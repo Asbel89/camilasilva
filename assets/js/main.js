@@ -279,7 +279,10 @@
       const target = Number(el.getAttribute("data-count"));
       const suffix = el.getAttribute("data-suffix") || "";
       const n = Math.round(target * ratio);
-      el.textContent = n.toLocaleString(locale()) + suffix;
+      const text = n.toLocaleString(locale()) + suffix;
+      el.textContent = text;
+      const slot = el.parentElement && el.parentElement.querySelector(".stats__final");
+      if (slot) slot.textContent = target.toLocaleString(locale()) + suffix;
     });
   }
 
@@ -341,7 +344,9 @@
     if (years) years.setAttribute("data-suffix", NUMBER_SUFFIX[lang].years);
 
     $$("[data-download]").forEach(function (el) {
-      el.setAttribute("href", lang === "pt" ? "Camila-Silva-Media-Kit-PT.pdf" : "Camila-Silva-Media-Kit.pdf");
+      const file = lang === "pt" ? "Camila-Silva-Media-Kit-PT.pdf" : "Camila-Silva-Media-Kit.pdf";
+      el.setAttribute("href", file);
+      el.setAttribute("download", file);
     });
 
     if (countersDone) updateCounters();
