@@ -13,7 +13,7 @@
       "print.contact": "WhatsApp +353 85 817 2621",
       "nav.about": "Sobre",
       "nav.career": "Carreira",
-      "nav.gallery": "Galeria",
+      "nav.gallery": "See Album",
       "nav.videos": "Vídeos",
       "nav.programs": "Programas",
       "nav.contact": "Contato",
@@ -92,15 +92,15 @@
       "intl.i4d": "Programas de intercâmbio cultural, apresentações e workshops apresentados para públicos internacionais, festivais e instituições culturais.",
       "intl.tag4": "Apresentação · Workshop",
 
-      "gallery.label": "Galeria",
+      "gallery.label": "See Album",
       "gallery.title": "Presença em imagem.",
       "gallery.intro": "Retratos e cenas de palco que traduzem força, elegância e brasilidade.",
       "gallery.hint": "Clique em uma imagem para ampliar.",
       "gallery.altProfile": "Retrato de Camila Silva em traje bege",
-      "gallery.archiveLabel": "Acervo completo",
+      "gallery.archiveLabel": "Acervo de álbuns",
       "gallery.archiveTitle": "75 álbuns, 8.969 fotos.",
-      "gallery.archiveText": "Todas as fotos da página oficial organizadas por álbum — carnaval, ensaios, palcos e bastidores.",
-      "gallery.archiveCta": "Explorar o acervo",
+      "gallery.archiveText": "Carnaval, ensaios, palcos e bastidores — todas as fotos organizadas por álbum.",
+      "gallery.archiveCta": "See Album",
 
       "videos.label": "Vídeos",
       "videos.title": "O palco em movimento.",
@@ -127,7 +127,10 @@
 
       "programs.label": "Ensino & Programas",
       "programs.title": "Como o samba brasileiro é ensinado a públicos internacionais.",
-      "programs.intro": "A abordagem pedagógica de Camila Silva combina precisão técnica, contexto cultural e aprendizado corporal, pensados para estudantes não brasileiros e para bailarinas brasileiras interessadas em formação de samba de nível internacional. Sua metodologia traduz o samba como linguagem cultural viva — acessível, envolvente e respeitosa em relação às raízes afro-brasileiras — e já foi aplicada com sucesso na Europa, África, Ásia e América do Norte, em workshops, residências e programas culturais.",
+      "programs.intro": "Uma metodologia que une técnica, contexto cultural e expressão corporal — aplicada em workshops, residências e programas internacionais.",
+      "programs.methodTitle": "Metodologia",
+      "programs.methodMeta": "4 pilares",
+      "programs.listMeta": "5 formatos",
       "method.m1t": "Técnica & Ritmo",
       "method.m1d": "Passos fundamentais do samba, estrutura rítmica e coordenação, adaptados a diferentes níveis de experiência e contextos culturais.",
       "method.m2t": "Contexto Cultural",
@@ -158,7 +161,7 @@
 
       "contact.label": "Contato",
       "contact.title": "Vamos levar o samba ao seu evento?",
-      "contact.intro": "Camila Silva está disponível para contratações internacionais, incluindo apresentações, workshops, residências e programas culturais. Os programas são sob medida para festivais, instituições culturais, escolas de dança e eventos especiais.",
+      "contact.intro": "Disponível para apresentações, workshops, residências e programas culturais sob medida para festivais, instituições e eventos especiais.",
       "contact.ctaWhats": "Falar no WhatsApp",
       "contact.ctaInstagram": "Instagram",
       "contact.pressLabel": "Imprensa & contratações internacionais",
@@ -167,6 +170,7 @@
       "contact.baseLabel": "Base",
       "contact.baseValue": "Dublin, Irlanda",
       "contact.sideTitle": "Ideal para",
+      "contact.sideMeta": "5 formatos",
       "contact.tick1": "Carnavais & festivais no mundo todo",
       "contact.tick2": "Instituições culturais & museus",
       "contact.tick3": "Escolas de dança profissional",
@@ -197,7 +201,7 @@
       "print.contact": "WhatsApp +353 85 817 2621",
       "nav.about": "About",
       "nav.career": "Career",
-      "nav.gallery": "Gallery",
+      "nav.gallery": "See Album",
       "nav.videos": "Videos",
       "nav.programs": "Programs",
       "nav.contact": "Contact",
@@ -276,15 +280,15 @@
       "intl.i4d": "Cultural exchange programs, performances and workshops presented for international audiences, festivals and cultural institutions.",
       "intl.tag4": "Performance · Workshop",
 
-      "gallery.label": "Gallery",
+      "gallery.label": "See Album",
       "gallery.title": "Presence, in frame.",
       "gallery.intro": "Portraits and stage moments that convey strength, elegance and Brazilian identity.",
       "gallery.hint": "Click an image to enlarge.",
       "gallery.altProfile": "Portrait of Camila Silva in a beige outfit",
-      "gallery.archiveLabel": "Full archive",
+      "gallery.archiveLabel": "Album archive",
       "gallery.archiveTitle": "75 albums, 8,969 photos.",
-      "gallery.archiveText": "Every photo from the official page, organized by album — carnival, editorials, stages and backstage.",
-      "gallery.archiveCta": "Explore the archive",
+      "gallery.archiveText": "Carnival, editorials, stages and backstage — every photo organized by album.",
+      "gallery.archiveCta": "See Album",
 
       "videos.label": "Videos",
       "videos.title": "The stage in motion.",
@@ -311,7 +315,10 @@
 
       "programs.label": "Teaching & Programs",
       "programs.title": "How Brazilian samba is taught to international audiences",
-      "programs.intro": "Camila Silva's teaching approach combines technical precision, cultural context and embodied learning, designed for non-Brazilian students and for Brazilian dancers interested in international-level samba education. Her methodology translates samba as a living cultural language — accessible, engaging and respectful of its Afro-Brazilian roots — and has been successfully applied in Europe, Africa, Asia and North America, in workshops, residencies and cultural programs.",
+      "programs.intro": "A methodology that combines technique, cultural context and body expression — applied in workshops, residencies and international programs.",
+      "programs.methodTitle": "Methodology",
+      "programs.methodMeta": "4 pillars",
+      "programs.listMeta": "5 formats",
       "method.m1t": "Technique & Rhythm",
       "method.m1d": "Fundamental samba steps, rhythm structure and coordination, adapted to different experience levels and cultural backgrounds.",
       "method.m2t": "Cultural Context",
@@ -342,7 +349,7 @@
 
       "contact.label": "Contact",
       "contact.title": "Let's bring samba to your event?",
-      "contact.intro": "Camila Silva is available for international bookings, including performances, workshops, residencies and cultural programs. Programs are tailored for festivals, cultural institutions, dance schools and special events.",
+      "contact.intro": "Available for performances, workshops, residencies and cultural programs tailored for festivals, institutions and special events.",
       "contact.ctaWhats": "Message on WhatsApp",
       "contact.ctaInstagram": "Instagram",
       "contact.pressLabel": "Press & international bookings",
@@ -351,6 +358,7 @@
       "contact.baseLabel": "Location",
       "contact.baseValue": "Dublin, Ireland",
       "contact.sideTitle": "Ideal for",
+      "contact.sideMeta": "5 formats",
       "contact.tick1": "Carnivals & festivals worldwide",
       "contact.tick2": "Cultural institutions & museums",
       "contact.tick3": "Professional dance schools",
@@ -760,6 +768,20 @@
 
   const year = $("#year");
   if (year) year.textContent = String(new Date().getFullYear());
+
+  const detailsElements = $$("details");
+  const detailsPrintState = new Map();
+  window.addEventListener("beforeprint", () => {
+    detailsElements.forEach((element) => {
+      detailsPrintState.set(element, element.open);
+      element.open = true;
+    });
+  });
+  window.addEventListener("afterprint", () => {
+    detailsElements.forEach((element) => {
+      element.open = Boolean(detailsPrintState.get(element));
+    });
+  });
 
   applyLanguage(lang);
   onScroll();

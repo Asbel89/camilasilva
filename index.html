@@ -36,12 +36,12 @@
 
     <nav class="nav" id="primaryNav" aria-label="Navegação principal">
       <div class="nav__links" id="navLinks">
-        <a href="#sobre" data-nav data-i18n="nav.about"><span class="nav__num" aria-hidden="true">01</span>Sobre</a>
-        <a href="#carreira" data-nav data-i18n="nav.career"><span class="nav__num" aria-hidden="true">02</span>Carreira</a>
-        <a href="#galeria" data-nav data-i18n="nav.gallery"><span class="nav__num" aria-hidden="true">03</span>Galeria</a>
-        <a href="#videos" data-nav data-i18n="nav.videos"><span class="nav__num" aria-hidden="true">04</span>Vídeos</a>
-        <a href="#programas" data-nav data-i18n="nav.programs"><span class="nav__num" aria-hidden="true">05</span>Programas</a>
-        <a href="#contato" data-nav data-i18n="nav.contact"><span class="nav__num" aria-hidden="true">06</span>Contato</a>
+        <a href="#sobre" data-nav><span class="nav__num" aria-hidden="true">01</span><span data-i18n="nav.about">Sobre</span></a>
+        <a href="#carreira" data-nav><span class="nav__num" aria-hidden="true">02</span><span data-i18n="nav.career">Carreira</span></a>
+        <a href="#galeria" data-nav><span class="nav__num" aria-hidden="true">03</span><span data-i18n="nav.gallery">See Album</span></a>
+        <a href="#videos" data-nav><span class="nav__num" aria-hidden="true">04</span><span data-i18n="nav.videos">Vídeos</span></a>
+        <a href="#programas" data-nav><span class="nav__num" aria-hidden="true">05</span><span data-i18n="nav.programs">Programas</span></a>
+        <a href="#contato" data-nav><span class="nav__num" aria-hidden="true">06</span><span data-i18n="nav.contact">Contato</span></a>
 
         <div class="nav__mobile-foot">
           <p class="nav__mobile-label" data-i18n="nav.mobileLabel">Contratações &amp; imprensa</p>
@@ -158,65 +158,39 @@
         <div class="about__content">
           <p class="about__lead reveal" data-i18n="about.p1">Camila Silva é uma bailarina, instrutora e embaixadora cultural brasileira com experiência internacional e mais de 21 anos de atuação profissional no Carnaval, em palco e em intercâmbio cultural.</p>
           <p class="reveal" data-i18n="about.p2">Seu trabalho vai além da apresentação. Camila ensina samba como linguagem cultural, conectando técnica, ritmo e expressão corporal às raízes afro-brasileiras do Carnaval brasileiro.</p>
-          <p class="reveal" data-i18n="about.p3">Com experiência internacional na Europa, África, Ásia e América do Norte, Camila apresenta aulas, workshops e experiências culturais imersivas enraizadas na tradição brasileira, para públicos brasileiros e não brasileiros, festivais, instituições culturais e escolas de dança profissional.</p>
 
-          <div class="about__numbers reveal" aria-label="Números da carreira">
-            <div>
-              <strong>21+</strong>
-              <span data-i18n="about.years">anos de carreira</span>
-            </div>
-            <div>
-              <strong>04</strong>
-              <span data-i18n="about.continents">continentes</span>
-            </div>
-            <div>
-              <strong>PT · EN · ES</strong>
-              <span data-i18n="about.languages">idiomas de trabalho</span>
-            </div>
-          </div>
-
-          <ul class="pillars">
-            <li class="reveal">
-              <span class="pillars__num" aria-hidden="true">01</span>
-              <div>
-                <h3 data-i18n="about.pillar1t">Sambando com Arte</h3>
+          <div class="topics reveal">
+            <details class="topic">
+              <summary>
+                <span class="topic__num" aria-hidden="true">01</span>
+                <span class="topic__title" data-i18n="about.pillar1t">Sambando com Arte</span>
+                <span class="topic__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="topic__body">
                 <p data-i18n="about.pillar1d">Fundadora da Sambando com Arte — dedicada à preservação, à educação e à difusão internacional da cultura afro-brasileira do samba.</p>
               </div>
-            </li>
-            <li class="reveal">
-              <span class="pillars__num" aria-hidden="true">02</span>
-              <div>
-                <h3 data-i18n="about.pillar2t">Rainha do Carnaval</h3>
+            </details>
+            <details class="topic">
+              <summary>
+                <span class="topic__num" aria-hidden="true">02</span>
+                <span class="topic__title" data-i18n="about.pillar2t">Rainha do Carnaval</span>
+                <span class="topic__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="topic__body">
                 <p data-i18n="about.pillar2d">Rainha do Carnaval no Brasil e no exterior, representando a cultura do samba brasileiro no mais alto nível.</p>
               </div>
-            </li>
-            <li class="reveal">
-              <span class="pillars__num" aria-hidden="true">03</span>
-              <div>
-                <h3 data-i18n="about.pillar3t">Raízes afro-brasileiras</h3>
+            </details>
+            <details class="topic">
+              <summary>
+                <span class="topic__num" aria-hidden="true">03</span>
+                <span class="topic__title" data-i18n="about.pillar3t">Raízes afro-brasileiras</span>
+                <span class="topic__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="topic__body">
                 <p data-i18n="about.pillar3d">Enraizada na herança afro-brasileira — respeitosa, contextualizada e historicamente consciente.</p>
               </div>
-            </li>
-          </ul>
-
-          <dl class="meta-list reveal">
-            <div>
-              <dt data-i18n="about.row1">Base</dt>
-              <dd>Dublin, Irlanda</dd>
-            </div>
-            <div>
-              <dt data-i18n="about.row2">Território</dt>
-              <dd data-i18n="about.territory">Brasil</dd>
-            </div>
-            <div>
-              <dt data-i18n="about.row3">Formato</dt>
-              <dd data-i18n="about.format">Performance · Workshop · Residência</dd>
-            </div>
-          </dl>
-
-          <blockquote class="about__quote reveal">
-            <p data-i18n="about.quote">“Trazendo o mais alto nível da cultura do samba brasileiro para o mundo.”</p>
-          </blockquote>
+            </details>
+          </div>
         </div>
       </div>
     </div>
@@ -235,25 +209,38 @@
         </div>
       </header>
 
-      <div class="career__list">
-        <article class="career__item reveal">
-          <span class="career__num" aria-hidden="true">01</span>
-          <h3 data-i18n="career.c1t">Liderança no Carnaval Brasileiro</h3>
-          <p data-i18n="career.c1d">Referência brasileira entre bailarinas de samba, profissionais do Carnaval e produtores culturais, convidada a representar o Brasil em intercâmbios culturais internacionais.</p>
-        </article>
-        <article class="career__item reveal">
-          <span class="career__num" aria-hidden="true">02</span>
-          <h3 data-i18n="career.c2t">Autoridade Cultural</h3>
-          <p data-i18n="career.c2d">Rainha do Carnaval no Brasil e no exterior, representando a cultura do samba brasileiro no mais alto nível profissional e cultural.</p>
-        </article>
-        <article class="career__item reveal">
-          <span class="career__num" aria-hidden="true">03</span>
-          <h3 data-i18n="career.c3t">Carreira Profissional</h3>
-          <p data-i18n="career.c3d">Mais de 21 anos de experiência profissional no Carnaval brasileiro, em apresentações e eventos culturais pelo país. Fundadora da Sambando com Arte.</p>
-        </article>
+      <div class="topics topics--dark reveal">
+        <details class="topic">
+          <summary>
+            <span class="topic__num" aria-hidden="true">01</span>
+            <span class="topic__title" data-i18n="career.c1t">Liderança no Carnaval Brasileiro</span>
+            <span class="topic__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="topic__body">
+            <p data-i18n="career.c1d">Referência brasileira entre bailarinas de samba, profissionais do Carnaval e produtores culturais, convidada a representar o Brasil em intercâmbios culturais internacionais.</p>
+          </div>
+        </details>
+        <details class="topic">
+          <summary>
+            <span class="topic__num" aria-hidden="true">02</span>
+            <span class="topic__title" data-i18n="career.c2t">Autoridade Cultural</span>
+            <span class="topic__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="topic__body">
+            <p data-i18n="career.c2d">Rainha do Carnaval no Brasil e no exterior, representando a cultura do samba brasileiro no mais alto nível profissional e cultural.</p>
+          </div>
+        </details>
+        <details class="topic">
+          <summary>
+            <span class="topic__num" aria-hidden="true">03</span>
+            <span class="topic__title" data-i18n="career.c3t">Carreira Profissional</span>
+            <span class="topic__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="topic__body">
+            <p data-i18n="career.c3d">Mais de 21 anos de experiência profissional no Carnaval brasileiro, em apresentações e eventos culturais pelo país. Fundadora da Sambando com Arte.</p>
+          </div>
+        </details>
       </div>
-
-      <p class="career__banner reveal" data-i18n="career.banner">Seu trabalho representa o samba brasileiro em seu mais alto nível profissional e cultural — enraizado na tradição e reconhecido internacionalmente.</p>
 
       <div class="intl">
         <header class="intl__head">
@@ -262,40 +249,52 @@
           <p class="lead reveal" data-i18n="intl.intro">Camila Silva representou o samba brasileiro em quatro continentes, com apresentações, workshops e experiências culturais imersivas para públicos internacionais, festivais e instituições culturais.</p>
         </header>
 
-        <ol class="intl__list">
-          <li class="intl__item reveal">
-            <span class="intl__year">2019</span>
-            <div class="intl__place">
-              <h4><span data-i18n="intl.i1c">Suécia</span> <small data-i18n="intl.i1city">Estocolmo</small></h4>
-              <span class="tag" data-i18n="intl.tag1">Rainha do Carnaval · Instrutora</span>
+        <div class="topics topics--dark reveal">
+          <details class="topic">
+            <summary>
+              <span class="topic__num" aria-hidden="true">2019</span>
+              <span class="topic__title"><span data-i18n="intl.i1c">Suécia</span> <small class="topic__city" data-i18n="intl.i1city">Estocolmo</small></span>
+              <span class="topic__meta" data-i18n="intl.tag1">Rainha do Carnaval · Instrutora</span>
+              <span class="topic__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="topic__body">
+              <p data-i18n="intl.i1d">Rainha do Carnaval e instrutora de samba. Workshops, apresentações e programas de intercâmbio cultural.</p>
             </div>
-            <p class="intl__desc" data-i18n="intl.i1d">Rainha do Carnaval e instrutora de samba. Workshops, apresentações e programas de intercâmbio cultural.</p>
-          </li>
-          <li class="intl__item reveal">
-            <span class="intl__year">2019</span>
-            <div class="intl__place">
-              <h4><span data-i18n="intl.i2c">Cabo Verde</span> <small data-i18n="intl.i2city">África</small></h4>
-              <span class="tag" data-i18n="intl.tag2">Embaixadora cultural · Instrutora</span>
+          </details>
+          <details class="topic">
+            <summary>
+              <span class="topic__num" aria-hidden="true">2019</span>
+              <span class="topic__title"><span data-i18n="intl.i2c">Cabo Verde</span> <small class="topic__city" data-i18n="intl.i2city">África</small></span>
+              <span class="topic__meta" data-i18n="intl.tag2">Embaixadora cultural · Instrutora</span>
+              <span class="topic__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="topic__body">
+              <p data-i18n="intl.i2d">Embaixadora cultural e instrutora de samba. Workshops e apresentações celebrando as raízes afro-brasileiras.</p>
             </div>
-            <p class="intl__desc" data-i18n="intl.i2d">Embaixadora cultural e instrutora de samba. Workshops e apresentações celebrando as raízes afro-brasileiras.</p>
-          </li>
-          <li class="intl__item reveal">
-            <span class="intl__year">2022</span>
-            <div class="intl__place">
-              <h4><span data-i18n="intl.i3c">Alemanha</span> <small data-i18n="intl.i3city">Coburgo</small></h4>
-              <span class="tag" data-i18n="intl.tag3">Rainha do Carnaval · Instrutora convidada</span>
+          </details>
+          <details class="topic">
+            <summary>
+              <span class="topic__num" aria-hidden="true">2022</span>
+              <span class="topic__title"><span data-i18n="intl.i3c">Alemanha</span> <small class="topic__city" data-i18n="intl.i3city">Coburgo</small></span>
+              <span class="topic__meta" data-i18n="intl.tag3">Rainha do Carnaval · Instrutora convidada</span>
+              <span class="topic__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="topic__body">
+              <p data-i18n="intl.i3d">Rainha do Carnaval e instrutora convidada. Apresentações em palco e workshops de samba.</p>
             </div>
-            <p class="intl__desc" data-i18n="intl.i3d">Rainha do Carnaval e instrutora convidada. Apresentações em palco e workshops de samba.</p>
-          </li>
-          <li class="intl__item reveal">
-            <span class="intl__year" aria-hidden="true">—</span>
-            <div class="intl__place">
-              <h4 data-i18n="intl.i4c">Ásia e América do Norte</h4>
-              <span class="tag" data-i18n="intl.tag4">Apresentação · Workshop</span>
+          </details>
+          <details class="topic">
+            <summary>
+              <span class="topic__num" aria-hidden="true">—</span>
+              <span class="topic__title" data-i18n="intl.i4c">Ásia e América do Norte</span>
+              <span class="topic__meta" data-i18n="intl.tag4">Apresentação · Workshop</span>
+              <span class="topic__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="topic__body">
+              <p data-i18n="intl.i4d">Programas de intercâmbio cultural, apresentações e workshops apresentados para públicos internacionais, festivais e instituições culturais.</p>
             </div>
-            <p class="intl__desc" data-i18n="intl.i4d">Programas de intercâmbio cultural, apresentações e workshops apresentados para públicos internacionais, festivais e instituições culturais.</p>
-          </li>
-        </ol>
+          </details>
+        </div>
       </div>
     </div>
   </section>
@@ -305,7 +304,7 @@
     <div class="shell">
       <header class="section-head">
         <div class="section-head__label reveal">
-          <p class="section-label"><span class="section-label__num">03</span><span data-i18n="gallery.label">Galeria</span></p>
+          <p class="section-label"><span class="section-label__num">03</span><span data-i18n="gallery.label">See Album</span></p>
         </div>
         <div class="section-head__body">
           <h2 class="display reveal" id="galeriaTitle" data-i18n="gallery.title">Presença em imagem.</h2>
@@ -362,7 +361,7 @@
           <h3 class="gallery__archive-title" data-i18n="gallery.archiveTitle">75 álbuns, 8.969 fotos.</h3>
           <p class="gallery__archive-text" data-i18n="gallery.archiveText">Todas as fotos da página oficial organizadas por álbum — carnaval, ensaios, palcos e bastidores.</p>
         </div>
-        <a class="btn btn--solid" href="media-kit/albuns/index.html" data-i18n="gallery.archiveCta">Explorar o acervo</a>
+        <a class="btn btn--solid" href="media-kit/albuns/index.html" data-i18n="gallery.archiveCta">See Album</a>
       </div>
     </div>
   </section>
@@ -481,21 +480,6 @@
           <p class="social__text" data-i18n="social.text">Acompanhe o trabalho de perto — vídeos completos no Instagram.</p>
         </div>
 
-        <dl class="social__stats">
-          <div>
-            <dt data-i18n="social.postsLabel">Publicações</dt>
-            <dd data-i18n="social.postsValue">1.743</dd>
-          </div>
-          <div>
-            <dt data-i18n="social.followersLabel">Seguidores</dt>
-            <dd data-i18n="social.followersValue">275 mil</dd>
-          </div>
-          <div>
-            <dt data-i18n="social.followingLabel">Seguindo</dt>
-            <dd data-i18n="social.followingValue">623</dd>
-          </div>
-        </dl>
-
         <a class="btn btn--outline social__cta" href="https://instagram.com/iamcamilasilva" target="_blank" rel="noopener">
           <span data-i18n="social.cta">Seguir no Instagram</span>
           <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -517,83 +501,98 @@
         </div>
       </header>
 
-      <div class="method">
-        <article class="method__item reveal">
-          <span class="method__num" aria-hidden="true">01</span>
-          <div>
-            <h3 data-i18n="method.m1t">Técnica &amp; Ritmo</h3>
-            <p data-i18n="method.m1d">Passos fundamentais do samba, estrutura rítmica e coordenação, adaptados a diferentes níveis de experiência e contextos culturais.</p>
+      <div class="topics reveal">
+        <details class="topic">
+          <summary>
+            <span class="topic__num" aria-hidden="true">01</span>
+            <span class="topic__title" data-i18n="programs.methodTitle">Metodologia</span>
+            <span class="topic__meta" data-i18n="programs.methodMeta">4 pilares</span>
+            <span class="topic__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="topic__body">
+            <div class="method">
+              <article class="method__item">
+                <span class="method__num" aria-hidden="true">01</span>
+                <div>
+                  <h3 data-i18n="method.m1t">Técnica &amp; Ritmo</h3>
+                  <p data-i18n="method.m1d">Passos fundamentais do samba, estrutura rítmica e coordenação, adaptados a diferentes níveis de experiência e contextos culturais.</p>
+                </div>
+              </article>
+              <article class="method__item">
+                <span class="method__num" aria-hidden="true">02</span>
+                <div>
+                  <h3 data-i18n="method.m2t">Contexto Cultural</h3>
+                  <p data-i18n="method.m2d">Entender o samba além do movimento: história, cultura do Carnaval e herança afro-brasileira como parte do processo de aprendizagem.</p>
+                </div>
+              </article>
+              <article class="method__item">
+                <span class="method__num" aria-hidden="true">03</span>
+                <div>
+                  <h3 data-i18n="method.m3t">Expressão Corporal &amp; Presença</h3>
+                  <p data-i18n="method.m3d">Postura, fluidez, interpretação musical e confiança, desenvolvendo uma expressão de samba autêntica.</p>
+                </div>
+              </article>
+              <article class="method__item">
+                <span class="method__num" aria-hidden="true">04</span>
+                <div>
+                  <h3 data-i18n="method.m4t">Aprendizado Progressivo</h3>
+                  <p data-i18n="method.m4d">Aulas estruturadas do nível iniciante ao avançado, garantindo clareza, segurança e desenvolvimento contínuo para participantes internacionais e bailarinas brasileiras em busca de formação avançada.</p>
+                </div>
+              </article>
+            </div>
           </div>
-        </article>
-        <article class="method__item reveal">
-          <span class="method__num" aria-hidden="true">02</span>
-          <div>
-            <h3 data-i18n="method.m2t">Contexto Cultural</h3>
-            <p data-i18n="method.m2d">Entender o samba além do movimento: história, cultura do Carnaval e herança afro-brasileira como parte do processo de aprendizagem.</p>
+        </details>
+
+        <details class="topic">
+          <summary>
+            <span class="topic__num" aria-hidden="true">02</span>
+            <span class="topic__title" data-i18n="programs.listTitle">Aulas · Workshops · Residências</span>
+            <span class="topic__meta" data-i18n="programs.listMeta">5 formatos</span>
+            <span class="topic__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="topic__body">
+            <ol class="program-list">
+              <li class="program">
+                <span class="program__num" aria-hidden="true">01</span>
+                <h4 data-i18n="programs.p1t">Fundamentos do Samba</h4>
+                <p data-i18n="programs.p1d">Técnica, ritmo e coordenação. Indicado para públicos internacionais e bailarinas brasileiras em busca de refinamento técnico.</p>
+                <span class="program__time" data-i18n="programs.p1time">60–90 min</span>
+              </li>
+              <li class="program">
+                <span class="program__num" aria-hidden="true">02</span>
+                <h4 data-i18n="programs.p2t">Samba Brasileiro &amp; Experiência do Carnaval</h4>
+                <p data-i18n="programs.p2d">Workshops imersivos combinando dança, cultura e história do Carnaval.</p>
+                <span class="program__time" data-i18n="programs.p2time">2–3 horas</span>
+              </li>
+              <li class="program">
+                <span class="program__num" aria-hidden="true">03</span>
+                <h4 data-i18n="programs.p3t">Raízes Afro-Brasileiras &amp; Samba</h4>
+                <p data-i18n="programs.p3d">Explorando o samba como expressão e identidade cultural afro-brasileira.</p>
+                <span class="program__time" data-i18n="programs.p3time">2–3 horas</span>
+              </li>
+              <li class="program">
+                <span class="program__num" aria-hidden="true">04</span>
+                <h4 data-i18n="programs.p4t">Presença de Palco &amp; Performance de Samba</h4>
+                <p data-i18n="programs.p4d">Interpretação musical, expressão corporal e confiança de palco.</p>
+                <span class="program__time" data-i18n="programs.p4time">2–3 horas</span>
+              </li>
+              <li class="program program--feature">
+                <span class="program__num" aria-hidden="true">05</span>
+                <h4 data-i18n="programs.p5t">Programa de Residência de Samba</h4>
+                <p data-i18n="programs.p5d">Experiências artísticas e educativas de vários dias para instituições e festivais.</p>
+                <span class="program__time" data-i18n="programs.p5time">3–7 dias</span>
+              </li>
+            </ol>
           </div>
-        </article>
-        <article class="method__item reveal">
-          <span class="method__num" aria-hidden="true">03</span>
-          <div>
-            <h3 data-i18n="method.m3t">Expressão Corporal &amp; Presença</h3>
-            <p data-i18n="method.m3d">Postura, fluidez, interpretação musical e confiança, desenvolvendo uma expressão de samba autêntica.</p>
-          </div>
-        </article>
-        <article class="method__item reveal">
-          <span class="method__num" aria-hidden="true">04</span>
-          <div>
-            <h3 data-i18n="method.m4t">Aprendizado Progressivo</h3>
-            <p data-i18n="method.m4d">Aulas estruturadas do nível iniciante ao avançado, garantindo clareza, segurança e desenvolvimento contínuo para participantes internacionais e bailarinas brasileiras em busca de formação avançada.</p>
-          </div>
-        </article>
+        </details>
       </div>
 
-      <div class="programs">
-        <div class="programs__head">
-          <h3 class="reveal" data-i18n="programs.listTitle">Aulas · Workshops · Residências</h3>
-          <p class="reveal" data-i18n="programs.listIntro">Camila Silva oferece programas estruturados de samba para públicos internacionais e bailarinas brasileiras, incluindo instituições culturais, festivais e escolas de dança profissional. Os programas são adaptáveis a diferentes formatos, tamanhos de grupo e níveis de experiência.</p>
-        </div>
-
-        <ol class="program-list">
-          <li class="program reveal">
-            <span class="program__num" aria-hidden="true">01</span>
-            <h4 data-i18n="programs.p1t">Fundamentos do Samba</h4>
-            <p data-i18n="programs.p1d">Técnica, ritmo e coordenação. Indicado para públicos internacionais e bailarinas brasileiras em busca de refinamento técnico.</p>
-            <span class="program__time" data-i18n="programs.p1time">60–90 min</span>
-          </li>
-          <li class="program reveal">
-            <span class="program__num" aria-hidden="true">02</span>
-            <h4 data-i18n="programs.p2t">Samba Brasileiro &amp; Experiência do Carnaval</h4>
-            <p data-i18n="programs.p2d">Workshops imersivos combinando dança, cultura e história do Carnaval.</p>
-            <span class="program__time" data-i18n="programs.p2time">2–3 horas</span>
-          </li>
-          <li class="program reveal">
-            <span class="program__num" aria-hidden="true">03</span>
-            <h4 data-i18n="programs.p3t">Raízes Afro-Brasileiras &amp; Samba</h4>
-            <p data-i18n="programs.p3d">Explorando o samba como expressão e identidade cultural afro-brasileira.</p>
-            <span class="program__time" data-i18n="programs.p3time">2–3 horas</span>
-          </li>
-          <li class="program reveal">
-            <span class="program__num" aria-hidden="true">04</span>
-            <h4 data-i18n="programs.p4t">Presença de Palco &amp; Performance de Samba</h4>
-            <p data-i18n="programs.p4d">Interpretação musical, expressão corporal e confiança de palco.</p>
-            <span class="program__time" data-i18n="programs.p4time">2–3 horas</span>
-          </li>
-          <li class="program program--feature reveal">
-            <span class="program__num" aria-hidden="true">05</span>
-            <h4 data-i18n="programs.p5t">Programa de Residência de Samba</h4>
-            <p data-i18n="programs.p5d">Experiências artísticas e educativas de vários dias para instituições e festivais.</p>
-            <span class="program__time" data-i18n="programs.p5time">3–7 dias</span>
-          </li>
-        </ol>
-
-        <div class="programs__cta reveal">
-          <p data-i18n="programs.ctaText">Programas adaptáveis a diferentes formatos, grupos e níveis de experiência.</p>
-          <a class="btn btn--solid" href="#contato">
-            <span data-i18n="programs.cta">Falar sobre seu projeto</span>
-            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M4 12h15M13 6.5 18.5 12 13 17.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
+      <div class="programs__cta reveal">
+        <p data-i18n="programs.ctaText">Programas adaptáveis a diferentes formatos, grupos e níveis de experiência.</p>
+        <a class="btn btn--solid" href="#contato">
+          <span data-i18n="programs.cta">Falar sobre seu projeto</span>
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M4 12h15M13 6.5 18.5 12 13 17.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -640,17 +639,22 @@
           </div>
         </address>
 
-        <div class="contact__aside reveal">
-          <h3 data-i18n="contact.sideTitle">Ideal para</h3>
-          <ul class="ticks">
-            <li data-i18n="contact.tick1">Carnavais &amp; festivais no mundo todo</li>
-            <li data-i18n="contact.tick2">Instituições culturais &amp; museus</li>
-            <li data-i18n="contact.tick3">Escolas de dança profissional</li>
-            <li data-i18n="contact.tick4">Marcas, turismo &amp; turismo cultural</li>
-            <li data-i18n="contact.tick5">Shows e eventos especiais</li>
-          </ul>
-          <p class="contact__note" data-i18n="contact.note">Os programas são adaptáveis a diferentes formatos, tamanhos de grupo e níveis de experiência. Residências podem ser desenhadas para programas artísticos de vários dias.</p>
-        </div>
+        <details class="topic topic--contact reveal">
+          <summary>
+            <span class="topic__title" data-i18n="contact.sideTitle">Ideal para</span>
+            <span class="topic__meta" data-i18n="contact.sideMeta">5 formatos</span>
+            <span class="topic__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="topic__body">
+            <ul class="ticks">
+              <li data-i18n="contact.tick1">Carnavais &amp; festivais no mundo todo</li>
+              <li data-i18n="contact.tick2">Instituições culturais &amp; museus</li>
+              <li data-i18n="contact.tick3">Escolas de dança profissional</li>
+              <li data-i18n="contact.tick4">Marcas, turismo &amp; turismo cultural</li>
+              <li data-i18n="contact.tick5">Shows e eventos especiais</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </div>
 
@@ -680,7 +684,7 @@
       <nav class="footer__nav" aria-label="Navegação do rodapé">
         <a href="#sobre" data-i18n="nav.about">Sobre</a>
         <a href="#carreira" data-i18n="nav.career">Carreira</a>
-        <a href="#galeria" data-i18n="nav.gallery">Galeria</a>
+        <a href="#galeria" data-i18n="nav.gallery">See Album</a>
         <a href="#videos" data-i18n="nav.videos">Vídeos</a>
         <a href="#programas" data-i18n="nav.programs">Programas</a>
         <a href="#contato" data-i18n="nav.contact">Contato</a>
