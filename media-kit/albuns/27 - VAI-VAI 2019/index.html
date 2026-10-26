@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VAI-VAI 2019 — Acervo Camila Silva</title>
+<meta name="description" content="Álbum VAI-VAI 2019 do acervo de fotos de Camila Silva. 124 fotos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Instrument+Sans:ital,wght@0,400..600;1,400..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14100e;--wine:#5b1c22;--wine-soft:#7a2c33;--ivory:#f5efe6;--sand:#e7dbcb;
+  --text:#2b2420;--muted:#7c6f63;--line:rgba(20,16,14,.14);
+  --serif:"Fraunces",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1480px,calc(100% - 3rem));margin-inline:auto}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem 0;border-bottom:1px solid var(--line);background:rgba(245,239,230,.92);backdrop-filter:blur(14px)}
+.top a{text-decoration:none;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.top a:hover{color:var(--wine)}
+.brand{font-family:var(--serif);font-size:1rem;letter-spacing:.02em;text-transform:none!important}
+.hero{padding:clamp(3.5rem,8vw,7rem) 0 clamp(2rem,4vw,3.5rem)}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin:0 0 1.2rem;color:var(--wine);font-size:.62rem;
+  letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.55}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.96;letter-spacing:-.02em;margin:0}
+.hero p.lead{max-width:56ch;margin:1.6rem 0 0;color:var(--muted);font-size:clamp(.95rem,1.25vw,1.08rem);line-height:1.7}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.stats div{display:flex;flex-direction:column;gap:.25rem}
+.stats strong{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1}
+.stats span{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin:0 0 2rem}
+.search{flex:1 1 260px;max-width:420px}
+.search input{width:100%;padding:.85rem 1rem;border:1px solid var(--line);background:#fffdf9;color:var(--text);
+  font:inherit;font-size:.85rem;border-radius:1px;outline:none}
+.search input:focus{border-color:var(--wine)}
+.count{color:var(--muted);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(1rem,2vw,1.6rem);
+  padding-bottom:6rem}
+.card{position:relative;display:flex;flex-direction:column;text-decoration:none;background:#fffdf9;border:1px solid var(--line);
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,16,14,.12)}
+.card__img{aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card__img img{transform:scale(1.045)}
+.card__body{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;padding:1rem 1.1rem 1.15rem}
+.card__title{font-family:var(--serif);font-size:1.02rem;line-height:1.25;margin:0;font-weight:400}
+.card__num{flex:0 0 auto;color:var(--wine);font-size:.58rem;letter-spacing:.16em;font-weight:600}
+.card__meta{margin-top:.35rem;color:var(--muted);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+.album-head{padding:clamp(2.5rem,5vw,4.5rem) 0 1.8rem}
+.album-head h1{font-size:clamp(2rem,5vw,3.6rem)}
+.album-head .lead{margin-top:1rem;color:var(--muted);font-size:.92rem}
+.crumbs{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;color:var(--muted);font-size:.62rem;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.4rem}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{color:var(--wine)}
+.album-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:2.6rem;padding:.65rem 1.1rem;border:1px solid var(--ink);
+  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;background:transparent;cursor:pointer;
+  transition:background .3s,color .3s}
+.btn:hover{background:var(--ink);color:var(--ivory)}
+.btn--solid{background:var(--ink);color:var(--ivory)}
+.btn--solid:hover{background:var(--wine);border-color:var(--wine)}
+.masonry{column-count:4;column-gap:clamp(.6rem,1.2vw,1rem);padding-bottom:6rem}
+@media(max-width:1100px){.masonry{column-count:3}}
+@media(max-width:760px){.masonry{column-count:2}}
+@media(max-width:420px){.masonry{column-count:1}}
+.photo{position:relative;display:block;width:100%;margin:0 0 clamp(.6rem,1.2vw,1rem);padding:0;border:0;
+  background:var(--sand);cursor:zoom-in;break-inside:avoid;overflow:hidden}
+.photo img{width:100%;height:auto;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.photo:hover img{transform:scale(1.02)}
+.photo__zoom{position:absolute;right:.6rem;bottom:.6rem;width:2rem;height:2rem;display:grid;place-items:center;
+  border-radius:50%;background:rgba(20,16,14,.72);color:var(--ivory);opacity:0;transition:opacity .3s}
+.photo:hover .photo__zoom{opacity:1}
+.lightbox{position:fixed;inset:0;z-index:100;display:none;background:rgba(12,9,8,.96);padding:clamp(1rem,4vw,3rem)}
+.lightbox[open],.lightbox.is-open{display:grid;grid-template-rows:1fr auto;gap:1rem}
+.lightbox__stage{display:grid;place-items:center;min-height:0}
+.lightbox__stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lightbox__bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--ivory);
+  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.lightbox__bar a{color:var(--ivory);text-underline-offset:4px}
+.lightbox button{background:transparent;border:1px solid rgba(245,239,230,.4);color:var(--ivory);width:2.6rem;height:2.6rem;
+  display:grid;place-items:center;cursor:pointer;font-size:1rem}
+.lightbox button:hover{background:var(--ivory);color:var(--ink)}
+.lightbox__close{position:absolute;top:clamp(1rem,3vw,2rem);right:clamp(1rem,3vw,2rem);z-index:2}
+.lightbox__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
+.lightbox__prev{left:clamp(.5rem,2vw,1.5rem)}
+.lightbox__next{right:clamp(.5rem,2vw,1.5rem)}
+.empty{padding:6rem 0;text-align:center;color:var(--muted)}
+@media(max-width:640px){.wrap{width:calc(100% - 2rem)}.stats{gap:1.6rem}}
+@media print{.top,.toolbar,.album-actions,.lightbox{display:none!important}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+    <a class="brand" href="../index.html">Camila Silva <span style="color:var(--muted);font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase">· Acervo</span></a>
+    <a href="../index.html">← Todos os álbuns</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="album-head">
+    <nav class="crumbs" aria-label="Navegação">
+      <a href="../../index.html">Media kit</a><span>/</span><a href="../index.html">Álbuns</a><span>/</span><span>VAI-VAI 2019</span>
+    </nav>
+    <h1>VAI-VAI 2019</h1>
+    <p class="lead">124 fotos</p>
+    <div class="album-actions">
+      <a class="btn" href="https://www.facebook.com/media/set/?set=a.2020694328045334&amp;type=3" target="_blank" rel="noopener">Ver álbum original no Facebook</a>
+      <a class="btn btn--solid" href="../index.html">Ver outros álbuns</a>
+    </div>
+  </section>
+  <section class="masonry" aria-label="Fotos do álbum VAI-VAI 2019">
+    <button class="photo" type="button" data-full="fotos/0001_369587957865920.jpg" aria-label="Ampliar foto 1 de 124"><img src="fotos/0001_369587957865920.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 1" width="643" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0002_369587997865916.jpg" aria-label="Ampliar foto 2 de 124"><img src="fotos/0002_369587997865916.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 2" width="1080" height="716" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0003_369588034532579.jpg" aria-label="Ampliar foto 3 de 124"><img src="fotos/0003_369588034532579.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 3" width="960" height="630" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0004_369588077865908.jpg" aria-label="Ampliar foto 4 de 124"><img src="fotos/0004_369588077865908.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 4" width="643" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0005_369588117865904.jpg" aria-label="Ampliar foto 5 de 124"><img src="fotos/0005_369588117865904.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 5" width="643" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0006_369588151199234.jpg" aria-label="Ampliar foto 6 de 124"><img src="fotos/0006_369588151199234.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 6" width="645" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0007_369588184532564.jpg" aria-label="Ampliar foto 7 de 124"><img src="fotos/0007_369588184532564.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 7" width="1080" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0008_369589597865756.jpg" aria-label="Ampliar foto 8 de 124"><img src="fotos/0008_369589597865756.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 8" width="1080" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0009_369589634532419.jpg" aria-label="Ampliar foto 9 de 124"><img src="fotos/0009_369589634532419.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 9" width="1080" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0010_369589674532415.jpg" aria-label="Ampliar foto 10 de 124"><img src="fotos/0010_369589674532415.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 10" width="642" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0011_369589717865744.jpg" aria-label="Ampliar foto 11 de 124"><img src="fotos/0011_369589717865744.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 11" width="646" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0012_369589754532407.jpg" aria-label="Ampliar foto 12 de 124"><img src="fotos/0012_369589754532407.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 12" width="644" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0013_369589791199070.jpg" aria-label="Ampliar foto 13 de 124"><img src="fotos/0013_369589791199070.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 13" width="643" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0014_374593174032065.jpg" aria-label="Ampliar foto 14 de 124"><img src="fotos/0014_374593174032065.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 14" width="618" height="412" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0015_374593224032060.jpg" aria-label="Ampliar foto 15 de 124"><img src="fotos/0015_374593224032060.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 15" width="1080" height="715" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0016_374847097340006.jpg" aria-label="Ampliar foto 16 de 124"><img src="fotos/0016_374847097340006.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 16" width="642" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0017_374847124006670.jpg" aria-label="Ampliar foto 17 de 124"><img src="fotos/0017_374847124006670.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 17" width="646" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0018_374847160673333.jpg" aria-label="Ampliar foto 18 de 124"><img src="fotos/0018_374847160673333.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 18" width="646" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0019_374847200673329.jpg" aria-label="Ampliar foto 19 de 124"><img src="fotos/0019_374847200673329.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 19" width="643" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0020_2026557907458976.jpg" aria-label="Ampliar foto 20 de 124"><img src="fotos/0020_2026557907458976.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 20" width="600" height="399" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0021_2026565374124896.jpg" aria-label="Ampliar foto 21 de 124"><img src="fotos/0021_2026565374124896.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 21" width="600" height="399" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0022_2026574170790683.jpg" aria-label="Ampliar foto 22 de 124"><img src="fotos/0022_2026574170790683.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 22" width="1440" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0023_2026585900789510.jpg" aria-label="Ampliar foto 23 de 124"><img src="fotos/0023_2026585900789510.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 23" width="1440" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0024_2026734427441324.jpg" aria-label="Ampliar foto 24 de 124"><img src="fotos/0024_2026734427441324.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 24" width="600" height="399" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0025_2026734460774654.jpg" aria-label="Ampliar foto 25 de 124"><img src="fotos/0025_2026734460774654.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 25" width="600" height="399" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0026_2026734557441311.jpg" aria-label="Ampliar foto 26 de 124"><img src="fotos/0026_2026734557441311.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 26" width="600" height="399" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0027_2026741540773946.jpg" aria-label="Ampliar foto 27 de 124"><img src="fotos/0027_2026741540773946.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 27" width="960" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0028_2026741590773941.jpg" aria-label="Ampliar foto 28 de 124"><img src="fotos/0028_2026741590773941.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 28" width="960" height="632" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0029_2026741637440603.jpg" aria-label="Ampliar foto 29 de 124"><img src="fotos/0029_2026741637440603.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 29" width="761" height="506" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0030_2026741700773930.jpg" aria-label="Ampliar foto 30 de 124"><img src="fotos/0030_2026741700773930.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 30" width="763" height="500" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0031_2026802970767803.jpg" aria-label="Ampliar foto 31 de 124"><img src="fotos/0031_2026802970767803.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 31" width="960" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0032_2026803054101128.jpg" aria-label="Ampliar foto 32 de 124"><img src="fotos/0032_2026803054101128.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 32" width="960" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0033_2026803100767790.jpg" aria-label="Ampliar foto 33 de 124"><img src="fotos/0033_2026803100767790.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 33" width="600" height="399" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0034_2026825224098911.jpg" aria-label="Ampliar foto 34 de 124"><img src="fotos/0034_2026825224098911.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 34" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0035_2026825347432232.jpg" aria-label="Ampliar foto 35 de 124"><img src="fotos/0035_2026825347432232.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 35" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0036_2026825504098883.jpg" aria-label="Ampliar foto 36 de 124"><img src="fotos/0036_2026825504098883.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 36" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0037_2026825604098873.jpg" aria-label="Ampliar foto 37 de 124"><img src="fotos/0037_2026825604098873.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 37" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0038_2026825710765529.jpg" aria-label="Ampliar foto 38 de 124"><img src="fotos/0038_2026825710765529.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 38" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0039_2026825804098853.jpg" aria-label="Ampliar foto 39 de 124"><img src="fotos/0039_2026825804098853.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 39" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0040_2026971774084256.jpg" aria-label="Ampliar foto 40 de 124"><img src="fotos/0040_2026971774084256.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 40" width="920" height="613" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0041_2026988164082617.jpg" aria-label="Ampliar foto 41 de 124"><img src="fotos/0041_2026988164082617.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 41" width="480" height="480" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0042_2026988240749276.jpg" aria-label="Ampliar foto 42 de 124"><img src="fotos/0042_2026988240749276.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 42" width="300" height="200" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0043_2026988270749273.jpg" aria-label="Ampliar foto 43 de 124"><img src="fotos/0043_2026988270749273.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 43" width="300" height="200" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0044_2027222814059152.jpg" aria-label="Ampliar foto 44 de 124"><img src="fotos/0044_2027222814059152.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 44" width="1080" height="708" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0045_2027260537388713.jpg" aria-label="Ampliar foto 45 de 124"><img src="fotos/0045_2027260537388713.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 45" width="739" height="415" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0046_2029652730482827.jpg" aria-label="Ampliar foto 46 de 124"><img src="fotos/0046_2029652730482827.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 46" width="1024" height="683" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0047_2029658630482237.jpg" aria-label="Ampliar foto 47 de 124"><img src="fotos/0047_2029658630482237.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 47" width="1068" height="712" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0048_2030751197039647.jpg" aria-label="Ampliar foto 48 de 124"><img src="fotos/0048_2030751197039647.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 48" width="960" height="622" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0049_2030751260372974.jpg" aria-label="Ampliar foto 49 de 124"><img src="fotos/0049_2030751260372974.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 49" width="960" height="628" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0050_2031520660296034.jpg" aria-label="Ampliar foto 50 de 124"><img src="fotos/0050_2031520660296034.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 50" width="1000" height="667" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0051_2032876793493754.jpg" aria-label="Ampliar foto 51 de 124"><img src="fotos/0051_2032876793493754.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 51" width="894" height="594" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0052_2032885073492926.jpg" aria-label="Ampliar foto 52 de 124"><img src="fotos/0052_2032885073492926.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 52" width="429" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0053_2032892330158867.jpg" aria-label="Ampliar foto 53 de 124"><img src="fotos/0053_2032892330158867.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 53" width="805" height="575" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0054_2032921866822580.jpg" aria-label="Ampliar foto 54 de 124"><img src="fotos/0054_2032921866822580.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 54" width="807" height="535" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0055_2032963886818378.jpg" aria-label="Ampliar foto 55 de 124"><img src="fotos/0055_2032963886818378.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 55" width="429" height="643" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0056_2032963993485034.jpg" aria-label="Ampliar foto 56 de 124"><img src="fotos/0056_2032963993485034.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 56" width="430" height="643" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0057_2032964033485030.jpg" aria-label="Ampliar foto 57 de 124"><img src="fotos/0057_2032964033485030.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 57" width="430" height="644" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0058_2032964076818359.jpg" aria-label="Ampliar foto 58 de 124"><img src="fotos/0058_2032964076818359.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 58" width="428" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0059_2032964113485022.jpg" aria-label="Ampliar foto 59 de 124"><img src="fotos/0059_2032964113485022.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 59" width="429" height="642" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0060_2033616240086476.jpg" aria-label="Ampliar foto 60 de 124"><img src="fotos/0060_2033616240086476.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 60" width="1074" height="1074" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0061_2034376970010403.jpg" aria-label="Ampliar foto 61 de 124"><img src="fotos/0061_2034376970010403.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 61" width="1024" height="1820" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0062_2034407936673973.jpg" aria-label="Ampliar foto 62 de 124"><img src="fotos/0062_2034407936673973.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 62" width="1024" height="1820" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0063_2034441126670654.jpg" aria-label="Ampliar foto 63 de 124"><img src="fotos/0063_2034441126670654.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 63" width="1024" height="1820" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0064_2034471473334286.jpg" aria-label="Ampliar foto 64 de 124"><img src="fotos/0064_2034471473334286.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 64" width="1024" height="1820" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0065_2034495813331852.jpg" aria-label="Ampliar foto 65 de 124"><img src="fotos/0065_2034495813331852.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 65" width="1024" height="1820" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0066_2034505089997591.jpg" aria-label="Ampliar foto 66 de 124"><img src="fotos/0066_2034505089997591.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 66" width="1024" height="1820" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0067_2039500169498083.jpg" aria-label="Ampliar foto 67 de 124"><img src="fotos/0067_2039500169498083.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 67" width="512" height="768" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0068_2039500226164744.jpg" aria-label="Ampliar foto 68 de 124"><img src="fotos/0068_2039500226164744.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 68" width="512" height="768" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0069_2039500266164740.jpg" aria-label="Ampliar foto 69 de 124"><img src="fotos/0069_2039500266164740.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 69" width="512" height="768" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0070_2039500349498065.jpg" aria-label="Ampliar foto 70 de 124"><img src="fotos/0070_2039500349498065.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 70" width="512" height="768" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0071_2039500382831395.jpg" aria-label="Ampliar foto 71 de 124"><img src="fotos/0071_2039500382831395.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 71" width="512" height="768" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0072_2039500406164726.jpg" aria-label="Ampliar foto 72 de 124"><img src="fotos/0072_2039500406164726.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 72" width="512" height="768" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0073_2041933042588129.jpg" aria-label="Ampliar foto 73 de 124"><img src="fotos/0073_2041933042588129.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 73" width="1010" height="1485" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0074_2041959415918825.jpg" aria-label="Ampliar foto 74 de 124"><img src="fotos/0074_2041959415918825.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 74" width="1000" height="647" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0075_2042038595910907.jpg" aria-label="Ampliar foto 75 de 124"><img src="fotos/0075_2042038595910907.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 75" width="1000" height="1483" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0076_2042173185897448.jpg" aria-label="Ampliar foto 76 de 124"><img src="fotos/0076_2042173185897448.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 76" width="992" height="1487" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0077_2042454179202682.jpg" aria-label="Ampliar foto 77 de 124"><img src="fotos/0077_2042454179202682.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 77" width="994" height="648" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0078_2042475149200585.jpg" aria-label="Ampliar foto 78 de 124"><img src="fotos/0078_2042475149200585.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 78" width="1009" height="647" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0079_2049578275156939.jpg" aria-label="Ampliar foto 79 de 124"><img src="fotos/0079_2049578275156939.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 79" width="600" height="900" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0080_2049578545156912.jpg" aria-label="Ampliar foto 80 de 124"><img src="fotos/0080_2049578545156912.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 80" width="600" height="900" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0081_2049578745156892.jpg" aria-label="Ampliar foto 81 de 124"><img src="fotos/0081_2049578745156892.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 81" width="600" height="900" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0082_2049580755156691.jpg" aria-label="Ampliar foto 82 de 124"><img src="fotos/0082_2049580755156691.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 82" width="733" height="489" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0083_2049581305156636.jpg" aria-label="Ampliar foto 83 de 124"><img src="fotos/0083_2049581305156636.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 83" width="940" height="590" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0084_2049582075156559.jpg" aria-label="Ampliar foto 84 de 124"><img src="fotos/0084_2049582075156559.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 84" width="940" height="590" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0085_2049582585156508.jpg" aria-label="Ampliar foto 85 de 124"><img src="fotos/0085_2049582585156508.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 85" width="542" height="395" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0086_2054800471301386.jpg" aria-label="Ampliar foto 86 de 124"><img src="fotos/0086_2054800471301386.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 86" width="960" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0087_2054800527968047.jpg" aria-label="Ampliar foto 87 de 124"><img src="fotos/0087_2054800527968047.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 87" width="960" height="942" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0088_2063580153756751.jpg" aria-label="Ampliar foto 88 de 124"><img src="fotos/0088_2063580153756751.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 88" width="960" height="705" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0089_2063580220423411.jpg" aria-label="Ampliar foto 89 de 124"><img src="fotos/0089_2063580220423411.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 89" width="960" height="704" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0090_2091317030983063.jpg" aria-label="Ampliar foto 90 de 124"><img src="fotos/0090_2091317030983063.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 90" width="1080" height="751" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0091_2092047220910044.jpg" aria-label="Ampliar foto 91 de 124"><img src="fotos/0091_2092047220910044.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 91" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0092_2092077230907043.jpg" aria-label="Ampliar foto 92 de 124"><img src="fotos/0092_2092077230907043.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 92" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0093_2092131967568236.jpg" aria-label="Ampliar foto 93 de 124"><img src="fotos/0093_2092131967568236.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 93" width="960" height="654" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0094_2092131987568234.jpg" aria-label="Ampliar foto 94 de 124"><img src="fotos/0094_2092131987568234.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 94" width="960" height="654" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0095_2092131994234900.jpg" aria-label="Ampliar foto 95 de 124"><img src="fotos/0095_2092131994234900.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 95" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0096_2092132150901551.jpg" aria-label="Ampliar foto 96 de 124"><img src="fotos/0096_2092132150901551.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 96" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0097_2092132240901542.jpg" aria-label="Ampliar foto 97 de 124"><img src="fotos/0097_2092132240901542.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 97" width="960" height="659" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0098_2698658616915565.jpg" aria-label="Ampliar foto 98 de 124"><img src="fotos/0098_2698658616915565.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 98" width="558" height="370" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0099_2698658653582228.jpg" aria-label="Ampliar foto 99 de 124"><img src="fotos/0099_2698658653582228.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 99" width="370" height="557" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0100_2762750103839749.jpg" aria-label="Ampliar foto 100 de 124"><img src="fotos/0100_2762750103839749.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 100" width="612" height="408" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0101_2789190437862382.jpg" aria-label="Ampliar foto 101 de 124"><img src="fotos/0101_2789190437862382.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 101" width="512" height="768" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0102_2895019977279427.jpg" aria-label="Ampliar foto 102 de 124"><img src="fotos/0102_2895019977279427.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 102" width="667" height="1000" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0103_2929664437148314.jpg" aria-label="Ampliar foto 103 de 124"><img src="fotos/0103_2929664437148314.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 103" width="1000" height="666" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0104_2937799653001459.jpg" aria-label="Ampliar foto 104 de 124"><img src="fotos/0104_2937799653001459.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 104" width="1080" height="1598" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0105_2949534421827982.jpg" aria-label="Ampliar foto 105 de 124"><img src="fotos/0105_2949534421827982.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 105" width="960" height="639" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0106_2949534581827966.jpg" aria-label="Ampliar foto 106 de 124"><img src="fotos/0106_2949534581827966.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 106" width="960" height="639" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0107_2949534798494611.jpg" aria-label="Ampliar foto 107 de 124"><img src="fotos/0107_2949534798494611.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 107" width="960" height="639" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0108_2949535008494590.jpg" aria-label="Ampliar foto 108 de 124"><img src="fotos/0108_2949535008494590.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 108" width="960" height="639" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0109_2971333396314751.jpg" aria-label="Ampliar foto 109 de 124"><img src="fotos/0109_2971333396314751.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 109" width="639" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0110_2971333529648071.jpg" aria-label="Ampliar foto 110 de 124"><img src="fotos/0110_2971333529648071.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 110" width="960" height="639" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0111_2971333626314728.jpg" aria-label="Ampliar foto 111 de 124"><img src="fotos/0111_2971333626314728.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 111" width="960" height="639" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0112_2971333716314719.jpg" aria-label="Ampliar foto 112 de 124"><img src="fotos/0112_2971333716314719.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 112" width="958" height="643" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0113_3004666209648136.jpg" aria-label="Ampliar foto 113 de 124"><img src="fotos/0113_3004666209648136.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 113" width="958" height="1451" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0114_3071253082989448.jpg" aria-label="Ampliar foto 114 de 124"><img src="fotos/0114_3071253082989448.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 114" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0115_3071253192989437.jpg" aria-label="Ampliar foto 115 de 124"><img src="fotos/0115_3071253192989437.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 115" width="960" height="644" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0116_3071253302989426.jpg" aria-label="Ampliar foto 116 de 124"><img src="fotos/0116_3071253302989426.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 116" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0117_3071253519656071.jpg" aria-label="Ampliar foto 117 de 124"><img src="fotos/0117_3071253519656071.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 117" width="550" height="367" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0118_3110548255726597.jpg" aria-label="Ampliar foto 118 de 124"><img src="fotos/0118_3110548255726597.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 118" width="550" height="367" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0119_3110548369059919.jpg" aria-label="Ampliar foto 119 de 124"><img src="fotos/0119_3110548369059919.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 119" width="550" height="345" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0120_3163124767135612.jpg" aria-label="Ampliar foto 120 de 124"><img src="fotos/0120_3163124767135612.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 120" width="1069" height="1613" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0121_3239833226131432.jpg" aria-label="Ampliar foto 121 de 124"><img src="fotos/0121_3239833226131432.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 121" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0122_3239833279464760.jpg" aria-label="Ampliar foto 122 de 124"><img src="fotos/0122_3239833279464760.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 122" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0123_3239833352798086.jpg" aria-label="Ampliar foto 123 de 124"><img src="fotos/0123_3239833352798086.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 123" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0124_3475055162609236.jpg" aria-label="Ampliar foto 124 de 124"><img src="fotos/0124_3475055162609236.jpg" alt="Camila Silva — VAI-VAI 2019 — foto 124" width="1076" height="1062" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+  </section>
+</main>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+  <button class="lightbox__close" type="button" aria-label="Fechar">✕</button>
+  <button class="lightbox__nav lightbox__prev" type="button" aria-label="Foto anterior">‹</button>
+  <div class="lightbox__stage"><img alt=""></div>
+  <button class="lightbox__nav lightbox__next" type="button" aria-label="Próxima foto">›</button>
+  <div class="lightbox__bar">
+    <span data-counter>1 / 124</span>
+    <a data-download href="#" download>Baixar esta foto ↓</a>
+    <span>VAI-VAI 2019</span>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox');
+  if(!box) return;
+  var img=box.querySelector('.lightbox__stage img');
+  var counter=box.querySelector('[data-counter]');
+  var dl=box.querySelector('[data-download]');
+  var photos=[].slice.call(document.querySelectorAll('.photo'));
+  var idx=0;
+  function show(i){
+    idx=(i+photos.length)%photos.length;
+    var p=photos[idx];
+    img.src=p.getAttribute('data-full');
+    img.alt=p.querySelector('img')?.alt||'';
+    if(counter) counter.textContent=(idx+1)+' / '+photos.length;
+    if(dl){dl.href=p.getAttribute('data-full');dl.setAttribute('download',(p.getAttribute('data-full')||'').split('/').pop());}
+  }
+  function open(i){show(i);box.classList.add('is-open');document.body.style.overflow='hidden';}
+  function close(){box.classList.remove('is-open');document.body.style.overflow='';img.removeAttribute('src');}
+  photos.forEach(function(p,i){p.addEventListener('click',function(e){e.preventDefault();open(i);});});
+  box.querySelector('.lightbox__close').addEventListener('click',close);
+  box.querySelector('.lightbox__prev').addEventListener('click',function(){show(idx-1);});
+  box.querySelector('.lightbox__next').addEventListener('click',function(){show(idx+1);});
+  box.addEventListener('click',function(e){if(e.target===box||e.target.classList.contains('lightbox__stage'))close();});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+})();
+</script>
+</body>
+</html>

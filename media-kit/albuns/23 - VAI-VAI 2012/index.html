@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VAI-VAI 2012 — Acervo Camila Silva</title>
+<meta name="description" content="Álbum VAI-VAI 2012 do acervo de fotos de Camila Silva. 78 fotos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Instrument+Sans:ital,wght@0,400..600;1,400..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14100e;--wine:#5b1c22;--wine-soft:#7a2c33;--ivory:#f5efe6;--sand:#e7dbcb;
+  --text:#2b2420;--muted:#7c6f63;--line:rgba(20,16,14,.14);
+  --serif:"Fraunces",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1480px,calc(100% - 3rem));margin-inline:auto}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem 0;border-bottom:1px solid var(--line);background:rgba(245,239,230,.92);backdrop-filter:blur(14px)}
+.top a{text-decoration:none;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.top a:hover{color:var(--wine)}
+.brand{font-family:var(--serif);font-size:1rem;letter-spacing:.02em;text-transform:none!important}
+.hero{padding:clamp(3.5rem,8vw,7rem) 0 clamp(2rem,4vw,3.5rem)}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin:0 0 1.2rem;color:var(--wine);font-size:.62rem;
+  letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.55}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.96;letter-spacing:-.02em;margin:0}
+.hero p.lead{max-width:56ch;margin:1.6rem 0 0;color:var(--muted);font-size:clamp(.95rem,1.25vw,1.08rem);line-height:1.7}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.stats div{display:flex;flex-direction:column;gap:.25rem}
+.stats strong{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1}
+.stats span{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin:0 0 2rem}
+.search{flex:1 1 260px;max-width:420px}
+.search input{width:100%;padding:.85rem 1rem;border:1px solid var(--line);background:#fffdf9;color:var(--text);
+  font:inherit;font-size:.85rem;border-radius:1px;outline:none}
+.search input:focus{border-color:var(--wine)}
+.count{color:var(--muted);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(1rem,2vw,1.6rem);
+  padding-bottom:6rem}
+.card{position:relative;display:flex;flex-direction:column;text-decoration:none;background:#fffdf9;border:1px solid var(--line);
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,16,14,.12)}
+.card__img{aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card__img img{transform:scale(1.045)}
+.card__body{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;padding:1rem 1.1rem 1.15rem}
+.card__title{font-family:var(--serif);font-size:1.02rem;line-height:1.25;margin:0;font-weight:400}
+.card__num{flex:0 0 auto;color:var(--wine);font-size:.58rem;letter-spacing:.16em;font-weight:600}
+.card__meta{margin-top:.35rem;color:var(--muted);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+.album-head{padding:clamp(2.5rem,5vw,4.5rem) 0 1.8rem}
+.album-head h1{font-size:clamp(2rem,5vw,3.6rem)}
+.album-head .lead{margin-top:1rem;color:var(--muted);font-size:.92rem}
+.crumbs{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;color:var(--muted);font-size:.62rem;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.4rem}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{color:var(--wine)}
+.album-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:2.6rem;padding:.65rem 1.1rem;border:1px solid var(--ink);
+  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;background:transparent;cursor:pointer;
+  transition:background .3s,color .3s}
+.btn:hover{background:var(--ink);color:var(--ivory)}
+.btn--solid{background:var(--ink);color:var(--ivory)}
+.btn--solid:hover{background:var(--wine);border-color:var(--wine)}
+.masonry{column-count:4;column-gap:clamp(.6rem,1.2vw,1rem);padding-bottom:6rem}
+@media(max-width:1100px){.masonry{column-count:3}}
+@media(max-width:760px){.masonry{column-count:2}}
+@media(max-width:420px){.masonry{column-count:1}}
+.photo{position:relative;display:block;width:100%;margin:0 0 clamp(.6rem,1.2vw,1rem);padding:0;border:0;
+  background:var(--sand);cursor:zoom-in;break-inside:avoid;overflow:hidden}
+.photo img{width:100%;height:auto;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.photo:hover img{transform:scale(1.02)}
+.photo__zoom{position:absolute;right:.6rem;bottom:.6rem;width:2rem;height:2rem;display:grid;place-items:center;
+  border-radius:50%;background:rgba(20,16,14,.72);color:var(--ivory);opacity:0;transition:opacity .3s}
+.photo:hover .photo__zoom{opacity:1}
+.lightbox{position:fixed;inset:0;z-index:100;display:none;background:rgba(12,9,8,.96);padding:clamp(1rem,4vw,3rem)}
+.lightbox[open],.lightbox.is-open{display:grid;grid-template-rows:1fr auto;gap:1rem}
+.lightbox__stage{display:grid;place-items:center;min-height:0}
+.lightbox__stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lightbox__bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--ivory);
+  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.lightbox__bar a{color:var(--ivory);text-underline-offset:4px}
+.lightbox button{background:transparent;border:1px solid rgba(245,239,230,.4);color:var(--ivory);width:2.6rem;height:2.6rem;
+  display:grid;place-items:center;cursor:pointer;font-size:1rem}
+.lightbox button:hover{background:var(--ivory);color:var(--ink)}
+.lightbox__close{position:absolute;top:clamp(1rem,3vw,2rem);right:clamp(1rem,3vw,2rem);z-index:2}
+.lightbox__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
+.lightbox__prev{left:clamp(.5rem,2vw,1.5rem)}
+.lightbox__next{right:clamp(.5rem,2vw,1.5rem)}
+.empty{padding:6rem 0;text-align:center;color:var(--muted)}
+@media(max-width:640px){.wrap{width:calc(100% - 2rem)}.stats{gap:1.6rem}}
+@media print{.top,.toolbar,.album-actions,.lightbox{display:none!important}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+    <a class="brand" href="../index.html">Camila Silva <span style="color:var(--muted);font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase">· Acervo</span></a>
+    <a href="../index.html">← Todos os álbuns</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="album-head">
+    <nav class="crumbs" aria-label="Navegação">
+      <a href="../../index.html">Media kit</a><span>/</span><a href="../index.html">Álbuns</a><span>/</span><span>VAI-VAI 2012</span>
+    </nav>
+    <h1>VAI-VAI 2012</h1>
+    <p class="lead">78 fotos</p>
+    <div class="album-actions">
+      <a class="btn" href="https://www.facebook.com/media/set/?set=a.448042861977163&amp;type=3" target="_blank" rel="noopener">Ver álbum original no Facebook</a>
+      <a class="btn btn--solid" href="../index.html">Ver outros álbuns</a>
+    </div>
+  </section>
+  <section class="masonry" aria-label="Fotos do álbum VAI-VAI 2012">
+    <button class="photo" type="button" data-full="fotos/0001_369607244530658.jpg" aria-label="Ampliar foto 1 de 78"><img src="fotos/0001_369607244530658.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 1" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0002_398105328347516.jpg" aria-label="Ampliar foto 2 de 78"><img src="fotos/0002_398105328347516.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 2" width="956" height="500" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0003_439379169510199.jpg" aria-label="Ampliar foto 3 de 78"><img src="fotos/0003_439379169510199.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 3" width="960" height="594" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0004_439379179510198.jpg" aria-label="Ampliar foto 4 de 78"><img src="fotos/0004_439379179510198.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 4" width="665" height="344" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0005_439379219510194.jpg" aria-label="Ampliar foto 5 de 78"><img src="fotos/0005_439379219510194.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 5" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0006_439379232843526.jpg" aria-label="Ampliar foto 6 de 78"><img src="fotos/0006_439379232843526.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 6" width="565" height="430" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0007_439379236176859.jpg" aria-label="Ampliar foto 7 de 78"><img src="fotos/0007_439379236176859.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 7" width="325" height="206" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0008_439379366176846.jpg" aria-label="Ampliar foto 8 de 78"><img src="fotos/0008_439379366176846.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 8" width="399" height="600" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0009_439379549510161.jpg" aria-label="Ampliar foto 9 de 78"><img src="fotos/0009_439379549510161.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 9" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0010_448042891977160.jpg" aria-label="Ampliar foto 10 de 78"><img src="fotos/0010_448042891977160.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 10" width="460" height="308" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0011_448043181977131.jpg" aria-label="Ampliar foto 11 de 78"><img src="fotos/0011_448043181977131.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 11" width="600" height="371" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0012_448043215310461.jpg" aria-label="Ampliar foto 12 de 78"><img src="fotos/0012_448043215310461.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 12" width="700" height="404" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0013_448043251977124.jpg" aria-label="Ampliar foto 13 de 78"><img src="fotos/0013_448043251977124.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 13" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0014_448043261977123.jpg" aria-label="Ampliar foto 14 de 78"><img src="fotos/0014_448043261977123.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 14" width="960" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0015_448043318643784.jpg" aria-label="Ampliar foto 15 de 78"><img src="fotos/0015_448043318643784.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 15" width="614" height="461" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0016_448043371977112.jpg" aria-label="Ampliar foto 16 de 78"><img src="fotos/0016_448043371977112.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 16" width="960" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0017_448043395310443.jpg" aria-label="Ampliar foto 17 de 78"><img src="fotos/0017_448043395310443.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 17" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0018_448043428643773.jpg" aria-label="Ampliar foto 18 de 78"><img src="fotos/0018_448043428643773.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 18" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0019_630526180395496.jpg" aria-label="Ampliar foto 19 de 78"><img src="fotos/0019_630526180395496.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 19" width="417" height="556" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0020_630526187062162.jpg" aria-label="Ampliar foto 20 de 78"><img src="fotos/0020_630526187062162.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 20" width="400" height="601" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0021_630526190395495.jpg" aria-label="Ampliar foto 21 de 78"><img src="fotos/0021_630526190395495.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 21" width="639" height="426" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0022_630526260395488.jpg" aria-label="Ampliar foto 22 de 78"><img src="fotos/0022_630526260395488.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 22" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0023_630526277062153.jpg" aria-label="Ampliar foto 23 de 78"><img src="fotos/0023_630526277062153.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 23" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0024_630526283728819.jpg" aria-label="Ampliar foto 24 de 78"><img src="fotos/0024_630526283728819.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 24" width="493" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0025_630526317062149.jpg" aria-label="Ampliar foto 25 de 78"><img src="fotos/0025_630526317062149.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 25" width="417" height="556" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0026_630526353728812.jpg" aria-label="Ampliar foto 26 de 78"><img src="fotos/0026_630526353728812.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 26" width="400" height="600" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0027_630526403728807.jpg" aria-label="Ampliar foto 27 de 78"><img src="fotos/0027_630526403728807.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 27" width="400" height="600" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0028_630526503728797.jpg" aria-label="Ampliar foto 28 de 78"><img src="fotos/0028_630526503728797.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 28" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0029_630526530395461.jpg" aria-label="Ampliar foto 29 de 78"><img src="fotos/0029_630526530395461.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 29" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0030_630526573728790.jpg" aria-label="Ampliar foto 30 de 78"><img src="fotos/0030_630526573728790.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 30" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0031_630526590395455.jpg" aria-label="Ampliar foto 31 de 78"><img src="fotos/0031_630526590395455.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 31" width="417" height="624" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0032_630526603728787.jpg" aria-label="Ampliar foto 32 de 78"><img src="fotos/0032_630526603728787.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 32" width="370" height="211" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0033_630526643728783.jpg" aria-label="Ampliar foto 33 de 78"><img src="fotos/0033_630526643728783.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 33" width="835" height="586" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0034_630526677062113.jpg" aria-label="Ampliar foto 34 de 78"><img src="fotos/0034_630526677062113.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 34" width="417" height="556" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0035_630526717062109.jpg" aria-label="Ampliar foto 35 de 78"><img src="fotos/0035_630526717062109.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 35" width="960" height="638" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0036_630526737062107.jpg" aria-label="Ampliar foto 36 de 78"><img src="fotos/0036_630526737062107.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 36" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0037_630526757062105.jpg" aria-label="Ampliar foto 37 de 78"><img src="fotos/0037_630526757062105.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 37" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0038_630526767062104.jpg" aria-label="Ampliar foto 38 de 78"><img src="fotos/0038_630526767062104.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 38" width="639" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0039_630526783728769.jpg" aria-label="Ampliar foto 39 de 78"><img src="fotos/0039_630526783728769.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 39" width="400" height="600" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0040_630526810395433.jpg" aria-label="Ampliar foto 40 de 78"><img src="fotos/0040_630526810395433.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 40" width="400" height="600" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0041_630526857062095.jpg" aria-label="Ampliar foto 41 de 78"><img src="fotos/0041_630526857062095.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 41" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0042_630526900395424.jpg" aria-label="Ampliar foto 42 de 78"><img src="fotos/0042_630526900395424.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 42" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0043_630526927062088.jpg" aria-label="Ampliar foto 43 de 78"><img src="fotos/0043_630526927062088.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 43" width="960" height="717" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0044_630526933728754.jpg" aria-label="Ampliar foto 44 de 78"><img src="fotos/0044_630526933728754.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 44" width="625" height="417" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0045_630526983728749.jpg" aria-label="Ampliar foto 45 de 78"><img src="fotos/0045_630526983728749.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 45" width="640" height="427" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0046_630526993728748.jpg" aria-label="Ampliar foto 46 de 78"><img src="fotos/0046_630526993728748.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 46" width="316" height="236" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0047_630527023728745.jpg" aria-label="Ampliar foto 47 de 78"><img src="fotos/0047_630527023728745.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 47" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0048_630527053728742.jpg" aria-label="Ampliar foto 48 de 78"><img src="fotos/0048_630527053728742.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 48" width="370" height="211" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0049_630527103728737.jpg" aria-label="Ampliar foto 49 de 78"><img src="fotos/0049_630527103728737.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 49" width="417" height="556" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0050_630527123728735.jpg" aria-label="Ampliar foto 50 de 78"><img src="fotos/0050_630527123728735.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 50" width="320" height="180" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0051_663974803717300.png" aria-label="Ampliar foto 51 de 78"><img src="fotos/0051_663974803717300.png" alt="Camila Silva — VAI-VAI 2012 — foto 51" width="600" height="387" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0052_669711299810317.jpg" aria-label="Ampliar foto 52 de 78"><img src="fotos/0052_669711299810317.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 52" width="960" height="540" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0053_717817181666395.jpg" aria-label="Ampliar foto 53 de 78"><img src="fotos/0053_717817181666395.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 53" width="426" height="633" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0054_761905720590874.jpg" aria-label="Ampliar foto 54 de 78"><img src="fotos/0054_761905720590874.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 54" width="480" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0055_779381688843277.jpg" aria-label="Ampliar foto 55 de 78"><img src="fotos/0055_779381688843277.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 55" width="960" height="609" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0056_779381735509939.jpg" aria-label="Ampliar foto 56 de 78"><img src="fotos/0056_779381735509939.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 56" width="960" height="659" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0057_779381782176601.jpg" aria-label="Ampliar foto 57 de 78"><img src="fotos/0057_779381782176601.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 57" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0058_837285893052856.jpg" aria-label="Ampliar foto 58 de 78"><img src="fotos/0058_837285893052856.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 58" width="300" height="300" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0059_843199865794792.jpg" aria-label="Ampliar foto 59 de 78"><img src="fotos/0059_843199865794792.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 59" width="502" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0060_923715017743276.jpg" aria-label="Ampliar foto 60 de 78"><img src="fotos/0060_923715017743276.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 60" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0061_923723411075770.jpg" aria-label="Ampliar foto 61 de 78"><img src="fotos/0061_923723411075770.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 61" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0062_923723431075768.jpg" aria-label="Ampliar foto 62 de 78"><img src="fotos/0062_923723431075768.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 62" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0063_923729377741840.jpg" aria-label="Ampliar foto 63 de 78"><img src="fotos/0063_923729377741840.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 63" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0064_923741201073991.jpg" aria-label="Ampliar foto 64 de 78"><img src="fotos/0064_923741201073991.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 64" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0065_923768387737939.jpg" aria-label="Ampliar foto 65 de 78"><img src="fotos/0065_923768387737939.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 65" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0066_923783134403131.jpg" aria-label="Ampliar foto 66 de 78"><img src="fotos/0066_923783134403131.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 66" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0067_923857644395680.jpg" aria-label="Ampliar foto 67 de 78"><img src="fotos/0067_923857644395680.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 67" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0068_2848897808558311.jpg" aria-label="Ampliar foto 68 de 78"><img src="fotos/0068_2848897808558311.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 68" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0069_2904915836289841.jpg" aria-label="Ampliar foto 69 de 78"><img src="fotos/0069_2904915836289841.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 69" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0070_2978988892215868.jpg" aria-label="Ampliar foto 70 de 78"><img src="fotos/0070_2978988892215868.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 70" width="1053" height="698" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0071_2991486057632818.jpg" aria-label="Ampliar foto 71 de 78"><img src="fotos/0071_2991486057632818.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 71" width="1029" height="687" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0072_3002199456561478.jpg" aria-label="Ampliar foto 72 de 78"><img src="fotos/0072_3002199456561478.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 72" width="1044" height="699" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0073_3035478166566940.jpg" aria-label="Ampliar foto 73 de 78"><img src="fotos/0073_3035478166566940.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 73" width="422" height="629" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0074_3085838438197579.jpg" aria-label="Ampliar foto 74 de 78"><img src="fotos/0074_3085838438197579.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 74" width="985" height="653" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0075_3126496640798425.jpg" aria-label="Ampliar foto 75 de 78"><img src="fotos/0075_3126496640798425.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 75" width="977" height="651" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0076_3246257418822346.jpg" aria-label="Ampliar foto 76 de 78"><img src="fotos/0076_3246257418822346.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 76" width="984" height="649" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0077_3374058092708944.jpg" aria-label="Ampliar foto 77 de 78"><img src="fotos/0077_3374058092708944.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 77" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0078_3569472383167513.jpg" aria-label="Ampliar foto 78 de 78"><img src="fotos/0078_3569472383167513.jpg" alt="Camila Silva — VAI-VAI 2012 — foto 78" width="641" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+  </section>
+</main>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+  <button class="lightbox__close" type="button" aria-label="Fechar">✕</button>
+  <button class="lightbox__nav lightbox__prev" type="button" aria-label="Foto anterior">‹</button>
+  <div class="lightbox__stage"><img alt=""></div>
+  <button class="lightbox__nav lightbox__next" type="button" aria-label="Próxima foto">›</button>
+  <div class="lightbox__bar">
+    <span data-counter>1 / 78</span>
+    <a data-download href="#" download>Baixar esta foto ↓</a>
+    <span>VAI-VAI 2012</span>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox');
+  if(!box) return;
+  var img=box.querySelector('.lightbox__stage img');
+  var counter=box.querySelector('[data-counter]');
+  var dl=box.querySelector('[data-download]');
+  var photos=[].slice.call(document.querySelectorAll('.photo'));
+  var idx=0;
+  function show(i){
+    idx=(i+photos.length)%photos.length;
+    var p=photos[idx];
+    img.src=p.getAttribute('data-full');
+    img.alt=p.querySelector('img')?.alt||'';
+    if(counter) counter.textContent=(idx+1)+' / '+photos.length;
+    if(dl){dl.href=p.getAttribute('data-full');dl.setAttribute('download',(p.getAttribute('data-full')||'').split('/').pop());}
+  }
+  function open(i){show(i);box.classList.add('is-open');document.body.style.overflow='hidden';}
+  function close(){box.classList.remove('is-open');document.body.style.overflow='';img.removeAttribute('src');}
+  photos.forEach(function(p,i){p.addEventListener('click',function(e){e.preventDefault();open(i);});});
+  box.querySelector('.lightbox__close').addEventListener('click',close);
+  box.querySelector('.lightbox__prev').addEventListener('click',function(){show(idx-1);});
+  box.querySelector('.lightbox__next').addEventListener('click',function(){show(idx+1);});
+  box.addEventListener('click',function(e){if(e.target===box||e.target.classList.contains('lightbox__stage'))close();});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+})();
+</script>
+</body>
+</html>

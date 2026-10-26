@@ -1,0 +1,754 @@
+{
+  "albums": [
+    {
+      "id": "296714018486648",
+      "title": "Arquivos do celular",
+      "folder": "01 - Arquivos do celular",
+      "photos": 606,
+      "downloaded": 606,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.296714018486648&type=3"
+    },
+    {
+      "id": "1118235428291233",
+      "title": "Promoshoots/ Divulgação",
+      "folder": "02 - Promoshoots- Divulgação",
+      "photos": 176,
+      "downloaded": 176,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1118235428291233&type=3"
+    },
+    {
+      "id": "944698300354880",
+      "title": "U. DOS MORROS 2024",
+      "folder": "03 - U. DOS MORROS 2024",
+      "photos": 9,
+      "downloaded": 9,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.944698300354880&type=3"
+    },
+    {
+      "id": "947234886767888",
+      "title": "MOCIDADE ALEGRE 2024",
+      "folder": "04 - MOCIDADE ALEGRE 2024",
+      "photos": 15,
+      "downloaded": 15,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.947234886767888&type=3"
+    },
+    {
+      "id": "2371713916276705",
+      "title": "U. dos Morros: A beleza de ser um eterno aprendiz",
+      "folder": "05 - U. dos Morros- A beleza de ser um eterno aprendiz",
+      "photos": 120,
+      "downloaded": 120,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.2371713916276705&type=3"
+    },
+    {
+      "id": "923061125851931",
+      "title": "Mocidade Alegre: a Morada do Samba",
+      "folder": "06 - Mocidade Alegre- a Morada do Samba",
+      "photos": 54,
+      "downloaded": 54,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.923061125851931&type=3"
+    },
+    {
+      "id": "296714021819981",
+      "title": "Fotos do perfil",
+      "folder": "07 - Fotos do perfil",
+      "photos": 43,
+      "downloaded": 43,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.296714021819981&type=3"
+    },
+    {
+      "id": "296714028486647",
+      "title": "Fotos da capa",
+      "folder": "08 - Fotos da capa",
+      "photos": 46,
+      "downloaded": 46,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.296714028486647&type=3"
+    },
+    {
+      "id": "505406334284081",
+      "title": "Rainha do Carnaval de Coburgo 2022",
+      "folder": "09 - Rainha do Carnaval de Coburgo 2022",
+      "photos": 61,
+      "downloaded": 61,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.505406334284081&type=3"
+    },
+    {
+      "id": "1820260444755391",
+      "title": "Ensaio Quilombo do Futuro",
+      "folder": "10 - Ensaio Quilombo do Futuro",
+      "photos": 40,
+      "downloaded": 40,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1820260444755391&type=3"
+    },
+    {
+      "id": "528252831999431",
+      "title": "Mocidade: da Mooca tu és a mais bela",
+      "folder": "11 - Mocidade- da Mooca tu és a mais bela",
+      "photos": 168,
+      "downloaded": 168,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.528252831999431&type=3"
+    },
+    {
+      "id": "543629560461758",
+      "title": "MUM 2022",
+      "folder": "12 - MUM 2022",
+      "photos": 95,
+      "downloaded": 95,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.543629560461758&type=3"
+    },
+    {
+      "id": "2591827110932050",
+      "title": "Rainha do Carnaval do RJ 2020",
+      "folder": "13 - Rainha do Carnaval do RJ 2020",
+      "photos": 708,
+      "downloaded": 708,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.2591827110932050&type=3"
+    },
+    {
+      "id": "705121766269270",
+      "title": "VAI-VAI 2015",
+      "folder": "14 - VAI-VAI 2015",
+      "photos": 235,
+      "downloaded": 235,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.705121766269270&type=3"
+    },
+    {
+      "id": "630637823717665",
+      "title": "MOCIDADE 2013",
+      "folder": "15 - MOCIDADE 2013",
+      "photos": 101,
+      "downloaded": 101,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.630637823717665&type=3"
+    },
+    {
+      "id": "620661491381965",
+      "title": "Vai-Vai: minha raça, minha raiz",
+      "folder": "16 - Vai-Vai- minha raça, minha raiz",
+      "photos": 1392,
+      "downloaded": 1392,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.620661491381965&type=3"
+    },
+    {
+      "id": "439379099510206",
+      "title": "VAI-VAI 2011",
+      "folder": "17 - VAI-VAI 2011",
+      "photos": 57,
+      "downloaded": 57,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.439379099510206&type=3"
+    },
+    {
+      "id": "2665616090219818",
+      "title": "U. DOS MORROS 2020",
+      "folder": "18 - U. DOS MORROS 2020",
+      "photos": 84,
+      "downloaded": 84,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.2665616090219818&type=3"
+    },
+    {
+      "id": "1519429414838497",
+      "title": "VAI-VAI 2018",
+      "folder": "19 - VAI-VAI 2018",
+      "photos": 107,
+      "downloaded": 107,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1519429414838497&type=3"
+    },
+    {
+      "id": "1754747877973315",
+      "title": "Mocidade: sou independente, sou raiz",
+      "folder": "20 - Mocidade- sou independente, sou raiz",
+      "photos": 1066,
+      "downloaded": 1066,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1754747877973315&type=3"
+    },
+    {
+      "id": "2020694011378699",
+      "title": "MOCIDADE 2019",
+      "folder": "21 - MOCIDADE 2019",
+      "photos": 184,
+      "downloaded": 184,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.2020694011378699&type=3"
+    },
+    {
+      "id": "1519429508171821",
+      "title": "MOCIDADE 2018",
+      "folder": "22 - MOCIDADE 2018",
+      "photos": 214,
+      "downloaded": 214,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1519429508171821&type=3"
+    },
+    {
+      "id": "448042861977163",
+      "title": "VAI-VAI 2012",
+      "folder": "23 - VAI-VAI 2012",
+      "photos": 78,
+      "downloaded": 78,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.448042861977163&type=3"
+    },
+    {
+      "id": "1187186784729430",
+      "title": "MOCIDADE 2017",
+      "folder": "24 - MOCIDADE 2017",
+      "photos": 247,
+      "downloaded": 247,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1187186784729430&type=3"
+    },
+    {
+      "id": "656107414504039",
+      "title": "Rainha do Carnaval de SP 2009",
+      "folder": "25 - Rainha do Carnaval de SP 2009",
+      "photos": 72,
+      "downloaded": 72,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.656107414504039&type=3"
+    },
+    {
+      "id": "1185391401575635",
+      "title": "VAI-VAI 2017",
+      "folder": "26 - VAI-VAI 2017",
+      "photos": 225,
+      "downloaded": 225,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1185391401575635&type=3"
+    },
+    {
+      "id": "2020694328045334",
+      "title": "VAI-VAI 2019",
+      "folder": "27 - VAI-VAI 2019",
+      "photos": 124,
+      "downloaded": 124,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.2020694328045334&type=3"
+    },
+    {
+      "id": "878889605559151",
+      "title": "VAI-VAI 2016",
+      "folder": "28 - VAI-VAI 2016",
+      "photos": 289,
+      "downloaded": 289,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.878889605559151&type=3"
+    },
+    {
+      "id": "877863948995050",
+      "title": "MOCIDADE 2016",
+      "folder": "29 - MOCIDADE 2016",
+      "photos": 62,
+      "downloaded": 62,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.877863948995050&type=3"
+    },
+    {
+      "id": "3067880476660042",
+      "title": "Ensaio Beleza Negra",
+      "folder": "30 - Ensaio Beleza Negra",
+      "photos": 12,
+      "downloaded": 12,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.3067880476660042&type=3"
+    },
+    {
+      "id": "630603083721139",
+      "title": "VAI-VAI 2013",
+      "folder": "31 - VAI-VAI 2013",
+      "photos": 72,
+      "downloaded": 72,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.630603083721139&type=3"
+    },
+    {
+      "id": "296714035153313",
+      "title": "Fotos",
+      "folder": "32 - Fotos",
+      "photos": 446,
+      "downloaded": 446,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.296714035153313&type=3"
+    },
+    {
+      "id": "612730465508401",
+      "title": "VAI-VAI 2014",
+      "folder": "33 - VAI-VAI 2014",
+      "photos": 74,
+      "downloaded": 74,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.612730465508401&type=3"
+    },
+    {
+      "id": "777216265726486",
+      "title": "Ensaio Festas In",
+      "folder": "34 - Ensaio Festas In",
+      "photos": 60,
+      "downloaded": 60,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.777216265726486&type=3"
+    },
+    {
+      "id": "1519941511453954",
+      "title": "Ensaio G1 Vai-Vai",
+      "folder": "35 - Ensaio G1 Vai-Vai",
+      "photos": 13,
+      "downloaded": 13,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1519941511453954&type=3"
+    },
+    {
+      "id": "629962507118530",
+      "title": "VAI-VAI 2009",
+      "folder": "36 - VAI-VAI 2009",
+      "photos": 30,
+      "downloaded": 30,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.629962507118530&type=3"
+    },
+    {
+      "id": "441885119259604",
+      "title": "Ensaio by Claudio Lira",
+      "folder": "37 - Ensaio by Claudio Lira",
+      "photos": 35,
+      "downloaded": 35,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.441885119259604&type=3"
+    },
+    {
+      "id": "1388122164635890",
+      "title": "Ensaio Mocidade Guerreira",
+      "folder": "38 - Ensaio Mocidade Guerreira",
+      "photos": 43,
+      "downloaded": 43,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1388122164635890&type=3"
+    },
+    {
+      "id": "1400513903396716",
+      "title": "Ensaio Namastê",
+      "folder": "39 - Ensaio Namastê",
+      "photos": 21,
+      "downloaded": 21,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1400513903396716&type=3"
+    },
+    {
+      "id": "630094800438634",
+      "title": "VAI-VAI 2010",
+      "folder": "40 - VAI-VAI 2010",
+      "photos": 27,
+      "downloaded": 27,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.630094800438634&type=3"
+    },
+    {
+      "id": "2064935656954534",
+      "title": "Rainha do Carnaval de Estocolmo 2019",
+      "folder": "41 - Rainha do Carnaval de Estocolmo 2019",
+      "photos": 34,
+      "downloaded": 34,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.2064935656954534&type=3"
+    },
+    {
+      "id": "2489388774509218",
+      "title": "Festa do Clipe Bom Bom",
+      "folder": "42 - Festa do Clipe Bom Bom",
+      "photos": 46,
+      "downloaded": 46,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.2489388774509218&type=3"
+    },
+    {
+      "id": "444447462336703",
+      "title": "E foram tantos carnavais ♪",
+      "folder": "43 - E foram tantos carnavais",
+      "photos": 264,
+      "downloaded": 264,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.444447462336703&type=3"
+    },
+    {
+      "id": "638346756280105",
+      "title": "Ensaio Portal O Carnaval de São Paulo",
+      "folder": "44 - Ensaio Portal O Carnaval de São Paulo",
+      "photos": 49,
+      "downloaded": 49,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.638346756280105&type=3"
+    },
+    {
+      "id": "642764155838365",
+      "title": "Ensaio by Alex Pires",
+      "folder": "45 - Ensaio by Alex Pires",
+      "photos": 23,
+      "downloaded": 23,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.642764155838365&type=3"
+    },
+    {
+      "id": "2601504346630993",
+      "title": "Ensaio G1 Tuiuti",
+      "folder": "46 - Ensaio G1 Tuiuti",
+      "photos": 10,
+      "downloaded": 10,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.2601504346630993&type=3"
+    },
+    {
+      "id": "1999559556825478",
+      "title": "Ensaio G1 Mocidade",
+      "folder": "47 - Ensaio G1 Mocidade",
+      "photos": 10,
+      "downloaded": 10,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1999559556825478&type=3"
+    },
+    {
+      "id": "1962251593889608",
+      "title": "Ensaio Eu sou o tempo.. Tempo é vida",
+      "folder": "48 - Ensaio Eu sou o tempo.. Tempo é vida",
+      "photos": 14,
+      "downloaded": 14,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1962251593889608&type=3"
+    },
+    {
+      "id": "1868367266611375",
+      "title": "B'day Camila Silva faz 32",
+      "folder": "49 - B'day Camila Silva faz 32",
+      "photos": 18,
+      "downloaded": 18,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1868367266611375&type=3"
+    },
+    {
+      "id": "1199647820149993",
+      "title": "Ensaio G1/ Carnaval SP 2017",
+      "folder": "50 - Ensaio G1- Carnaval SP 2017",
+      "photos": 12,
+      "downloaded": 12,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1199647820149993&type=3"
+    },
+    {
+      "id": "1391016354346471",
+      "title": "Ensaio Africanize",
+      "folder": "51 - Ensaio Africanize",
+      "photos": 13,
+      "downloaded": 13,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1391016354346471&type=3"
+    },
+    {
+      "id": "808899912558121",
+      "title": "Central Girls",
+      "folder": "52 - Central Girls",
+      "photos": 85,
+      "downloaded": 85,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.808899912558121&type=3"
+    },
+    {
+      "id": "1430146480433458",
+      "title": "Majestades do Carnaval",
+      "folder": "53 - Majestades do Carnaval",
+      "photos": 473,
+      "downloaded": 473,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1430146480433458&type=3"
+    },
+    {
+      "id": "1287998617981579",
+      "title": "Estréia da peça \"Louca & Ciumenta\"",
+      "folder": "54 - Estréia da peça -Louca & Ciumenta",
+      "photos": 17,
+      "downloaded": 17,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1287998617981579&type=3"
+    },
+    {
+      "id": "1169123659869076",
+      "title": "Ensaio Não Existe Mais Quente",
+      "folder": "55 - Ensaio Não Existe Mais Quente",
+      "photos": 26,
+      "downloaded": 26,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1169123659869076&type=3"
+    },
+    {
+      "id": "1174224226025686",
+      "title": "Ensaio EGO/ Carnaval 2017",
+      "folder": "56 - Ensaio EGO- Carnaval 2017",
+      "photos": 8,
+      "downloaded": 8,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1174224226025686&type=3"
+    },
+    {
+      "id": "1168183196629789",
+      "title": "Ensaio UOL 2017",
+      "folder": "57 - Ensaio UOL 2017",
+      "photos": 15,
+      "downloaded": 15,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1168183196629789&type=3"
+    },
+    {
+      "id": "1162185890562853",
+      "title": "Ensaio PAPARAZZO",
+      "folder": "58 - Ensaio PAPARAZZO",
+      "photos": 45,
+      "downloaded": 45,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1162185890562853&type=3"
+    },
+    {
+      "id": "1106426209472155",
+      "title": "Minissérie Dois Irmãos",
+      "folder": "59 - Minissérie Dois Irmãos",
+      "photos": 22,
+      "downloaded": 22,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.1106426209472155&type=3"
+    },
+    {
+      "id": "870847343030044",
+      "title": "Ensaio UOL/ Vai-Vai",
+      "folder": "60 - Ensaio UOL- Vai-Vai",
+      "photos": 23,
+      "downloaded": 23,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.870847343030044&type=3"
+    },
+    {
+      "id": "632569553524492",
+      "title": "Ensaio IG/ Lapa, RJ",
+      "folder": "61 - Ensaio IG- Lapa, RJ",
+      "photos": 32,
+      "downloaded": 32,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.632569553524492&type=3"
+    },
+    {
+      "id": "954971541284290",
+      "title": "Evento Carmen Steffens",
+      "folder": "62 - Evento Carmen Steffens",
+      "photos": 14,
+      "downloaded": 14,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.954971541284290&type=3"
+    },
+    {
+      "id": "634639083317539",
+      "title": "Revista SAMPA Carnaval e Turismo",
+      "folder": "63 - Revista SAMPA Carnaval e Turismo",
+      "photos": 12,
+      "downloaded": 12,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.634639083317539&type=3"
+    },
+    {
+      "id": "811943615587084",
+      "title": "Festa Tri Troféu Nota 10",
+      "folder": "64 - Festa Tri Troféu Nota 10",
+      "photos": 35,
+      "downloaded": 35,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.811943615587084&type=3"
+    },
+    {
+      "id": "642685925846188",
+      "title": "Camisa Verde e Branco 2008",
+      "folder": "65 - Camisa Verde e Branco 2008",
+      "photos": 11,
+      "downloaded": 11,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.642685925846188&type=3"
+    },
+    {
+      "id": "635400676574713",
+      "title": "Ensaio by Alex Nunes",
+      "folder": "66 - Ensaio by Alex Nunes",
+      "photos": 21,
+      "downloaded": 21,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.635400676574713&type=3"
+    },
+    {
+      "id": "790974384350674",
+      "title": "Ensaio Awagun Modas",
+      "folder": "67 - Ensaio Awagun Modas",
+      "photos": 11,
+      "downloaded": 11,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.790974384350674&type=3"
+    },
+    {
+      "id": "696387297142717",
+      "title": "Ensaio IG/ Vai-Vai 2015",
+      "folder": "68 - Ensaio IG- Vai-Vai 2015",
+      "photos": 22,
+      "downloaded": 22,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.696387297142717&type=3"
+    },
+    {
+      "id": "776334139148032",
+      "title": "Ensaio RVSTG",
+      "folder": "69 - Ensaio RVSTG",
+      "photos": 20,
+      "downloaded": 20,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.776334139148032&type=3"
+    },
+    {
+      "id": "635336013247846",
+      "title": "Ensaio G1/ Mocidade Independente de Padre Miguel",
+      "folder": "70 - Ensaio G1- Mocidade Independente de Padre Miguel",
+      "photos": 10,
+      "downloaded": 10,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.635336013247846&type=3"
+    },
+    {
+      "id": "634743636640417",
+      "title": "Ensaio G1/ Vinhos do Brasil",
+      "folder": "71 - Ensaio G1- Vinhos do Brasil",
+      "photos": 15,
+      "downloaded": 15,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.634743636640417&type=3"
+    },
+    {
+      "id": "633811206733660",
+      "title": "Ensaio IG/ Despindo Camila Silva",
+      "folder": "72 - Ensaio IG- Despindo Camila Silva",
+      "photos": 9,
+      "downloaded": 9,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.633811206733660&type=3"
+    },
+    {
+      "id": "632758843505563",
+      "title": "Ensaio G1/ Sala São Paulo",
+      "folder": "73 - Ensaio G1- Sala São Paulo",
+      "photos": 11,
+      "downloaded": 11,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.632758843505563&type=3"
+    },
+    {
+      "id": "632712013510246",
+      "title": "Ensaio EGO/ Mocidade Indepedente de Padre Miguel",
+      "folder": "74 - Ensaio EGO- Mocidade Indepedente de Padre Miguel",
+      "photos": 13,
+      "downloaded": 13,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.632712013510246&type=3"
+    },
+    {
+      "id": "632647016850079",
+      "title": "Ensaio IG/ Vai-Vai",
+      "folder": "75 - Ensaio IG- Vai-Vai",
+      "photos": 15,
+      "downloaded": 15,
+      "failed": 0,
+      "videos_skipped": 0,
+      "source_url": "https://www.facebook.com/media/set/?set=a.632647016850079&type=3"
+    }
+  ]
+}

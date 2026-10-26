@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U. DOS MORROS 2020 — Acervo Camila Silva</title>
+<meta name="description" content="Álbum U. DOS MORROS 2020 do acervo de fotos de Camila Silva. 84 fotos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Instrument+Sans:ital,wght@0,400..600;1,400..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14100e;--wine:#5b1c22;--wine-soft:#7a2c33;--ivory:#f5efe6;--sand:#e7dbcb;
+  --text:#2b2420;--muted:#7c6f63;--line:rgba(20,16,14,.14);
+  --serif:"Fraunces",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1480px,calc(100% - 3rem));margin-inline:auto}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem 0;border-bottom:1px solid var(--line);background:rgba(245,239,230,.92);backdrop-filter:blur(14px)}
+.top a{text-decoration:none;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.top a:hover{color:var(--wine)}
+.brand{font-family:var(--serif);font-size:1rem;letter-spacing:.02em;text-transform:none!important}
+.hero{padding:clamp(3.5rem,8vw,7rem) 0 clamp(2rem,4vw,3.5rem)}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin:0 0 1.2rem;color:var(--wine);font-size:.62rem;
+  letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.55}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.96;letter-spacing:-.02em;margin:0}
+.hero p.lead{max-width:56ch;margin:1.6rem 0 0;color:var(--muted);font-size:clamp(.95rem,1.25vw,1.08rem);line-height:1.7}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.stats div{display:flex;flex-direction:column;gap:.25rem}
+.stats strong{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1}
+.stats span{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin:0 0 2rem}
+.search{flex:1 1 260px;max-width:420px}
+.search input{width:100%;padding:.85rem 1rem;border:1px solid var(--line);background:#fffdf9;color:var(--text);
+  font:inherit;font-size:.85rem;border-radius:1px;outline:none}
+.search input:focus{border-color:var(--wine)}
+.count{color:var(--muted);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(1rem,2vw,1.6rem);
+  padding-bottom:6rem}
+.card{position:relative;display:flex;flex-direction:column;text-decoration:none;background:#fffdf9;border:1px solid var(--line);
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,16,14,.12)}
+.card__img{aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card__img img{transform:scale(1.045)}
+.card__body{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;padding:1rem 1.1rem 1.15rem}
+.card__title{font-family:var(--serif);font-size:1.02rem;line-height:1.25;margin:0;font-weight:400}
+.card__num{flex:0 0 auto;color:var(--wine);font-size:.58rem;letter-spacing:.16em;font-weight:600}
+.card__meta{margin-top:.35rem;color:var(--muted);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+.album-head{padding:clamp(2.5rem,5vw,4.5rem) 0 1.8rem}
+.album-head h1{font-size:clamp(2rem,5vw,3.6rem)}
+.album-head .lead{margin-top:1rem;color:var(--muted);font-size:.92rem}
+.crumbs{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;color:var(--muted);font-size:.62rem;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.4rem}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{color:var(--wine)}
+.album-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:2.6rem;padding:.65rem 1.1rem;border:1px solid var(--ink);
+  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;background:transparent;cursor:pointer;
+  transition:background .3s,color .3s}
+.btn:hover{background:var(--ink);color:var(--ivory)}
+.btn--solid{background:var(--ink);color:var(--ivory)}
+.btn--solid:hover{background:var(--wine);border-color:var(--wine)}
+.masonry{column-count:4;column-gap:clamp(.6rem,1.2vw,1rem);padding-bottom:6rem}
+@media(max-width:1100px){.masonry{column-count:3}}
+@media(max-width:760px){.masonry{column-count:2}}
+@media(max-width:420px){.masonry{column-count:1}}
+.photo{position:relative;display:block;width:100%;margin:0 0 clamp(.6rem,1.2vw,1rem);padding:0;border:0;
+  background:var(--sand);cursor:zoom-in;break-inside:avoid;overflow:hidden}
+.photo img{width:100%;height:auto;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.photo:hover img{transform:scale(1.02)}
+.photo__zoom{position:absolute;right:.6rem;bottom:.6rem;width:2rem;height:2rem;display:grid;place-items:center;
+  border-radius:50%;background:rgba(20,16,14,.72);color:var(--ivory);opacity:0;transition:opacity .3s}
+.photo:hover .photo__zoom{opacity:1}
+.lightbox{position:fixed;inset:0;z-index:100;display:none;background:rgba(12,9,8,.96);padding:clamp(1rem,4vw,3rem)}
+.lightbox[open],.lightbox.is-open{display:grid;grid-template-rows:1fr auto;gap:1rem}
+.lightbox__stage{display:grid;place-items:center;min-height:0}
+.lightbox__stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lightbox__bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--ivory);
+  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.lightbox__bar a{color:var(--ivory);text-underline-offset:4px}
+.lightbox button{background:transparent;border:1px solid rgba(245,239,230,.4);color:var(--ivory);width:2.6rem;height:2.6rem;
+  display:grid;place-items:center;cursor:pointer;font-size:1rem}
+.lightbox button:hover{background:var(--ivory);color:var(--ink)}
+.lightbox__close{position:absolute;top:clamp(1rem,3vw,2rem);right:clamp(1rem,3vw,2rem);z-index:2}
+.lightbox__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
+.lightbox__prev{left:clamp(.5rem,2vw,1.5rem)}
+.lightbox__next{right:clamp(.5rem,2vw,1.5rem)}
+.empty{padding:6rem 0;text-align:center;color:var(--muted)}
+@media(max-width:640px){.wrap{width:calc(100% - 2rem)}.stats{gap:1.6rem}}
+@media print{.top,.toolbar,.album-actions,.lightbox{display:none!important}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+    <a class="brand" href="../index.html">Camila Silva <span style="color:var(--muted);font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase">· Acervo</span></a>
+    <a href="../index.html">← Todos os álbuns</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="album-head">
+    <nav class="crumbs" aria-label="Navegação">
+      <a href="../../index.html">Media kit</a><span>/</span><a href="../index.html">Álbuns</a><span>/</span><span>U. DOS MORROS 2020</span>
+    </nav>
+    <h1>U. DOS MORROS 2020</h1>
+    <p class="lead">84 fotos</p>
+    <div class="album-actions">
+      <a class="btn" href="https://www.facebook.com/media/set/?set=a.2665616090219818&amp;type=3" target="_blank" rel="noopener">Ver álbum original no Facebook</a>
+      <a class="btn btn--solid" href="../index.html">Ver outros álbuns</a>
+    </div>
+  </section>
+  <section class="masonry" aria-label="Fotos do álbum U. DOS MORROS 2020">
+    <button class="photo" type="button" data-full="fotos/0001_369598841198165.jpg" aria-label="Ampliar foto 1 de 84"><img src="fotos/0001_369598841198165.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 1" width="1080" height="1620" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0002_369598977864818.jpg" aria-label="Ampliar foto 2 de 84"><img src="fotos/0002_369598977864818.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 2" width="1080" height="1795" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0003_369599167864799.jpg" aria-label="Ampliar foto 3 de 84"><img src="fotos/0003_369599167864799.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 3" width="1080" height="1620" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0004_369599214531461.jpg" aria-label="Ampliar foto 4 de 84"><img src="fotos/0004_369599214531461.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 4" width="1080" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0005_369599241198125.jpg" aria-label="Ampliar foto 5 de 84"><img src="fotos/0005_369599241198125.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 5" width="1080" height="1620" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0006_369599291198120.jpg" aria-label="Ampliar foto 6 de 84"><img src="fotos/0006_369599291198120.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 6" width="1080" height="1620" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0007_369606994530683.jpg" aria-label="Ampliar foto 7 de 84"><img src="fotos/0007_369606994530683.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 7" width="1080" height="1620" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0008_369607087864007.jpg" aria-label="Ampliar foto 8 de 84"><img src="fotos/0008_369607087864007.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 8" width="1080" height="1620" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0009_382577616566954.jpg" aria-label="Ampliar foto 9 de 84"><img src="fotos/0009_382577616566954.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 9" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0010_448666876624694.jpg" aria-label="Ampliar foto 10 de 84"><img src="fotos/0010_448666876624694.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 10" width="1080" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0011_491049982386383.jpg" aria-label="Ampliar foto 11 de 84"><img src="fotos/0011_491049982386383.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 11" width="1080" height="712" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0012_2661235310657896.jpg" aria-label="Ampliar foto 12 de 84"><img src="fotos/0012_2661235310657896.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 12" width="1080" height="718" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0013_2662051673909593.jpg" aria-label="Ampliar foto 13 de 84"><img src="fotos/0013_2662051673909593.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 13" width="1080" height="711" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0014_2662485817199512.jpg" aria-label="Ampliar foto 14 de 84"><img src="fotos/0014_2662485817199512.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 14" width="1080" height="716" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0015_2663168227131271.jpg" aria-label="Ampliar foto 15 de 84"><img src="fotos/0015_2663168227131271.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 15" width="1080" height="1430" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0016_2663893827058711.jpg" aria-label="Ampliar foto 16 de 84"><img src="fotos/0016_2663893827058711.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 16" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0017_2663937737054320.jpg" aria-label="Ampliar foto 17 de 84"><img src="fotos/0017_2663937737054320.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 17" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0018_2663997067048387.jpg" aria-label="Ampliar foto 18 de 84"><img src="fotos/0018_2663997067048387.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 18" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0019_2664087667039327.jpg" aria-label="Ampliar foto 19 de 84"><img src="fotos/0019_2664087667039327.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 19" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0020_2664389013675859.jpg" aria-label="Ampliar foto 20 de 84"><img src="fotos/0020_2664389013675859.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 20" width="720" height="469" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0021_2665526553562105.jpg" aria-label="Ampliar foto 21 de 84"><img src="fotos/0021_2665526553562105.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 21" width="1080" height="1619" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0022_2665527103562050.jpg" aria-label="Ampliar foto 22 de 84"><img src="fotos/0022_2665527103562050.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 22" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0023_2665527933561967.jpg" aria-label="Ampliar foto 23 de 84"><img src="fotos/0023_2665527933561967.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 23" width="1080" height="1630" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0024_2665528456895248.jpg" aria-label="Ampliar foto 24 de 84"><img src="fotos/0024_2665528456895248.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 24" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0025_2665549603559800.jpg" aria-label="Ampliar foto 25 de 84"><img src="fotos/0025_2665549603559800.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 25" width="1080" height="1630" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0026_2665550060226421.jpg" aria-label="Ampliar foto 26 de 84"><img src="fotos/0026_2665550060226421.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 26" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0027_2665550523559708.jpg" aria-label="Ampliar foto 27 de 84"><img src="fotos/0027_2665550523559708.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 27" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0028_2665550960226331.jpg" aria-label="Ampliar foto 28 de 84"><img src="fotos/0028_2665550960226331.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 28" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0029_2665551396892954.jpg" aria-label="Ampliar foto 29 de 84"><img src="fotos/0029_2665551396892954.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 29" width="720" height="1196" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0030_2665552863559474.jpg" aria-label="Ampliar foto 30 de 84"><img src="fotos/0030_2665552863559474.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 30" width="960" height="636" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0031_2665552936892800.jpg" aria-label="Ampliar foto 31 de 84"><img src="fotos/0031_2665552936892800.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 31" width="720" height="470" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0032_2665553046892789.jpg" aria-label="Ampliar foto 32 de 84"><img src="fotos/0032_2665553046892789.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 32" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0033_2665852916862802.jpg" aria-label="Ampliar foto 33 de 84"><img src="fotos/0033_2665852916862802.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 33" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0034_2665854023529358.jpg" aria-label="Ampliar foto 34 de 84"><img src="fotos/0034_2665854023529358.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 34" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0035_2665855580195869.jpg" aria-label="Ampliar foto 35 de 84"><img src="fotos/0035_2665855580195869.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 35" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0036_2665878103526950.jpg" aria-label="Ampliar foto 36 de 84"><img src="fotos/0036_2665878103526950.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 36" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0037_2665878446860249.jpg" aria-label="Ampliar foto 37 de 84"><img src="fotos/0037_2665878446860249.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 37" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0038_2665878903526870.jpg" aria-label="Ampliar foto 38 de 84"><img src="fotos/0038_2665878903526870.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 38" width="804" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0039_2665890023525758.jpg" aria-label="Ampliar foto 39 de 84"><img src="fotos/0039_2665890023525758.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 39" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0040_2665961180185309.jpg" aria-label="Ampliar foto 40 de 84"><img src="fotos/0040_2665961180185309.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 40" width="1080" height="713" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0041_2666081043506656.jpg" aria-label="Ampliar foto 41 de 84"><img src="fotos/0041_2666081043506656.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 41" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0042_2666081503506610.jpg" aria-label="Ampliar foto 42 de 84"><img src="fotos/0042_2666081503506610.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 42" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0043_2666082030173224.jpg" aria-label="Ampliar foto 43 de 84"><img src="fotos/0043_2666082030173224.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 43" width="960" height="726" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0044_2666082403506520.jpg" aria-label="Ampliar foto 44 de 84"><img src="fotos/0044_2666082403506520.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 44" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0045_2666579200123507.jpg" aria-label="Ampliar foto 45 de 84"><img src="fotos/0045_2666579200123507.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 45" width="1070" height="1085" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0046_2668230966624997.jpg" aria-label="Ampliar foto 46 de 84"><img src="fotos/0046_2668230966624997.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 46" width="1070" height="716" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0047_2681631211951639.jpg" aria-label="Ampliar foto 47 de 84"><img src="fotos/0047_2681631211951639.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 47" width="1080" height="1620" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0048_2681891498592277.jpg" aria-label="Ampliar foto 48 de 84"><img src="fotos/0048_2681891498592277.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 48" width="1075" height="714" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0049_2684623651652395.jpg" aria-label="Ampliar foto 49 de 84"><img src="fotos/0049_2684623651652395.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 49" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0050_2684623744985719.jpg" aria-label="Ampliar foto 50 de 84"><img src="fotos/0050_2684623744985719.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 50" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0051_2690579487723478.jpg" aria-label="Ampliar foto 51 de 84"><img src="fotos/0051_2690579487723478.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 51" width="1079" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0052_2692263980888362.jpg" aria-label="Ampliar foto 52 de 84"><img src="fotos/0052_2692263980888362.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 52" width="1079" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0053_2692741000840660.jpg" aria-label="Ampliar foto 53 de 84"><img src="fotos/0053_2692741000840660.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 53" width="1079" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0054_2692745254173568.jpg" aria-label="Ampliar foto 54 de 84"><img src="fotos/0054_2692745254173568.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 54" width="1079" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0055_2692753917506035.jpg" aria-label="Ampliar foto 55 de 84"><img src="fotos/0055_2692753917506035.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 55" width="1080" height="1619" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0056_2694717500643010.jpg" aria-label="Ampliar foto 56 de 84"><img src="fotos/0056_2694717500643010.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 56" width="960" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0057_2694717583976335.jpg" aria-label="Ampliar foto 57 de 84"><img src="fotos/0057_2694717583976335.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 57" width="960" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0058_2694717710642989.jpg" aria-label="Ampliar foto 58 de 84"><img src="fotos/0058_2694717710642989.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 58" width="960" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0059_2694717890642971.jpg" aria-label="Ampliar foto 59 de 84"><img src="fotos/0059_2694717890642971.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 59" width="960" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0060_2694717987309628.jpg" aria-label="Ampliar foto 60 de 84"><img src="fotos/0060_2694717987309628.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 60" width="960" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0061_2694718093976284.jpg" aria-label="Ampliar foto 61 de 84"><img src="fotos/0061_2694718093976284.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 61" width="960" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0062_2694718173976276.jpg" aria-label="Ampliar foto 62 de 84"><img src="fotos/0062_2694718173976276.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 62" width="960" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0063_2743091862472240.jpg" aria-label="Ampliar foto 63 de 84"><img src="fotos/0063_2743091862472240.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 63" width="339" height="508" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0064_2757571761024250.jpg" aria-label="Ampliar foto 64 de 84"><img src="fotos/0064_2757571761024250.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 64" width="960" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0065_2757571831024243.jpg" aria-label="Ampliar foto 65 de 84"><img src="fotos/0065_2757571831024243.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 65" width="960" height="555" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0066_2767058603408899.jpg" aria-label="Ampliar foto 66 de 84"><img src="fotos/0066_2767058603408899.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 66" width="720" height="1080" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0067_2812902165491209.jpg" aria-label="Ampliar foto 67 de 84"><img src="fotos/0067_2812902165491209.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 67" width="1080" height="1794" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0068_2949204485194309.jpg" aria-label="Ampliar foto 68 de 84"><img src="fotos/0068_2949204485194309.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 68" width="1080" height="1263" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0069_3054781744636582.jpg" aria-label="Ampliar foto 69 de 84"><img src="fotos/0069_3054781744636582.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 69" width="960" height="636" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0070_3054781864636570.jpg" aria-label="Ampliar foto 70 de 84"><img src="fotos/0070_3054781864636570.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 70" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0071_3179680362146719.jpg" aria-label="Ampliar foto 71 de 84"><img src="fotos/0071_3179680362146719.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 71" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0072_3180330495415039.jpg" aria-label="Ampliar foto 72 de 84"><img src="fotos/0072_3180330495415039.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 72" width="1080" height="1440" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0073_3183823208399101.jpg" aria-label="Ampliar foto 73 de 84"><img src="fotos/0073_3183823208399101.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 73" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0074_3187512421363513.jpg" aria-label="Ampliar foto 74 de 84"><img src="fotos/0074_3187512421363513.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 74" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0075_3192564137525008.jpg" aria-label="Ampliar foto 75 de 84"><img src="fotos/0075_3192564137525008.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 75" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0076_3195638077217614.jpg" aria-label="Ampliar foto 76 de 84"><img src="fotos/0076_3195638077217614.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 76" width="1071" height="1071" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0077_3208611202586968.jpg" aria-label="Ampliar foto 77 de 84"><img src="fotos/0077_3208611202586968.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 77" width="1080" height="1440" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0078_3227560780692010.jpg" aria-label="Ampliar foto 78 de 84"><img src="fotos/0078_3227560780692010.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 78" width="1080" height="1440" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0079_3230424900405598.jpg" aria-label="Ampliar foto 79 de 84"><img src="fotos/0079_3230424900405598.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 79" width="1080" height="701" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0080_3236651376449617.jpg" aria-label="Ampliar foto 80 de 84"><img src="fotos/0080_3236651376449617.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 80" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0081_3517668891681196.jpg" aria-label="Ampliar foto 81 de 84"><img src="fotos/0081_3517668891681196.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 81" width="1080" height="1324" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0082_3534614369986648.jpg" aria-label="Ampliar foto 82 de 84"><img src="fotos/0082_3534614369986648.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 82" width="1080" height="1852" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0083_3538527219595363.jpg" aria-label="Ampliar foto 83 de 84"><img src="fotos/0083_3538527219595363.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 83" width="1080" height="1409" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0084_3581511775296907.jpg" aria-label="Ampliar foto 84 de 84"><img src="fotos/0084_3581511775296907.jpg" alt="Camila Silva — U. DOS MORROS 2020 — foto 84" width="1080" height="1620" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+  </section>
+</main>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+  <button class="lightbox__close" type="button" aria-label="Fechar">✕</button>
+  <button class="lightbox__nav lightbox__prev" type="button" aria-label="Foto anterior">‹</button>
+  <div class="lightbox__stage"><img alt=""></div>
+  <button class="lightbox__nav lightbox__next" type="button" aria-label="Próxima foto">›</button>
+  <div class="lightbox__bar">
+    <span data-counter>1 / 84</span>
+    <a data-download href="#" download>Baixar esta foto ↓</a>
+    <span>U. DOS MORROS 2020</span>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox');
+  if(!box) return;
+  var img=box.querySelector('.lightbox__stage img');
+  var counter=box.querySelector('[data-counter]');
+  var dl=box.querySelector('[data-download]');
+  var photos=[].slice.call(document.querySelectorAll('.photo'));
+  var idx=0;
+  function show(i){
+    idx=(i+photos.length)%photos.length;
+    var p=photos[idx];
+    img.src=p.getAttribute('data-full');
+    img.alt=p.querySelector('img')?.alt||'';
+    if(counter) counter.textContent=(idx+1)+' / '+photos.length;
+    if(dl){dl.href=p.getAttribute('data-full');dl.setAttribute('download',(p.getAttribute('data-full')||'').split('/').pop());}
+  }
+  function open(i){show(i);box.classList.add('is-open');document.body.style.overflow='hidden';}
+  function close(){box.classList.remove('is-open');document.body.style.overflow='';img.removeAttribute('src');}
+  photos.forEach(function(p,i){p.addEventListener('click',function(e){e.preventDefault();open(i);});});
+  box.querySelector('.lightbox__close').addEventListener('click',close);
+  box.querySelector('.lightbox__prev').addEventListener('click',function(){show(idx-1);});
+  box.querySelector('.lightbox__next').addEventListener('click',function(){show(idx+1);});
+  box.addEventListener('click',function(e){if(e.target===box||e.target.classList.contains('lightbox__stage'))close();});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+})();
+</script>
+</body>
+</html>

@@ -97,6 +97,10 @@
       "gallery.intro": "Retratos e cenas de palco que traduzem força, elegância e brasilidade.",
       "gallery.hint": "Clique em uma imagem para ampliar.",
       "gallery.altProfile": "Retrato de Camila Silva em traje bege",
+      "gallery.archiveLabel": "Acervo completo",
+      "gallery.archiveTitle": "75 álbuns, 8.969 fotos.",
+      "gallery.archiveText": "Todas as fotos da página oficial organizadas por álbum — carnaval, ensaios, palcos e bastidores.",
+      "gallery.archiveCta": "Explorar o acervo",
 
       "videos.label": "Vídeos",
       "videos.title": "O palco em movimento.",
@@ -277,6 +281,10 @@
       "gallery.intro": "Portraits and stage moments that convey strength, elegance and Brazilian identity.",
       "gallery.hint": "Click an image to enlarge.",
       "gallery.altProfile": "Portrait of Camila Silva in a beige outfit",
+      "gallery.archiveLabel": "Full archive",
+      "gallery.archiveTitle": "75 albums, 8,969 photos.",
+      "gallery.archiveText": "Every photo from the official page, organized by album — carnival, editorials, stages and backstage.",
+      "gallery.archiveCta": "Explore the archive",
 
       "videos.label": "Videos",
       "videos.title": "The stage in motion.",

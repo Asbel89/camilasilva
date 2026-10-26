@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOCIDADE 2013 — Acervo Camila Silva</title>
+<meta name="description" content="Álbum MOCIDADE 2013 do acervo de fotos de Camila Silva. 101 fotos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Instrument+Sans:ital,wght@0,400..600;1,400..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14100e;--wine:#5b1c22;--wine-soft:#7a2c33;--ivory:#f5efe6;--sand:#e7dbcb;
+  --text:#2b2420;--muted:#7c6f63;--line:rgba(20,16,14,.14);
+  --serif:"Fraunces",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1480px,calc(100% - 3rem));margin-inline:auto}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem 0;border-bottom:1px solid var(--line);background:rgba(245,239,230,.92);backdrop-filter:blur(14px)}
+.top a{text-decoration:none;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.top a:hover{color:var(--wine)}
+.brand{font-family:var(--serif);font-size:1rem;letter-spacing:.02em;text-transform:none!important}
+.hero{padding:clamp(3.5rem,8vw,7rem) 0 clamp(2rem,4vw,3.5rem)}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin:0 0 1.2rem;color:var(--wine);font-size:.62rem;
+  letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.55}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.96;letter-spacing:-.02em;margin:0}
+.hero p.lead{max-width:56ch;margin:1.6rem 0 0;color:var(--muted);font-size:clamp(.95rem,1.25vw,1.08rem);line-height:1.7}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.stats div{display:flex;flex-direction:column;gap:.25rem}
+.stats strong{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1}
+.stats span{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin:0 0 2rem}
+.search{flex:1 1 260px;max-width:420px}
+.search input{width:100%;padding:.85rem 1rem;border:1px solid var(--line);background:#fffdf9;color:var(--text);
+  font:inherit;font-size:.85rem;border-radius:1px;outline:none}
+.search input:focus{border-color:var(--wine)}
+.count{color:var(--muted);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(1rem,2vw,1.6rem);
+  padding-bottom:6rem}
+.card{position:relative;display:flex;flex-direction:column;text-decoration:none;background:#fffdf9;border:1px solid var(--line);
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,16,14,.12)}
+.card__img{aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card__img img{transform:scale(1.045)}
+.card__body{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;padding:1rem 1.1rem 1.15rem}
+.card__title{font-family:var(--serif);font-size:1.02rem;line-height:1.25;margin:0;font-weight:400}
+.card__num{flex:0 0 auto;color:var(--wine);font-size:.58rem;letter-spacing:.16em;font-weight:600}
+.card__meta{margin-top:.35rem;color:var(--muted);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+.album-head{padding:clamp(2.5rem,5vw,4.5rem) 0 1.8rem}
+.album-head h1{font-size:clamp(2rem,5vw,3.6rem)}
+.album-head .lead{margin-top:1rem;color:var(--muted);font-size:.92rem}
+.crumbs{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;color:var(--muted);font-size:.62rem;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.4rem}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{color:var(--wine)}
+.album-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:2.6rem;padding:.65rem 1.1rem;border:1px solid var(--ink);
+  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;background:transparent;cursor:pointer;
+  transition:background .3s,color .3s}
+.btn:hover{background:var(--ink);color:var(--ivory)}
+.btn--solid{background:var(--ink);color:var(--ivory)}
+.btn--solid:hover{background:var(--wine);border-color:var(--wine)}
+.masonry{column-count:4;column-gap:clamp(.6rem,1.2vw,1rem);padding-bottom:6rem}
+@media(max-width:1100px){.masonry{column-count:3}}
+@media(max-width:760px){.masonry{column-count:2}}
+@media(max-width:420px){.masonry{column-count:1}}
+.photo{position:relative;display:block;width:100%;margin:0 0 clamp(.6rem,1.2vw,1rem);padding:0;border:0;
+  background:var(--sand);cursor:zoom-in;break-inside:avoid;overflow:hidden}
+.photo img{width:100%;height:auto;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.photo:hover img{transform:scale(1.02)}
+.photo__zoom{position:absolute;right:.6rem;bottom:.6rem;width:2rem;height:2rem;display:grid;place-items:center;
+  border-radius:50%;background:rgba(20,16,14,.72);color:var(--ivory);opacity:0;transition:opacity .3s}
+.photo:hover .photo__zoom{opacity:1}
+.lightbox{position:fixed;inset:0;z-index:100;display:none;background:rgba(12,9,8,.96);padding:clamp(1rem,4vw,3rem)}
+.lightbox[open],.lightbox.is-open{display:grid;grid-template-rows:1fr auto;gap:1rem}
+.lightbox__stage{display:grid;place-items:center;min-height:0}
+.lightbox__stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lightbox__bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--ivory);
+  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.lightbox__bar a{color:var(--ivory);text-underline-offset:4px}
+.lightbox button{background:transparent;border:1px solid rgba(245,239,230,.4);color:var(--ivory);width:2.6rem;height:2.6rem;
+  display:grid;place-items:center;cursor:pointer;font-size:1rem}
+.lightbox button:hover{background:var(--ivory);color:var(--ink)}
+.lightbox__close{position:absolute;top:clamp(1rem,3vw,2rem);right:clamp(1rem,3vw,2rem);z-index:2}
+.lightbox__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
+.lightbox__prev{left:clamp(.5rem,2vw,1.5rem)}
+.lightbox__next{right:clamp(.5rem,2vw,1.5rem)}
+.empty{padding:6rem 0;text-align:center;color:var(--muted)}
+@media(max-width:640px){.wrap{width:calc(100% - 2rem)}.stats{gap:1.6rem}}
+@media print{.top,.toolbar,.album-actions,.lightbox{display:none!important}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+    <a class="brand" href="../index.html">Camila Silva <span style="color:var(--muted);font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase">· Acervo</span></a>
+    <a href="../index.html">← Todos os álbuns</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="album-head">
+    <nav class="crumbs" aria-label="Navegação">
+      <a href="../../index.html">Media kit</a><span>/</span><a href="../index.html">Álbuns</a><span>/</span><span>MOCIDADE 2013</span>
+    </nav>
+    <h1>MOCIDADE 2013</h1>
+    <p class="lead">101 fotos</p>
+    <div class="album-actions">
+      <a class="btn" href="https://www.facebook.com/media/set/?set=a.630637823717665&amp;type=3" target="_blank" rel="noopener">Ver álbum original no Facebook</a>
+      <a class="btn btn--solid" href="../index.html">Ver outros álbuns</a>
+    </div>
+  </section>
+  <section class="masonry" aria-label="Fotos do álbum MOCIDADE 2013">
+    <button class="photo" type="button" data-full="fotos/0001_369591831198866.jpg" aria-label="Ampliar foto 1 de 101"><img src="fotos/0001_369591831198866.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 1" width="960" height="641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0002_499213144903400.jpg" aria-label="Ampliar foto 2 de 101"><img src="fotos/0002_499213144903400.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 2" width="619" height="464" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0003_630638463717601.jpg" aria-label="Ampliar foto 3 de 101"><img src="fotos/0003_630638463717601.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 3" width="652" height="408" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0004_630638510384263.jpg" aria-label="Ampliar foto 4 de 101"><img src="fotos/0004_630638510384263.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 4" width="780" height="520" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0005_630638523717595.jpg" aria-label="Ampliar foto 5 de 101"><img src="fotos/0005_630638523717595.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 5" width="652" height="408" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0006_630638527050928.jpg" aria-label="Ampliar foto 6 de 101"><img src="fotos/0006_630638527050928.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 6" width="780" height="520" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0007_630638583717589.jpg" aria-label="Ampliar foto 7 de 101"><img src="fotos/0007_630638583717589.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 7" width="756" height="500" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0008_630638630384251.jpg" aria-label="Ampliar foto 8 de 101"><img src="fotos/0008_630638630384251.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 8" width="956" height="500" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0009_630638690384245.jpg" aria-label="Ampliar foto 9 de 101"><img src="fotos/0009_630638690384245.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 9" width="430" height="269" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0010_630638747050906.jpg" aria-label="Ampliar foto 10 de 101"><img src="fotos/0010_630638747050906.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 10" width="960" height="594" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0011_630638767050904.jpg" aria-label="Ampliar foto 11 de 101"><img src="fotos/0011_630638767050904.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 11" width="533" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0012_630638803717567.jpg" aria-label="Ampliar foto 12 de 101"><img src="fotos/0012_630638803717567.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 12" width="533" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0013_630638823717565.jpg" aria-label="Ampliar foto 13 de 101"><img src="fotos/0013_630638823717565.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 13" width="417" height="625" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0014_630638863717561.jpg" aria-label="Ampliar foto 14 de 101"><img src="fotos/0014_630638863717561.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 14" width="533" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0015_630638893717558.jpg" aria-label="Ampliar foto 15 de 101"><img src="fotos/0015_630638893717558.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 15" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0016_630638940384220.jpg" aria-label="Ampliar foto 16 de 101"><img src="fotos/0016_630638940384220.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 16" width="805" height="500" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0017_630638957050885.jpg" aria-label="Ampliar foto 17 de 101"><img src="fotos/0017_630638957050885.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 17" width="400" height="600" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0018_630638980384216.jpg" aria-label="Ampliar foto 18 de 101"><img src="fotos/0018_630638980384216.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 18" width="960" height="540" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0019_630639007050880.jpg" aria-label="Ampliar foto 19 de 101"><img src="fotos/0019_630639007050880.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 19" width="533" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0020_630639123717535.jpg" aria-label="Ampliar foto 20 de 101"><img src="fotos/0020_630639123717535.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 20" width="620" height="900" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0021_630639137050867.jpg" aria-label="Ampliar foto 21 de 101"><img src="fotos/0021_630639137050867.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 21" width="900" height="603" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0022_630639163717531.png" aria-label="Ampliar foto 22 de 101"><img src="fotos/0022_630639163717531.png" alt="Camila Silva — MOCIDADE 2013 — foto 22" width="640" height="541" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0023_630639177050863.jpg" aria-label="Ampliar foto 23 de 101"><img src="fotos/0023_630639177050863.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 23" width="435" height="292" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0024_630639203717527.jpg" aria-label="Ampliar foto 24 de 101"><img src="fotos/0024_630639203717527.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 24" width="573" height="683" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0025_630639213717526.jpg" aria-label="Ampliar foto 25 de 101"><img src="fotos/0025_630639213717526.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 25" width="300" height="450" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0026_630639237050857.jpg" aria-label="Ampliar foto 26 de 101"><img src="fotos/0026_630639237050857.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 26" width="448" height="443" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0027_630639267050854.jpg" aria-label="Ampliar foto 27 de 101"><img src="fotos/0027_630639267050854.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 27" width="620" height="388" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0028_630639323717515.jpg" aria-label="Ampliar foto 28 de 101"><img src="fotos/0028_630639323717515.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 28" width="960" height="577" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0029_630639383717509.jpg" aria-label="Ampliar foto 29 de 101"><img src="fotos/0029_630639383717509.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 29" width="960" height="577" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0030_630639420384172.jpg" aria-label="Ampliar foto 30 de 101"><img src="fotos/0030_630639420384172.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 30" width="700" height="525" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0031_633314096783371.jpg" aria-label="Ampliar foto 31 de 101"><img src="fotos/0031_633314096783371.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 31" width="936" height="595" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0032_633314106783370.jpg" aria-label="Ampliar foto 32 de 101"><img src="fotos/0032_633314106783370.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 32" width="939" height="596" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0033_637296666385114.jpg" aria-label="Ampliar foto 33 de 101"><img src="fotos/0033_637296666385114.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 33" width="935" height="583" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0034_637296726385108.jpg" aria-label="Ampliar foto 34 de 101"><img src="fotos/0034_637296726385108.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 34" width="640" height="597" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0035_637296779718436.png" aria-label="Ampliar foto 35 de 101"><img src="fotos/0035_637296779718436.png" alt="Camila Silva — MOCIDADE 2013 — foto 35" width="413" height="592" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0036_637296806385100.png" aria-label="Ampliar foto 36 de 101"><img src="fotos/0036_637296806385100.png" alt="Camila Silva — MOCIDADE 2013 — foto 36" width="422" height="588" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0037_637296813051766.jpg" aria-label="Ampliar foto 37 de 101"><img src="fotos/0037_637296813051766.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 37" width="596" height="730" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0038_637296866385094.jpg" aria-label="Ampliar foto 38 de 101"><img src="fotos/0038_637296866385094.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 38" width="400" height="597" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0039_637296896385091.jpg" aria-label="Ampliar foto 39 de 101"><img src="fotos/0039_637296896385091.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 39" width="398" height="595" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0040_637296936385087.jpg" aria-label="Ampliar foto 40 de 101"><img src="fotos/0040_637296936385087.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 40" width="620" height="500" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0041_637296959718418.jpg" aria-label="Ampliar foto 41 de 101"><img src="fotos/0041_637296959718418.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 41" width="620" height="900" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0042_640329572748490.jpg" aria-label="Ampliar foto 42 de 101"><img src="fotos/0042_640329572748490.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 42" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0043_659887034126077.jpg" aria-label="Ampliar foto 43 de 101"><img src="fotos/0043_659887034126077.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 43" width="319" height="264" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0044_662035190577928.jpg" aria-label="Ampliar foto 44 de 101"><img src="fotos/0044_662035190577928.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 44" width="598" height="442" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0045_699521233495990.jpg" aria-label="Ampliar foto 45 de 101"><img src="fotos/0045_699521233495990.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 45" width="448" height="299" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0046_716607681787345.jpg" aria-label="Ampliar foto 46 de 101"><img src="fotos/0046_716607681787345.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 46" width="594" height="399" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0047_716607688454011.jpg" aria-label="Ampliar foto 47 de 101"><img src="fotos/0047_716607688454011.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 47" width="589" height="402" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0048_716607708454009.jpg" aria-label="Ampliar foto 48 de 101"><img src="fotos/0048_716607708454009.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 48" width="652" height="408" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0049_716607735120673.jpg" aria-label="Ampliar foto 49 de 101"><img src="fotos/0049_716607735120673.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 49" width="593" height="399" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0050_716607741787339.jpg" aria-label="Ampliar foto 50 de 101"><img src="fotos/0050_716607741787339.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 50" width="590" height="404" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0051_716607771787336.jpg" aria-label="Ampliar foto 51 de 101"><img src="fotos/0051_716607771787336.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 51" width="594" height="403" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0052_716607828453997.jpg" aria-label="Ampliar foto 52 de 101"><img src="fotos/0052_716607828453997.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 52" width="594" height="402" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0053_716607835120663.jpg" aria-label="Ampliar foto 53 de 101"><img src="fotos/0053_716607835120663.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 53" width="592" height="401" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0054_716607855120661.jpg" aria-label="Ampliar foto 54 de 101"><img src="fotos/0054_716607855120661.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 54" width="591" height="402" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0055_716607891787324.jpg" aria-label="Ampliar foto 55 de 101"><img src="fotos/0055_716607891787324.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 55" width="594" height="401" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0056_763416937106419.jpg" aria-label="Ampliar foto 56 de 101"><img src="fotos/0056_763416937106419.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 56" width="384" height="576" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0057_778900092224770.jpg" aria-label="Ampliar foto 57 de 101"><img src="fotos/0057_778900092224770.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 57" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0058_779360198845426.jpg" aria-label="Ampliar foto 58 de 101"><img src="fotos/0058_779360198845426.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 58" width="897" height="595" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0059_779733288808117.jpg" aria-label="Ampliar foto 59 de 101"><img src="fotos/0059_779733288808117.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 59" width="960" height="654" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0060_779733295474783.jpg" aria-label="Ampliar foto 60 de 101"><img src="fotos/0060_779733295474783.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 60" width="635" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0061_779733382141441.jpg" aria-label="Ampliar foto 61 de 101"><img src="fotos/0061_779733382141441.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 61" width="770" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0062_780249922089787.jpg" aria-label="Ampliar foto 62 de 101"><img src="fotos/0062_780249922089787.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 62" width="329" height="472" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0063_780250102089769.jpg" aria-label="Ampliar foto 63 de 101"><img src="fotos/0063_780250102089769.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 63" width="419" height="529" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0064_780250235423089.jpg" aria-label="Ampliar foto 64 de 101"><img src="fotos/0064_780250235423089.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 64" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0065_780250262089753.jpg" aria-label="Ampliar foto 65 de 101"><img src="fotos/0065_780250262089753.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 65" width="344" height="472" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0066_786130264835086.jpg" aria-label="Ampliar foto 66 de 101"><img src="fotos/0066_786130264835086.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 66" width="306" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0067_786137608167685.jpg" aria-label="Ampliar foto 67 de 101"><img src="fotos/0067_786137608167685.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 67" width="338" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0068_786762071438572.jpg" aria-label="Ampliar foto 68 de 101"><img src="fotos/0068_786762071438572.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 68" width="650" height="850" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0069_786769601437819.jpg" aria-label="Ampliar foto 69 de 101"><img src="fotos/0069_786769601437819.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 69" width="462" height="650" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0070_787409308040515.jpg" aria-label="Ampliar foto 70 de 101"><img src="fotos/0070_787409308040515.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 70" width="597" height="336" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0071_787416801373099.jpg" aria-label="Ampliar foto 71 de 101"><img src="fotos/0071_787416801373099.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 71" width="269" height="336" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0072_789309051183874.jpg" aria-label="Ampliar foto 72 de 101"><img src="fotos/0072_789309051183874.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 72" width="1024" height="683" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0073_789320394516073.jpg" aria-label="Ampliar foto 73 de 101"><img src="fotos/0073_789320394516073.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 73" width="1024" height="717" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0074_789324644515648.jpg" aria-label="Ampliar foto 74 de 101"><img src="fotos/0074_789324644515648.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 74" width="683" height="1024" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0075_789324657848980.jpg" aria-label="Ampliar foto 75 de 101"><img src="fotos/0075_789324657848980.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 75" width="1024" height="717" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0076_789324704515642.jpg" aria-label="Ampliar foto 76 de 101"><img src="fotos/0076_789324704515642.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 76" width="717" height="1024" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0077_789325557848890.jpg" aria-label="Ampliar foto 77 de 101"><img src="fotos/0077_789325557848890.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 77" width="683" height="1024" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0078_789331964514916.jpg" aria-label="Ampliar foto 78 de 101"><img src="fotos/0078_789331964514916.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 78" width="717" height="1024" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0079_789353304512782.jpg" aria-label="Ampliar foto 79 de 101"><img src="fotos/0079_789353304512782.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 79" width="683" height="1024" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0080_790921057689340.jpg" aria-label="Ampliar foto 80 de 101"><img src="fotos/0080_790921057689340.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 80" width="420" height="548" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0081_804320599682719.jpg" aria-label="Ampliar foto 81 de 101"><img src="fotos/0081_804320599682719.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 81" width="857" height="554" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0082_804327453015367.jpg" aria-label="Ampliar foto 82 de 101"><img src="fotos/0082_804327453015367.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 82" width="856" height="552" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0083_804333796348066.jpg" aria-label="Ampliar foto 83 de 101"><img src="fotos/0083_804333796348066.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 83" width="857" height="552" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0084_938292552952189.jpg" aria-label="Ampliar foto 84 de 101"><img src="fotos/0084_938292552952189.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 84" width="308" height="464" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0085_1027086767406100.jpg" aria-label="Ampliar foto 85 de 101"><img src="fotos/0085_1027086767406100.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 85" width="480" height="542" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0086_1204952602952848.jpg" aria-label="Ampliar foto 86 de 101"><img src="fotos/0086_1204952602952848.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 86" width="1080" height="1342" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0087_1697007570414013.jpg" aria-label="Ampliar foto 87 de 101"><img src="fotos/0087_1697007570414013.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 87" width="1080" height="1334" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0088_1794909563957146.jpg" aria-label="Ampliar foto 88 de 101"><img src="fotos/0088_1794909563957146.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 88" width="1080" height="1339" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0089_1920568721391229.jpg" aria-label="Ampliar foto 89 de 101"><img src="fotos/0089_1920568721391229.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 89" width="940" height="626" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0090_1926521694129265.jpg" aria-label="Ampliar foto 90 de 101"><img src="fotos/0090_1926521694129265.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 90" width="1080" height="1332" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0091_2626801074101320.jpg" aria-label="Ampliar foto 91 de 101"><img src="fotos/0091_2626801074101320.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 91" width="1080" height="1235" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0092_2812122065569219.jpg" aria-label="Ampliar foto 92 de 101"><img src="fotos/0092_2812122065569219.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 92" width="945" height="612" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0093_2835160909932001.jpg" aria-label="Ampliar foto 93 de 101"><img src="fotos/0093_2835160909932001.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 93" width="1074" height="646" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0094_2845281582253267.jpg" aria-label="Ampliar foto 94 de 101"><img src="fotos/0094_2845281582253267.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 94" width="1080" height="1340" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0095_2865510850230340.jpg" aria-label="Ampliar foto 95 de 101"><img src="fotos/0095_2865510850230340.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 95" width="867" height="1334" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0096_2878856962229062.jpg" aria-label="Ampliar foto 96 de 101"><img src="fotos/0096_2878856962229062.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 96" width="611" height="611" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0097_2930293923752032.jpg" aria-label="Ampliar foto 97 de 101"><img src="fotos/0097_2930293923752032.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 97" width="1080" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0098_2945540008894090.jpg" aria-label="Ampliar foto 98 de 101"><img src="fotos/0098_2945540008894090.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 98" width="612" height="407" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0099_3035934306521326.jpg" aria-label="Ampliar foto 99 de 101"><img src="fotos/0099_3035934306521326.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 99" width="800" height="600" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0100_3077531642361592.jpg" aria-label="Ampliar foto 100 de 101"><img src="fotos/0100_3077531642361592.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 100" width="612" height="407" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0101_3252146738233414.jpg" aria-label="Ampliar foto 101 de 101"><img src="fotos/0101_3252146738233414.jpg" alt="Camila Silva — MOCIDADE 2013 — foto 101" width="1080" height="1174" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+  </section>
+</main>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+  <button class="lightbox__close" type="button" aria-label="Fechar">✕</button>
+  <button class="lightbox__nav lightbox__prev" type="button" aria-label="Foto anterior">‹</button>
+  <div class="lightbox__stage"><img alt=""></div>
+  <button class="lightbox__nav lightbox__next" type="button" aria-label="Próxima foto">›</button>
+  <div class="lightbox__bar">
+    <span data-counter>1 / 101</span>
+    <a data-download href="#" download>Baixar esta foto ↓</a>
+    <span>MOCIDADE 2013</span>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox');
+  if(!box) return;
+  var img=box.querySelector('.lightbox__stage img');
+  var counter=box.querySelector('[data-counter]');
+  var dl=box.querySelector('[data-download]');
+  var photos=[].slice.call(document.querySelectorAll('.photo'));
+  var idx=0;
+  function show(i){
+    idx=(i+photos.length)%photos.length;
+    var p=photos[idx];
+    img.src=p.getAttribute('data-full');
+    img.alt=p.querySelector('img')?.alt||'';
+    if(counter) counter.textContent=(idx+1)+' / '+photos.length;
+    if(dl){dl.href=p.getAttribute('data-full');dl.setAttribute('download',(p.getAttribute('data-full')||'').split('/').pop());}
+  }
+  function open(i){show(i);box.classList.add('is-open');document.body.style.overflow='hidden';}
+  function close(){box.classList.remove('is-open');document.body.style.overflow='';img.removeAttribute('src');}
+  photos.forEach(function(p,i){p.addEventListener('click',function(e){e.preventDefault();open(i);});});
+  box.querySelector('.lightbox__close').addEventListener('click',close);
+  box.querySelector('.lightbox__prev').addEventListener('click',function(){show(idx-1);});
+  box.querySelector('.lightbox__next').addEventListener('click',function(){show(idx+1);});
+  box.addEventListener('click',function(e){if(e.target===box||e.target.classList.contains('lightbox__stage'))close();});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+})();
+</script>
+</body>
+</html>

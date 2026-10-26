@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acervo de Álbuns — Camila Silva</title>
+<meta name="description" content="Acervo completo com 75 álbuns e 8969 fotos de Camila Silva, organizados por álbum.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Instrument+Sans:ital,wght@0,400..600;1,400..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14100e;--wine:#5b1c22;--wine-soft:#7a2c33;--ivory:#f5efe6;--sand:#e7dbcb;
+  --text:#2b2420;--muted:#7c6f63;--line:rgba(20,16,14,.14);
+  --serif:"Fraunces",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1480px,calc(100% - 3rem));margin-inline:auto}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem 0;border-bottom:1px solid var(--line);background:rgba(245,239,230,.92);backdrop-filter:blur(14px)}
+.top a{text-decoration:none;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.top a:hover{color:var(--wine)}
+.brand{font-family:var(--serif);font-size:1rem;letter-spacing:.02em;text-transform:none!important}
+.hero{padding:clamp(3.5rem,8vw,7rem) 0 clamp(2rem,4vw,3.5rem)}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin:0 0 1.2rem;color:var(--wine);font-size:.62rem;
+  letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.55}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.96;letter-spacing:-.02em;margin:0}
+.hero p.lead{max-width:56ch;margin:1.6rem 0 0;color:var(--muted);font-size:clamp(.95rem,1.25vw,1.08rem);line-height:1.7}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.stats div{display:flex;flex-direction:column;gap:.25rem}
+.stats strong{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1}
+.stats span{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin:0 0 2rem}
+.search{flex:1 1 260px;max-width:420px}
+.search input{width:100%;padding:.85rem 1rem;border:1px solid var(--line);background:#fffdf9;color:var(--text);
+  font:inherit;font-size:.85rem;border-radius:1px;outline:none}
+.search input:focus{border-color:var(--wine)}
+.count{color:var(--muted);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(1rem,2vw,1.6rem);
+  padding-bottom:6rem}
+.card{position:relative;display:flex;flex-direction:column;text-decoration:none;background:#fffdf9;border:1px solid var(--line);
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,16,14,.12)}
+.card__img{aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card__img img{transform:scale(1.045)}
+.card__body{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;padding:1rem 1.1rem 1.15rem}
+.card__title{font-family:var(--serif);font-size:1.02rem;line-height:1.25;margin:0;font-weight:400}
+.card__num{flex:0 0 auto;color:var(--wine);font-size:.58rem;letter-spacing:.16em;font-weight:600}
+.card__meta{margin-top:.35rem;color:var(--muted);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+.album-head{padding:clamp(2.5rem,5vw,4.5rem) 0 1.8rem}
+.album-head h1{font-size:clamp(2rem,5vw,3.6rem)}
+.album-head .lead{margin-top:1rem;color:var(--muted);font-size:.92rem}
+.crumbs{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;color:var(--muted);font-size:.62rem;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.4rem}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{color:var(--wine)}
+.album-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:2.6rem;padding:.65rem 1.1rem;border:1px solid var(--ink);
+  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;background:transparent;cursor:pointer;
+  transition:background .3s,color .3s}
+.btn:hover{background:var(--ink);color:var(--ivory)}
+.btn--solid{background:var(--ink);color:var(--ivory)}
+.btn--solid:hover{background:var(--wine);border-color:var(--wine)}
+.masonry{column-count:4;column-gap:clamp(.6rem,1.2vw,1rem);padding-bottom:6rem}
+@media(max-width:1100px){.masonry{column-count:3}}
+@media(max-width:760px){.masonry{column-count:2}}
+@media(max-width:420px){.masonry{column-count:1}}
+.photo{position:relative;display:block;width:100%;margin:0 0 clamp(.6rem,1.2vw,1rem);padding:0;border:0;
+  background:var(--sand);cursor:zoom-in;break-inside:avoid;overflow:hidden}
+.photo img{width:100%;height:auto;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.photo:hover img{transform:scale(1.02)}
+.photo__zoom{position:absolute;right:.6rem;bottom:.6rem;width:2rem;height:2rem;display:grid;place-items:center;
+  border-radius:50%;background:rgba(20,16,14,.72);color:var(--ivory);opacity:0;transition:opacity .3s}
+.photo:hover .photo__zoom{opacity:1}
+.lightbox{position:fixed;inset:0;z-index:100;display:none;background:rgba(12,9,8,.96);padding:clamp(1rem,4vw,3rem)}
+.lightbox[open],.lightbox.is-open{display:grid;grid-template-rows:1fr auto;gap:1rem}
+.lightbox__stage{display:grid;place-items:center;min-height:0}
+.lightbox__stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lightbox__bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--ivory);
+  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.lightbox__bar a{color:var(--ivory);text-underline-offset:4px}
+.lightbox button{background:transparent;border:1px solid rgba(245,239,230,.4);color:var(--ivory);width:2.6rem;height:2.6rem;
+  display:grid;place-items:center;cursor:pointer;font-size:1rem}
+.lightbox button:hover{background:var(--ivory);color:var(--ink)}
+.lightbox__close{position:absolute;top:clamp(1rem,3vw,2rem);right:clamp(1rem,3vw,2rem);z-index:2}
+.lightbox__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
+.lightbox__prev{left:clamp(.5rem,2vw,1.5rem)}
+.lightbox__next{right:clamp(.5rem,2vw,1.5rem)}
+.empty{padding:6rem 0;text-align:center;color:var(--muted)}
+@media(max-width:640px){.wrap{width:calc(100% - 2rem)}.stats{gap:1.6rem}}
+@media print{.top,.toolbar,.album-actions,.lightbox{display:none!important}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+    <a class="brand" href="../../index.html">Camila Silva <span style="color:var(--muted);font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase">· Acervo</span></a>
+    <a href="../../index.html">← Voltar ao media kit</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Acervo oficial · Facebook</p>
+    <h1>Álbuns<br>de Camila Silva.</h1>
+    <p class="lead">Todas as fotos dos álbuns públicos da página oficial, organizadas por álbum, na máxima resolução disponível. Navegue, amplie e baixe as imagens para uso editorial e de imprensa.</p>
+    <div class="stats">
+      <div><strong>75</strong><span>álbuns</span></div>
+      <div><strong>8.969</strong><span>fotos</span></div>
+      <div><strong>100%</strong><span>alta resolução</span></div>
+      <div><strong>26/10/2026</strong><span>atualizado em</span></div>
+    </div>
+  </section>
+  <div class="toolbar">
+    <div class="search"><input id="albumSearch" type="search" placeholder="Buscar álbum (ex.: Vai-Vai, Mocidade, ensaio)…" aria-label="Buscar álbum"></div>
+    <span class="count" data-visible>75 álbuns</span>
+  </div>
+  <section class="grid" aria-label="Lista de álbuns">
+    <a class="card" href="01%20-%20Arquivos%20do%20celular/index.html" data-album="Arquivos do celular"><div class="card__img"><img src="01 - Arquivos do celular/capa.jpg" alt="Capa do álbum Arquivos do celular" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Arquivos do celular</p><p class="card__meta">606 fotos</p></div><span class="card__num">01</span></div></a>
+<a class="card" href="02%20-%20Promoshoots-%20Divulga%C3%A7%C3%A3o/index.html" data-album="Promoshoots/ Divulgação"><div class="card__img"><img src="02 - Promoshoots- Divulgação/capa.jpg" alt="Capa do álbum Promoshoots/ Divulgação" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Promoshoots/ Divulgação</p><p class="card__meta">176 fotos</p></div><span class="card__num">02</span></div></a>
+<a class="card" href="03%20-%20U.%20DOS%20MORROS%202024/index.html" data-album="U. DOS MORROS 2024"><div class="card__img"><img src="03 - U. DOS MORROS 2024/capa.jpg" alt="Capa do álbum U. DOS MORROS 2024" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">U. DOS MORROS 2024</p><p class="card__meta">9 fotos</p></div><span class="card__num">03</span></div></a>
+<a class="card" href="04%20-%20MOCIDADE%20ALEGRE%202024/index.html" data-album="MOCIDADE ALEGRE 2024"><div class="card__img"><img src="04 - MOCIDADE ALEGRE 2024/capa.jpg" alt="Capa do álbum MOCIDADE ALEGRE 2024" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">MOCIDADE ALEGRE 2024</p><p class="card__meta">15 fotos</p></div><span class="card__num">04</span></div></a>
+<a class="card" href="05%20-%20U.%20dos%20Morros-%20A%20beleza%20de%20ser%20um%20eterno%20aprendiz/index.html" data-album="U. dos Morros: A beleza de ser um eterno aprendiz"><div class="card__img"><img src="05 - U. dos Morros- A beleza de ser um eterno aprendiz/capa.jpg" alt="Capa do álbum U. dos Morros: A beleza de ser um eterno aprendiz" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">U. dos Morros: A beleza de ser um eterno aprendiz</p><p class="card__meta">120 fotos</p></div><span class="card__num">05</span></div></a>
+<a class="card" href="06%20-%20Mocidade%20Alegre-%20a%20Morada%20do%20Samba/index.html" data-album="Mocidade Alegre: a Morada do Samba"><div class="card__img"><img src="06 - Mocidade Alegre- a Morada do Samba/capa.jpg" alt="Capa do álbum Mocidade Alegre: a Morada do Samba" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Mocidade Alegre: a Morada do Samba</p><p class="card__meta">54 fotos</p></div><span class="card__num">06</span></div></a>
+<a class="card" href="07%20-%20Fotos%20do%20perfil/index.html" data-album="Fotos do perfil"><div class="card__img"><img src="07 - Fotos do perfil/capa.jpg" alt="Capa do álbum Fotos do perfil" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Fotos do perfil</p><p class="card__meta">43 fotos</p></div><span class="card__num">07</span></div></a>
+<a class="card" href="08%20-%20Fotos%20da%20capa/index.html" data-album="Fotos da capa"><div class="card__img"><img src="08 - Fotos da capa/capa.jpg" alt="Capa do álbum Fotos da capa" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Fotos da capa</p><p class="card__meta">46 fotos</p></div><span class="card__num">08</span></div></a>
+<a class="card" href="09%20-%20Rainha%20do%20Carnaval%20de%20Coburgo%202022/index.html" data-album="Rainha do Carnaval de Coburgo 2022"><div class="card__img"><img src="09 - Rainha do Carnaval de Coburgo 2022/capa.jpg" alt="Capa do álbum Rainha do Carnaval de Coburgo 2022" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Rainha do Carnaval de Coburgo 2022</p><p class="card__meta">61 fotos</p></div><span class="card__num">09</span></div></a>
+<a class="card" href="10%20-%20Ensaio%20Quilombo%20do%20Futuro/index.html" data-album="Ensaio Quilombo do Futuro"><div class="card__img"><img src="10 - Ensaio Quilombo do Futuro/capa.jpg" alt="Capa do álbum Ensaio Quilombo do Futuro" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio Quilombo do Futuro</p><p class="card__meta">40 fotos</p></div><span class="card__num">10</span></div></a>
+<a class="card" href="11%20-%20Mocidade-%20da%20Mooca%20tu%20%C3%A9s%20a%20mais%20bela/index.html" data-album="Mocidade: da Mooca tu és a mais bela"><div class="card__img"><img src="11 - Mocidade- da Mooca tu és a mais bela/capa.jpg" alt="Capa do álbum Mocidade: da Mooca tu és a mais bela" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Mocidade: da Mooca tu és a mais bela</p><p class="card__meta">168 fotos</p></div><span class="card__num">11</span></div></a>
+<a class="card" href="12%20-%20MUM%202022/index.html" data-album="MUM 2022"><div class="card__img"><img src="12 - MUM 2022/capa.jpg" alt="Capa do álbum MUM 2022" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">MUM 2022</p><p class="card__meta">95 fotos</p></div><span class="card__num">12</span></div></a>
+<a class="card" href="13%20-%20Rainha%20do%20Carnaval%20do%20RJ%202020/index.html" data-album="Rainha do Carnaval do RJ 2020"><div class="card__img"><img src="13 - Rainha do Carnaval do RJ 2020/capa.jpg" alt="Capa do álbum Rainha do Carnaval do RJ 2020" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Rainha do Carnaval do RJ 2020</p><p class="card__meta">708 fotos</p></div><span class="card__num">13</span></div></a>
+<a class="card" href="14%20-%20VAI-VAI%202015/index.html" data-album="VAI-VAI 2015"><div class="card__img"><img src="14 - VAI-VAI 2015/capa.jpg" alt="Capa do álbum VAI-VAI 2015" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2015</p><p class="card__meta">235 fotos</p></div><span class="card__num">14</span></div></a>
+<a class="card" href="15%20-%20MOCIDADE%202013/index.html" data-album="MOCIDADE 2013"><div class="card__img"><img src="15 - MOCIDADE 2013/capa.jpg" alt="Capa do álbum MOCIDADE 2013" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">MOCIDADE 2013</p><p class="card__meta">101 fotos</p></div><span class="card__num">15</span></div></a>
+<a class="card" href="16%20-%20Vai-Vai-%20minha%20ra%C3%A7a%2C%20minha%20raiz/index.html" data-album="Vai-Vai: minha raça, minha raiz"><div class="card__img"><img src="16 - Vai-Vai- minha raça, minha raiz/capa.jpg" alt="Capa do álbum Vai-Vai: minha raça, minha raiz" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Vai-Vai: minha raça, minha raiz</p><p class="card__meta">1392 fotos</p></div><span class="card__num">16</span></div></a>
+<a class="card" href="17%20-%20VAI-VAI%202011/index.html" data-album="VAI-VAI 2011"><div class="card__img"><img src="17 - VAI-VAI 2011/capa.jpg" alt="Capa do álbum VAI-VAI 2011" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2011</p><p class="card__meta">57 fotos</p></div><span class="card__num">17</span></div></a>
+<a class="card" href="18%20-%20U.%20DOS%20MORROS%202020/index.html" data-album="U. DOS MORROS 2020"><div class="card__img"><img src="18 - U. DOS MORROS 2020/capa.jpg" alt="Capa do álbum U. DOS MORROS 2020" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">U. DOS MORROS 2020</p><p class="card__meta">84 fotos</p></div><span class="card__num">18</span></div></a>
+<a class="card" href="19%20-%20VAI-VAI%202018/index.html" data-album="VAI-VAI 2018"><div class="card__img"><img src="19 - VAI-VAI 2018/capa.jpg" alt="Capa do álbum VAI-VAI 2018" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2018</p><p class="card__meta">107 fotos</p></div><span class="card__num">19</span></div></a>
+<a class="card" href="20%20-%20Mocidade-%20sou%20independente%2C%20sou%20raiz/index.html" data-album="Mocidade: sou independente, sou raiz"><div class="card__img"><img src="20 - Mocidade- sou independente, sou raiz/capa.jpg" alt="Capa do álbum Mocidade: sou independente, sou raiz" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Mocidade: sou independente, sou raiz</p><p class="card__meta">1066 fotos</p></div><span class="card__num">20</span></div></a>
+<a class="card" href="21%20-%20MOCIDADE%202019/index.html" data-album="MOCIDADE 2019"><div class="card__img"><img src="21 - MOCIDADE 2019/capa.jpg" alt="Capa do álbum MOCIDADE 2019" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">MOCIDADE 2019</p><p class="card__meta">184 fotos</p></div><span class="card__num">21</span></div></a>
+<a class="card" href="22%20-%20MOCIDADE%202018/index.html" data-album="MOCIDADE 2018"><div class="card__img"><img src="22 - MOCIDADE 2018/capa.jpg" alt="Capa do álbum MOCIDADE 2018" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">MOCIDADE 2018</p><p class="card__meta">214 fotos</p></div><span class="card__num">22</span></div></a>
+<a class="card" href="23%20-%20VAI-VAI%202012/index.html" data-album="VAI-VAI 2012"><div class="card__img"><img src="23 - VAI-VAI 2012/capa.jpg" alt="Capa do álbum VAI-VAI 2012" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2012</p><p class="card__meta">78 fotos</p></div><span class="card__num">23</span></div></a>
+<a class="card" href="24%20-%20MOCIDADE%202017/index.html" data-album="MOCIDADE 2017"><div class="card__img"><img src="24 - MOCIDADE 2017/capa.jpg" alt="Capa do álbum MOCIDADE 2017" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">MOCIDADE 2017</p><p class="card__meta">247 fotos</p></div><span class="card__num">24</span></div></a>
+<a class="card" href="25%20-%20Rainha%20do%20Carnaval%20de%20SP%202009/index.html" data-album="Rainha do Carnaval de SP 2009"><div class="card__img"><img src="25 - Rainha do Carnaval de SP 2009/capa.jpg" alt="Capa do álbum Rainha do Carnaval de SP 2009" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Rainha do Carnaval de SP 2009</p><p class="card__meta">72 fotos</p></div><span class="card__num">25</span></div></a>
+<a class="card" href="26%20-%20VAI-VAI%202017/index.html" data-album="VAI-VAI 2017"><div class="card__img"><img src="26 - VAI-VAI 2017/capa.jpg" alt="Capa do álbum VAI-VAI 2017" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2017</p><p class="card__meta">225 fotos</p></div><span class="card__num">26</span></div></a>
+<a class="card" href="27%20-%20VAI-VAI%202019/index.html" data-album="VAI-VAI 2019"><div class="card__img"><img src="27 - VAI-VAI 2019/capa.jpg" alt="Capa do álbum VAI-VAI 2019" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2019</p><p class="card__meta">124 fotos</p></div><span class="card__num">27</span></div></a>
+<a class="card" href="28%20-%20VAI-VAI%202016/index.html" data-album="VAI-VAI 2016"><div class="card__img"><img src="28 - VAI-VAI 2016/capa.jpg" alt="Capa do álbum VAI-VAI 2016" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2016</p><p class="card__meta">289 fotos</p></div><span class="card__num">28</span></div></a>
+<a class="card" href="29%20-%20MOCIDADE%202016/index.html" data-album="MOCIDADE 2016"><div class="card__img"><img src="29 - MOCIDADE 2016/capa.jpg" alt="Capa do álbum MOCIDADE 2016" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">MOCIDADE 2016</p><p class="card__meta">62 fotos</p></div><span class="card__num">29</span></div></a>
+<a class="card" href="30%20-%20Ensaio%20Beleza%20Negra/index.html" data-album="Ensaio Beleza Negra"><div class="card__img"><img src="30 - Ensaio Beleza Negra/capa.jpg" alt="Capa do álbum Ensaio Beleza Negra" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio Beleza Negra</p><p class="card__meta">12 fotos</p></div><span class="card__num">30</span></div></a>
+<a class="card" href="31%20-%20VAI-VAI%202013/index.html" data-album="VAI-VAI 2013"><div class="card__img"><img src="31 - VAI-VAI 2013/capa.jpg" alt="Capa do álbum VAI-VAI 2013" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2013</p><p class="card__meta">72 fotos</p></div><span class="card__num">31</span></div></a>
+<a class="card" href="32%20-%20Fotos/index.html" data-album="Fotos"><div class="card__img"><img src="32 - Fotos/capa.jpg" alt="Capa do álbum Fotos" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Fotos</p><p class="card__meta">446 fotos</p></div><span class="card__num">32</span></div></a>
+<a class="card" href="33%20-%20VAI-VAI%202014/index.html" data-album="VAI-VAI 2014"><div class="card__img"><img src="33 - VAI-VAI 2014/capa.jpg" alt="Capa do álbum VAI-VAI 2014" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2014</p><p class="card__meta">74 fotos</p></div><span class="card__num">33</span></div></a>
+<a class="card" href="34%20-%20Ensaio%20Festas%20In/index.html" data-album="Ensaio Festas In"><div class="card__img"><img src="34 - Ensaio Festas In/capa.jpg" alt="Capa do álbum Ensaio Festas In" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio Festas In</p><p class="card__meta">60 fotos</p></div><span class="card__num">34</span></div></a>
+<a class="card" href="35%20-%20Ensaio%20G1%20Vai-Vai/index.html" data-album="Ensaio G1 Vai-Vai"><div class="card__img"><img src="35 - Ensaio G1 Vai-Vai/capa.jpg" alt="Capa do álbum Ensaio G1 Vai-Vai" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio G1 Vai-Vai</p><p class="card__meta">13 fotos</p></div><span class="card__num">35</span></div></a>
+<a class="card" href="36%20-%20VAI-VAI%202009/index.html" data-album="VAI-VAI 2009"><div class="card__img"><img src="36 - VAI-VAI 2009/capa.jpg" alt="Capa do álbum VAI-VAI 2009" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2009</p><p class="card__meta">30 fotos</p></div><span class="card__num">36</span></div></a>
+<a class="card" href="37%20-%20Ensaio%20by%20Claudio%20Lira/index.html" data-album="Ensaio by Claudio Lira"><div class="card__img"><img src="37 - Ensaio by Claudio Lira/capa.jpg" alt="Capa do álbum Ensaio by Claudio Lira" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio by Claudio Lira</p><p class="card__meta">35 fotos</p></div><span class="card__num">37</span></div></a>
+<a class="card" href="38%20-%20Ensaio%20Mocidade%20Guerreira/index.html" data-album="Ensaio Mocidade Guerreira"><div class="card__img"><img src="38 - Ensaio Mocidade Guerreira/capa.jpg" alt="Capa do álbum Ensaio Mocidade Guerreira" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio Mocidade Guerreira</p><p class="card__meta">43 fotos</p></div><span class="card__num">38</span></div></a>
+<a class="card" href="39%20-%20Ensaio%20Namast%C3%AA/index.html" data-album="Ensaio Namastê"><div class="card__img"><img src="39 - Ensaio Namastê/capa.jpg" alt="Capa do álbum Ensaio Namastê" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio Namastê</p><p class="card__meta">21 fotos</p></div><span class="card__num">39</span></div></a>
+<a class="card" href="40%20-%20VAI-VAI%202010/index.html" data-album="VAI-VAI 2010"><div class="card__img"><img src="40 - VAI-VAI 2010/capa.jpg" alt="Capa do álbum VAI-VAI 2010" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">VAI-VAI 2010</p><p class="card__meta">27 fotos</p></div><span class="card__num">40</span></div></a>
+<a class="card" href="41%20-%20Rainha%20do%20Carnaval%20de%20Estocolmo%202019/index.html" data-album="Rainha do Carnaval de Estocolmo 2019"><div class="card__img"><img src="41 - Rainha do Carnaval de Estocolmo 2019/capa.jpg" alt="Capa do álbum Rainha do Carnaval de Estocolmo 2019" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Rainha do Carnaval de Estocolmo 2019</p><p class="card__meta">34 fotos</p></div><span class="card__num">41</span></div></a>
+<a class="card" href="42%20-%20Festa%20do%20Clipe%20Bom%20Bom/index.html" data-album="Festa do Clipe Bom Bom"><div class="card__img"><img src="42 - Festa do Clipe Bom Bom/capa.jpg" alt="Capa do álbum Festa do Clipe Bom Bom" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Festa do Clipe Bom Bom</p><p class="card__meta">46 fotos</p></div><span class="card__num">42</span></div></a>
+<a class="card" href="43%20-%20E%20foram%20tantos%20carnavais/index.html" data-album="E foram tantos carnavais ♪"><div class="card__img"><img src="43 - E foram tantos carnavais/capa.jpg" alt="Capa do álbum E foram tantos carnavais ♪" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">E foram tantos carnavais ♪</p><p class="card__meta">264 fotos</p></div><span class="card__num">43</span></div></a>
+<a class="card" href="44%20-%20Ensaio%20Portal%20O%20Carnaval%20de%20S%C3%A3o%20Paulo/index.html" data-album="Ensaio Portal O Carnaval de São Paulo"><div class="card__img"><img src="44 - Ensaio Portal O Carnaval de São Paulo/capa.jpg" alt="Capa do álbum Ensaio Portal O Carnaval de São Paulo" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio Portal O Carnaval de São Paulo</p><p class="card__meta">49 fotos</p></div><span class="card__num">44</span></div></a>
+<a class="card" href="45%20-%20Ensaio%20by%20Alex%20Pires/index.html" data-album="Ensaio by Alex Pires"><div class="card__img"><img src="45 - Ensaio by Alex Pires/capa.jpg" alt="Capa do álbum Ensaio by Alex Pires" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio by Alex Pires</p><p class="card__meta">23 fotos</p></div><span class="card__num">45</span></div></a>
+<a class="card" href="46%20-%20Ensaio%20G1%20Tuiuti/index.html" data-album="Ensaio G1 Tuiuti"><div class="card__img"><img src="46 - Ensaio G1 Tuiuti/capa.jpg" alt="Capa do álbum Ensaio G1 Tuiuti" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio G1 Tuiuti</p><p class="card__meta">10 fotos</p></div><span class="card__num">46</span></div></a>
+<a class="card" href="47%20-%20Ensaio%20G1%20Mocidade/index.html" data-album="Ensaio G1 Mocidade"><div class="card__img"><img src="47 - Ensaio G1 Mocidade/capa.jpg" alt="Capa do álbum Ensaio G1 Mocidade" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio G1 Mocidade</p><p class="card__meta">10 fotos</p></div><span class="card__num">47</span></div></a>
+<a class="card" href="48%20-%20Ensaio%20Eu%20sou%20o%20tempo..%20Tempo%20%C3%A9%20vida/index.html" data-album="Ensaio Eu sou o tempo.. Tempo é vida"><div class="card__img"><img src="48 - Ensaio Eu sou o tempo.. Tempo é vida/capa.jpg" alt="Capa do álbum Ensaio Eu sou o tempo.. Tempo é vida" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio Eu sou o tempo.. Tempo é vida</p><p class="card__meta">14 fotos</p></div><span class="card__num">48</span></div></a>
+<a class="card" href="49%20-%20B%27day%20Camila%20Silva%20faz%2032/index.html" data-album="B&#x27;day Camila Silva faz 32"><div class="card__img"><img src="49 - B&#x27;day Camila Silva faz 32/capa.jpg" alt="Capa do álbum B&#x27;day Camila Silva faz 32" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">B&#x27;day Camila Silva faz 32</p><p class="card__meta">18 fotos</p></div><span class="card__num">49</span></div></a>
+<a class="card" href="50%20-%20Ensaio%20G1-%20Carnaval%20SP%202017/index.html" data-album="Ensaio G1/ Carnaval SP 2017"><div class="card__img"><img src="50 - Ensaio G1- Carnaval SP 2017/capa.jpg" alt="Capa do álbum Ensaio G1/ Carnaval SP 2017" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio G1/ Carnaval SP 2017</p><p class="card__meta">12 fotos</p></div><span class="card__num">50</span></div></a>
+<a class="card" href="51%20-%20Ensaio%20Africanize/index.html" data-album="Ensaio Africanize"><div class="card__img"><img src="51 - Ensaio Africanize/capa.jpg" alt="Capa do álbum Ensaio Africanize" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio Africanize</p><p class="card__meta">13 fotos</p></div><span class="card__num">51</span></div></a>
+<a class="card" href="52%20-%20Central%20Girls/index.html" data-album="Central Girls"><div class="card__img"><img src="52 - Central Girls/capa.jpg" alt="Capa do álbum Central Girls" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Central Girls</p><p class="card__meta">85 fotos</p></div><span class="card__num">52</span></div></a>
+<a class="card" href="53%20-%20Majestades%20do%20Carnaval/index.html" data-album="Majestades do Carnaval"><div class="card__img"><img src="53 - Majestades do Carnaval/capa.jpg" alt="Capa do álbum Majestades do Carnaval" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Majestades do Carnaval</p><p class="card__meta">473 fotos</p></div><span class="card__num">53</span></div></a>
+<a class="card" href="54%20-%20Estr%C3%A9ia%20da%20pe%C3%A7a%20-Louca%20%26%20Ciumenta/index.html" data-album="Estréia da peça &quot;Louca &amp; Ciumenta&quot;"><div class="card__img"><img src="54 - Estréia da peça -Louca &amp; Ciumenta/capa.jpg" alt="Capa do álbum Estréia da peça &quot;Louca &amp; Ciumenta&quot;" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Estréia da peça &quot;Louca &amp; Ciumenta&quot;</p><p class="card__meta">17 fotos</p></div><span class="card__num">54</span></div></a>
+<a class="card" href="55%20-%20Ensaio%20N%C3%A3o%20Existe%20Mais%20Quente/index.html" data-album="Ensaio Não Existe Mais Quente"><div class="card__img"><img src="55 - Ensaio Não Existe Mais Quente/capa.jpg" alt="Capa do álbum Ensaio Não Existe Mais Quente" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio Não Existe Mais Quente</p><p class="card__meta">26 fotos</p></div><span class="card__num">55</span></div></a>
+<a class="card" href="56%20-%20Ensaio%20EGO-%20Carnaval%202017/index.html" data-album="Ensaio EGO/ Carnaval 2017"><div class="card__img"><img src="56 - Ensaio EGO- Carnaval 2017/capa.jpg" alt="Capa do álbum Ensaio EGO/ Carnaval 2017" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio EGO/ Carnaval 2017</p><p class="card__meta">8 fotos</p></div><span class="card__num">56</span></div></a>
+<a class="card" href="57%20-%20Ensaio%20UOL%202017/index.html" data-album="Ensaio UOL 2017"><div class="card__img"><img src="57 - Ensaio UOL 2017/capa.jpg" alt="Capa do álbum Ensaio UOL 2017" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio UOL 2017</p><p class="card__meta">15 fotos</p></div><span class="card__num">57</span></div></a>
+<a class="card" href="58%20-%20Ensaio%20PAPARAZZO/index.html" data-album="Ensaio PAPARAZZO"><div class="card__img"><img src="58 - Ensaio PAPARAZZO/capa.jpg" alt="Capa do álbum Ensaio PAPARAZZO" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio PAPARAZZO</p><p class="card__meta">45 fotos</p></div><span class="card__num">58</span></div></a>
+<a class="card" href="59%20-%20Miniss%C3%A9rie%20Dois%20Irm%C3%A3os/index.html" data-album="Minissérie Dois Irmãos"><div class="card__img"><img src="59 - Minissérie Dois Irmãos/capa.jpg" alt="Capa do álbum Minissérie Dois Irmãos" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Minissérie Dois Irmãos</p><p class="card__meta">22 fotos</p></div><span class="card__num">59</span></div></a>
+<a class="card" href="60%20-%20Ensaio%20UOL-%20Vai-Vai/index.html" data-album="Ensaio UOL/ Vai-Vai"><div class="card__img"><img src="60 - Ensaio UOL- Vai-Vai/capa.jpg" alt="Capa do álbum Ensaio UOL/ Vai-Vai" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio UOL/ Vai-Vai</p><p class="card__meta">23 fotos</p></div><span class="card__num">60</span></div></a>
+<a class="card" href="61%20-%20Ensaio%20IG-%20Lapa%2C%20RJ/index.html" data-album="Ensaio IG/ Lapa, RJ"><div class="card__img"><img src="61 - Ensaio IG- Lapa, RJ/capa.jpg" alt="Capa do álbum Ensaio IG/ Lapa, RJ" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio IG/ Lapa, RJ</p><p class="card__meta">32 fotos</p></div><span class="card__num">61</span></div></a>
+<a class="card" href="62%20-%20Evento%20Carmen%20Steffens/index.html" data-album="Evento Carmen Steffens"><div class="card__img"><img src="62 - Evento Carmen Steffens/capa.jpg" alt="Capa do álbum Evento Carmen Steffens" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Evento Carmen Steffens</p><p class="card__meta">14 fotos</p></div><span class="card__num">62</span></div></a>
+<a class="card" href="63%20-%20Revista%20SAMPA%20Carnaval%20e%20Turismo/index.html" data-album="Revista SAMPA Carnaval e Turismo"><div class="card__img"><img src="63 - Revista SAMPA Carnaval e Turismo/capa.jpg" alt="Capa do álbum Revista SAMPA Carnaval e Turismo" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Revista SAMPA Carnaval e Turismo</p><p class="card__meta">12 fotos</p></div><span class="card__num">63</span></div></a>
+<a class="card" href="64%20-%20Festa%20Tri%20Trof%C3%A9u%20Nota%2010/index.html" data-album="Festa Tri Troféu Nota 10"><div class="card__img"><img src="64 - Festa Tri Troféu Nota 10/capa.jpg" alt="Capa do álbum Festa Tri Troféu Nota 10" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Festa Tri Troféu Nota 10</p><p class="card__meta">35 fotos</p></div><span class="card__num">64</span></div></a>
+<a class="card" href="65%20-%20Camisa%20Verde%20e%20Branco%202008/index.html" data-album="Camisa Verde e Branco 2008"><div class="card__img"><img src="65 - Camisa Verde e Branco 2008/capa.jpg" alt="Capa do álbum Camisa Verde e Branco 2008" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Camisa Verde e Branco 2008</p><p class="card__meta">11 fotos</p></div><span class="card__num">65</span></div></a>
+<a class="card" href="66%20-%20Ensaio%20by%20Alex%20Nunes/index.html" data-album="Ensaio by Alex Nunes"><div class="card__img"><img src="66 - Ensaio by Alex Nunes/capa.jpg" alt="Capa do álbum Ensaio by Alex Nunes" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio by Alex Nunes</p><p class="card__meta">21 fotos</p></div><span class="card__num">66</span></div></a>
+<a class="card" href="67%20-%20Ensaio%20Awagun%20Modas/index.html" data-album="Ensaio Awagun Modas"><div class="card__img"><img src="67 - Ensaio Awagun Modas/capa.jpg" alt="Capa do álbum Ensaio Awagun Modas" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio Awagun Modas</p><p class="card__meta">11 fotos</p></div><span class="card__num">67</span></div></a>
+<a class="card" href="68%20-%20Ensaio%20IG-%20Vai-Vai%202015/index.html" data-album="Ensaio IG/ Vai-Vai 2015"><div class="card__img"><img src="68 - Ensaio IG- Vai-Vai 2015/capa.jpg" alt="Capa do álbum Ensaio IG/ Vai-Vai 2015" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio IG/ Vai-Vai 2015</p><p class="card__meta">22 fotos</p></div><span class="card__num">68</span></div></a>
+<a class="card" href="69%20-%20Ensaio%20RVSTG/index.html" data-album="Ensaio RVSTG"><div class="card__img"><img src="69 - Ensaio RVSTG/capa.jpg" alt="Capa do álbum Ensaio RVSTG" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio RVSTG</p><p class="card__meta">20 fotos</p></div><span class="card__num">69</span></div></a>
+<a class="card" href="70%20-%20Ensaio%20G1-%20Mocidade%20Independente%20de%20Padre%20Miguel/index.html" data-album="Ensaio G1/ Mocidade Independente de Padre Miguel"><div class="card__img"><img src="70 - Ensaio G1- Mocidade Independente de Padre Miguel/capa.jpg" alt="Capa do álbum Ensaio G1/ Mocidade Independente de Padre Miguel" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio G1/ Mocidade Independente de Padre Miguel</p><p class="card__meta">10 fotos</p></div><span class="card__num">70</span></div></a>
+<a class="card" href="71%20-%20Ensaio%20G1-%20Vinhos%20do%20Brasil/index.html" data-album="Ensaio G1/ Vinhos do Brasil"><div class="card__img"><img src="71 - Ensaio G1- Vinhos do Brasil/capa.jpg" alt="Capa do álbum Ensaio G1/ Vinhos do Brasil" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio G1/ Vinhos do Brasil</p><p class="card__meta">15 fotos</p></div><span class="card__num">71</span></div></a>
+<a class="card" href="72%20-%20Ensaio%20IG-%20Despindo%20Camila%20Silva/index.html" data-album="Ensaio IG/ Despindo Camila Silva"><div class="card__img"><img src="72 - Ensaio IG- Despindo Camila Silva/capa.jpg" alt="Capa do álbum Ensaio IG/ Despindo Camila Silva" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio IG/ Despindo Camila Silva</p><p class="card__meta">9 fotos</p></div><span class="card__num">72</span></div></a>
+<a class="card" href="73%20-%20Ensaio%20G1-%20Sala%20S%C3%A3o%20Paulo/index.html" data-album="Ensaio G1/ Sala São Paulo"><div class="card__img"><img src="73 - Ensaio G1- Sala São Paulo/capa.jpg" alt="Capa do álbum Ensaio G1/ Sala São Paulo" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio G1/ Sala São Paulo</p><p class="card__meta">11 fotos</p></div><span class="card__num">73</span></div></a>
+<a class="card" href="74%20-%20Ensaio%20EGO-%20Mocidade%20Indepedente%20de%20Padre%20Miguel/index.html" data-album="Ensaio EGO/ Mocidade Indepedente de Padre Miguel"><div class="card__img"><img src="74 - Ensaio EGO- Mocidade Indepedente de Padre Miguel/capa.jpg" alt="Capa do álbum Ensaio EGO/ Mocidade Indepedente de Padre Miguel" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio EGO/ Mocidade Indepedente de Padre Miguel</p><p class="card__meta">13 fotos</p></div><span class="card__num">74</span></div></a>
+<a class="card" href="75%20-%20Ensaio%20IG-%20Vai-Vai/index.html" data-album="Ensaio IG/ Vai-Vai"><div class="card__img"><img src="75 - Ensaio IG- Vai-Vai/capa.jpg" alt="Capa do álbum Ensaio IG/ Vai-Vai" loading="lazy" decoding="async"></div><div class="card__body"><div><p class="card__title">Ensaio IG/ Vai-Vai</p><p class="card__meta">15 fotos</p></div><span class="card__num">75</span></div></a>
+  </section>
+</main>
+<script>
+(function(){
+  var input=document.getElementById('albumSearch');
+  if(!input) return;
+  var cards=[].slice.call(document.querySelectorAll('[data-album]'));
+  var counter=document.querySelector('[data-visible]');
+  function apply(){
+    var q=input.value.trim().toLowerCase();
+    var n=0;
+    cards.forEach(function(c){
+      var hit=!q||c.getAttribute('data-album').toLowerCase().indexOf(q)>-1;
+      c.style.display=hit?'':'none';
+      if(hit)n++;
+    });
+    if(counter) counter.textContent=n+' álbuns';
+  }
+  input.addEventListener('input',apply);
+  apply();
+})();
+</script>
+</body>
+</html>

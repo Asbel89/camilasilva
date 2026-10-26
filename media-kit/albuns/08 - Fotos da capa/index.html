@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fotos da capa — Acervo Camila Silva</title>
+<meta name="description" content="Álbum Fotos da capa do acervo de fotos de Camila Silva. 46 fotos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Instrument+Sans:ital,wght@0,400..600;1,400..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14100e;--wine:#5b1c22;--wine-soft:#7a2c33;--ivory:#f5efe6;--sand:#e7dbcb;
+  --text:#2b2420;--muted:#7c6f63;--line:rgba(20,16,14,.14);
+  --serif:"Fraunces",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1480px,calc(100% - 3rem));margin-inline:auto}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem 0;border-bottom:1px solid var(--line);background:rgba(245,239,230,.92);backdrop-filter:blur(14px)}
+.top a{text-decoration:none;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.top a:hover{color:var(--wine)}
+.brand{font-family:var(--serif);font-size:1rem;letter-spacing:.02em;text-transform:none!important}
+.hero{padding:clamp(3.5rem,8vw,7rem) 0 clamp(2rem,4vw,3.5rem)}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin:0 0 1.2rem;color:var(--wine);font-size:.62rem;
+  letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.55}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.96;letter-spacing:-.02em;margin:0}
+.hero p.lead{max-width:56ch;margin:1.6rem 0 0;color:var(--muted);font-size:clamp(.95rem,1.25vw,1.08rem);line-height:1.7}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.stats div{display:flex;flex-direction:column;gap:.25rem}
+.stats strong{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1}
+.stats span{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin:0 0 2rem}
+.search{flex:1 1 260px;max-width:420px}
+.search input{width:100%;padding:.85rem 1rem;border:1px solid var(--line);background:#fffdf9;color:var(--text);
+  font:inherit;font-size:.85rem;border-radius:1px;outline:none}
+.search input:focus{border-color:var(--wine)}
+.count{color:var(--muted);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(1rem,2vw,1.6rem);
+  padding-bottom:6rem}
+.card{position:relative;display:flex;flex-direction:column;text-decoration:none;background:#fffdf9;border:1px solid var(--line);
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,16,14,.12)}
+.card__img{aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card__img img{transform:scale(1.045)}
+.card__body{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;padding:1rem 1.1rem 1.15rem}
+.card__title{font-family:var(--serif);font-size:1.02rem;line-height:1.25;margin:0;font-weight:400}
+.card__num{flex:0 0 auto;color:var(--wine);font-size:.58rem;letter-spacing:.16em;font-weight:600}
+.card__meta{margin-top:.35rem;color:var(--muted);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+.album-head{padding:clamp(2.5rem,5vw,4.5rem) 0 1.8rem}
+.album-head h1{font-size:clamp(2rem,5vw,3.6rem)}
+.album-head .lead{margin-top:1rem;color:var(--muted);font-size:.92rem}
+.crumbs{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;color:var(--muted);font-size:.62rem;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.4rem}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{color:var(--wine)}
+.album-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:2.6rem;padding:.65rem 1.1rem;border:1px solid var(--ink);
+  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;background:transparent;cursor:pointer;
+  transition:background .3s,color .3s}
+.btn:hover{background:var(--ink);color:var(--ivory)}
+.btn--solid{background:var(--ink);color:var(--ivory)}
+.btn--solid:hover{background:var(--wine);border-color:var(--wine)}
+.masonry{column-count:4;column-gap:clamp(.6rem,1.2vw,1rem);padding-bottom:6rem}
+@media(max-width:1100px){.masonry{column-count:3}}
+@media(max-width:760px){.masonry{column-count:2}}
+@media(max-width:420px){.masonry{column-count:1}}
+.photo{position:relative;display:block;width:100%;margin:0 0 clamp(.6rem,1.2vw,1rem);padding:0;border:0;
+  background:var(--sand);cursor:zoom-in;break-inside:avoid;overflow:hidden}
+.photo img{width:100%;height:auto;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.photo:hover img{transform:scale(1.02)}
+.photo__zoom{position:absolute;right:.6rem;bottom:.6rem;width:2rem;height:2rem;display:grid;place-items:center;
+  border-radius:50%;background:rgba(20,16,14,.72);color:var(--ivory);opacity:0;transition:opacity .3s}
+.photo:hover .photo__zoom{opacity:1}
+.lightbox{position:fixed;inset:0;z-index:100;display:none;background:rgba(12,9,8,.96);padding:clamp(1rem,4vw,3rem)}
+.lightbox[open],.lightbox.is-open{display:grid;grid-template-rows:1fr auto;gap:1rem}
+.lightbox__stage{display:grid;place-items:center;min-height:0}
+.lightbox__stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lightbox__bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--ivory);
+  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.lightbox__bar a{color:var(--ivory);text-underline-offset:4px}
+.lightbox button{background:transparent;border:1px solid rgba(245,239,230,.4);color:var(--ivory);width:2.6rem;height:2.6rem;
+  display:grid;place-items:center;cursor:pointer;font-size:1rem}
+.lightbox button:hover{background:var(--ivory);color:var(--ink)}
+.lightbox__close{position:absolute;top:clamp(1rem,3vw,2rem);right:clamp(1rem,3vw,2rem);z-index:2}
+.lightbox__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
+.lightbox__prev{left:clamp(.5rem,2vw,1.5rem)}
+.lightbox__next{right:clamp(.5rem,2vw,1.5rem)}
+.empty{padding:6rem 0;text-align:center;color:var(--muted)}
+@media(max-width:640px){.wrap{width:calc(100% - 2rem)}.stats{gap:1.6rem}}
+@media print{.top,.toolbar,.album-actions,.lightbox{display:none!important}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+    <a class="brand" href="../index.html">Camila Silva <span style="color:var(--muted);font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase">· Acervo</span></a>
+    <a href="../index.html">← Todos os álbuns</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="album-head">
+    <nav class="crumbs" aria-label="Navegação">
+      <a href="../../index.html">Media kit</a><span>/</span><a href="../index.html">Álbuns</a><span>/</span><span>Fotos da capa</span>
+    </nav>
+    <h1>Fotos da capa</h1>
+    <p class="lead">46 fotos</p>
+    <div class="album-actions">
+      <a class="btn" href="https://www.facebook.com/media/set/?set=a.296714028486647&amp;type=3" target="_blank" rel="noopener">Ver álbum original no Facebook</a>
+      <a class="btn btn--solid" href="../index.html">Ver outros álbuns</a>
+    </div>
+  </section>
+  <section class="masonry" aria-label="Fotos do álbum Fotos da capa">
+    <button class="photo" type="button" data-full="fotos/0001_296714045153312.jpg" aria-label="Ampliar foto 1 de 46"><img src="fotos/0001_296714045153312.jpg" alt="Camila Silva — Fotos da capa — foto 1" width="1080" height="719" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0002_441011270723588.jpg" aria-label="Ampliar foto 2 de 46"><img src="fotos/0002_441011270723588.jpg" alt="Camila Silva — Fotos da capa — foto 2" width="1080" height="939" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0003_487743731340409.jpg" aria-label="Ampliar foto 3 de 46"><img src="fotos/0003_487743731340409.jpg" alt="Camila Silva — Fotos da capa — foto 3" width="992" height="723" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0004_529896825168365.jpg" aria-label="Ampliar foto 4 de 46"><img src="fotos/0004_529896825168365.jpg" alt="Camila Silva — Fotos da capa — foto 4" width="1080" height="710" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0005_544772703680777.jpg" aria-label="Ampliar foto 5 de 46"><img src="fotos/0005_544772703680777.jpg" alt="Camila Silva — Fotos da capa — foto 5" width="1080" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0006_632419926872788.jpg" aria-label="Ampliar foto 6 de 46"><img src="fotos/0006_632419926872788.jpg" alt="Camila Silva — Fotos da capa — foto 6" width="649" height="406" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0007_638884959559618.jpg" aria-label="Ampliar foto 7 de 46"><img src="fotos/0007_638884959559618.jpg" alt="Camila Silva — Fotos da capa — foto 7" width="620" height="450" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0008_645750305539750.jpg" aria-label="Ampliar foto 8 de 46"><img src="fotos/0008_645750305539750.jpg" alt="Camila Silva — Fotos da capa — foto 8" width="900" height="600" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0009_658873374227443.jpg" aria-label="Ampliar foto 9 de 46"><img src="fotos/0009_658873374227443.jpg" alt="Camila Silva — Fotos da capa — foto 9" width="960" height="639" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0010_669778273136953.jpg" aria-label="Ampliar foto 10 de 46"><img src="fotos/0010_669778273136953.jpg" alt="Camila Silva — Fotos da capa — foto 10" width="779" height="340" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0011_674611734030206.jpg" aria-label="Ampliar foto 11 de 46"><img src="fotos/0011_674611734030206.jpg" alt="Camila Silva — Fotos da capa — foto 11" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0012_682950575153056.jpg" aria-label="Ampliar foto 12 de 46"><img src="fotos/0012_682950575153056.jpg" alt="Camila Silva — Fotos da capa — foto 12" width="480" height="320" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0013_693635030751277.jpg" aria-label="Ampliar foto 13 de 46"><img src="fotos/0013_693635030751277.jpg" alt="Camila Silva — Fotos da capa — foto 13" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0014_707008432747270.jpg" aria-label="Ampliar foto 14 de 46"><img src="fotos/0014_707008432747270.jpg" alt="Camila Silva — Fotos da capa — foto 14" width="970" height="600" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0015_723314837783296.jpg" aria-label="Ampliar foto 15 de 46"><img src="fotos/0015_723314837783296.jpg" alt="Camila Silva — Fotos da capa — foto 15" width="620" height="429" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0016_752857434829036.jpg" aria-label="Ampliar foto 16 de 46"><img src="fotos/0016_752857434829036.jpg" alt="Camila Silva — Fotos da capa — foto 16" width="960" height="595" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0017_763747650406681.jpg" aria-label="Ampliar foto 17 de 46"><img src="fotos/0017_763747650406681.jpg" alt="Camila Silva — Fotos da capa — foto 17" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0018_772597130898332.jpg" aria-label="Ampliar foto 18 de 46"><img src="fotos/0018_772597130898332.jpg" alt="Camila Silva — Fotos da capa — foto 18" width="970" height="600" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0019_784172283074150.jpg" aria-label="Ampliar foto 19 de 46"><img src="fotos/0019_784172283074150.jpg" alt="Camila Silva — Fotos da capa — foto 19" width="1080" height="639" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0020_807218176059628.jpg" aria-label="Ampliar foto 20 de 46"><img src="fotos/0020_807218176059628.jpg" alt="Camila Silva — Fotos da capa — foto 20" width="960" height="639" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0021_828783573903088.jpg" aria-label="Ampliar foto 21 de 46"><img src="fotos/0021_828783573903088.jpg" alt="Camila Silva — Fotos da capa — foto 21" width="1050" height="630" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0022_879350215513090.jpg" aria-label="Ampliar foto 22 de 46"><img src="fotos/0022_879350215513090.jpg" alt="Camila Silva — Fotos da capa — foto 22" width="935" height="555" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0023_900603591431018.jpg" aria-label="Ampliar foto 23 de 46"><img src="fotos/0023_900603591431018.jpg" alt="Camila Silva — Fotos da capa — foto 23" width="620" height="450" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0024_999931440121633.jpg" aria-label="Ampliar foto 24 de 46"><img src="fotos/0024_999931440121633.jpg" alt="Camila Silva — Fotos da capa — foto 24" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0025_1022940387820738.jpg" aria-label="Ampliar foto 25 de 46"><img src="fotos/0025_1022940387820738.jpg" alt="Camila Silva — Fotos da capa — foto 25" width="552" height="804" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0026_1072926862822090.jpg" aria-label="Ampliar foto 26 de 46"><img src="fotos/0026_1072926862822090.jpg" alt="Camila Silva — Fotos da capa — foto 26" width="1280" height="847" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0027_1091784244269685.jpg" aria-label="Ampliar foto 27 de 46"><img src="fotos/0027_1091784244269685.jpg" alt="Camila Silva — Fotos da capa — foto 27" width="698" height="465" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0028_1156236707824438.jpg" aria-label="Ampliar foto 28 de 46"><img src="fotos/0028_1156236707824438.jpg" alt="Camila Silva — Fotos da capa — foto 28" width="1795" height="1197" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0029_1187183681396407.jpg" aria-label="Ampliar foto 29 de 46"><img src="fotos/0029_1187183681396407.jpg" alt="Camila Silva — Fotos da capa — foto 29" width="695" height="462" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0030_1201402893307819.jpg" aria-label="Ampliar foto 30 de 46"><img src="fotos/0030_1201402893307819.jpg" alt="Camila Silva — Fotos da capa — foto 30" width="640" height="426" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0031_1209034692544639.jpg" aria-label="Ampliar foto 31 de 46"><img src="fotos/0031_1209034692544639.jpg" alt="Camila Silva — Fotos da capa — foto 31" width="969" height="518" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0032_1311392842308823.jpg" aria-label="Ampliar foto 32 de 46"><img src="fotos/0032_1311392842308823.jpg" alt="Camila Silva — Fotos da capa — foto 32" width="720" height="1080" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0033_1384045415043565.jpg" aria-label="Ampliar foto 33 de 46"><img src="fotos/0033_1384045415043565.jpg" alt="Camila Silva — Fotos da capa — foto 33" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0034_1433144313467008.jpg" aria-label="Ampliar foto 34 de 46"><img src="fotos/0034_1433144313467008.jpg" alt="Camila Silva — Fotos da capa — foto 34" width="1024" height="768" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0035_1478657808915658.jpg" aria-label="Ampliar foto 35 de 46"><img src="fotos/0035_1478657808915658.jpg" alt="Camila Silva — Fotos da capa — foto 35" width="720" height="714" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0036_1516044718510300.jpg" aria-label="Ampliar foto 36 de 46"><img src="fotos/0036_1516044718510300.jpg" alt="Camila Silva — Fotos da capa — foto 36" width="1080" height="702" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0037_1547266325388139.jpg" aria-label="Ampliar foto 37 de 46"><img src="fotos/0037_1547266325388139.jpg" alt="Camila Silva — Fotos da capa — foto 37" width="840" height="440" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0038_1603675523080552.jpg" aria-label="Ampliar foto 38 de 46"><img src="fotos/0038_1603675523080552.jpg" alt="Camila Silva — Fotos da capa — foto 38" width="718" height="705" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0039_1861664337281668.jpg" aria-label="Ampliar foto 39 de 46"><img src="fotos/0039_1861664337281668.jpg" alt="Camila Silva — Fotos da capa — foto 39" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0040_1959571000824334.jpg" aria-label="Ampliar foto 40 de 46"><img src="fotos/0040_1959571000824334.jpg" alt="Camila Silva — Fotos da capa — foto 40" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0041_2122271367887629.jpg" aria-label="Ampliar foto 41 de 46"><img src="fotos/0041_2122271367887629.jpg" alt="Camila Silva — Fotos da capa — foto 41" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0042_2312841125497318.jpg" aria-label="Ampliar foto 42 de 46"><img src="fotos/0042_2312841125497318.jpg" alt="Camila Silva — Fotos da capa — foto 42" width="960" height="637" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0043_2592939630820798.jpg" aria-label="Ampliar foto 43 de 46"><img src="fotos/0043_2592939630820798.jpg" alt="Camila Silva — Fotos da capa — foto 43" width="1024" height="678" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0044_2807222412725851.jpg" aria-label="Ampliar foto 44 de 46"><img src="fotos/0044_2807222412725851.jpg" alt="Camila Silva — Fotos da capa — foto 44" width="1075" height="675" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0045_2834864319961660.jpg" aria-label="Ampliar foto 45 de 46"><img src="fotos/0045_2834864319961660.jpg" alt="Camila Silva — Fotos da capa — foto 45" width="1080" height="639" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0046_3182527591861996.jpg" aria-label="Ampliar foto 46 de 46"><img src="fotos/0046_3182527591861996.jpg" alt="Camila Silva — Fotos da capa — foto 46" width="934" height="593" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+  </section>
+</main>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+  <button class="lightbox__close" type="button" aria-label="Fechar">✕</button>
+  <button class="lightbox__nav lightbox__prev" type="button" aria-label="Foto anterior">‹</button>
+  <div class="lightbox__stage"><img alt=""></div>
+  <button class="lightbox__nav lightbox__next" type="button" aria-label="Próxima foto">›</button>
+  <div class="lightbox__bar">
+    <span data-counter>1 / 46</span>
+    <a data-download href="#" download>Baixar esta foto ↓</a>
+    <span>Fotos da capa</span>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox');
+  if(!box) return;
+  var img=box.querySelector('.lightbox__stage img');
+  var counter=box.querySelector('[data-counter]');
+  var dl=box.querySelector('[data-download]');
+  var photos=[].slice.call(document.querySelectorAll('.photo'));
+  var idx=0;
+  function show(i){
+    idx=(i+photos.length)%photos.length;
+    var p=photos[idx];
+    img.src=p.getAttribute('data-full');
+    img.alt=p.querySelector('img')?.alt||'';
+    if(counter) counter.textContent=(idx+1)+' / '+photos.length;
+    if(dl){dl.href=p.getAttribute('data-full');dl.setAttribute('download',(p.getAttribute('data-full')||'').split('/').pop());}
+  }
+  function open(i){show(i);box.classList.add('is-open');document.body.style.overflow='hidden';}
+  function close(){box.classList.remove('is-open');document.body.style.overflow='';img.removeAttribute('src');}
+  photos.forEach(function(p,i){p.addEventListener('click',function(e){e.preventDefault();open(i);});});
+  box.querySelector('.lightbox__close').addEventListener('click',close);
+  box.querySelector('.lightbox__prev').addEventListener('click',function(){show(idx-1);});
+  box.querySelector('.lightbox__next').addEventListener('click',function(){show(idx+1);});
+  box.addEventListener('click',function(e){if(e.target===box||e.target.classList.contains('lightbox__stage'))close();});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+})();
+</script>
+</body>
+</html>

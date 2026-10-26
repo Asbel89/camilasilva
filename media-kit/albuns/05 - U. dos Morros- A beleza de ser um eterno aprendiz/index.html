@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U. dos Morros: A beleza de ser um eterno aprendiz — Acervo Camila Silva</title>
+<meta name="description" content="Álbum U. dos Morros: A beleza de ser um eterno aprendiz do acervo de fotos de Camila Silva. 120 fotos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Instrument+Sans:ital,wght@0,400..600;1,400..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14100e;--wine:#5b1c22;--wine-soft:#7a2c33;--ivory:#f5efe6;--sand:#e7dbcb;
+  --text:#2b2420;--muted:#7c6f63;--line:rgba(20,16,14,.14);
+  --serif:"Fraunces",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1480px,calc(100% - 3rem));margin-inline:auto}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem 0;border-bottom:1px solid var(--line);background:rgba(245,239,230,.92);backdrop-filter:blur(14px)}
+.top a{text-decoration:none;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.top a:hover{color:var(--wine)}
+.brand{font-family:var(--serif);font-size:1rem;letter-spacing:.02em;text-transform:none!important}
+.hero{padding:clamp(3.5rem,8vw,7rem) 0 clamp(2rem,4vw,3.5rem)}
+.eyebrow{display:flex;align-items:center;gap:.7rem;margin:0 0 1.2rem;color:var(--wine);font-size:.62rem;
+  letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.55}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.96;letter-spacing:-.02em;margin:0}
+.hero p.lead{max-width:56ch;margin:1.6rem 0 0;color:var(--muted);font-size:clamp(.95rem,1.25vw,1.08rem);line-height:1.7}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.stats div{display:flex;flex-direction:column;gap:.25rem}
+.stats strong{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1}
+.stats span{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin:0 0 2rem}
+.search{flex:1 1 260px;max-width:420px}
+.search input{width:100%;padding:.85rem 1rem;border:1px solid var(--line);background:#fffdf9;color:var(--text);
+  font:inherit;font-size:.85rem;border-radius:1px;outline:none}
+.search input:focus{border-color:var(--wine)}
+.count{color:var(--muted);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(1rem,2vw,1.6rem);
+  padding-bottom:6rem}
+.card{position:relative;display:flex;flex-direction:column;text-decoration:none;background:#fffdf9;border:1px solid var(--line);
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,16,14,.12)}
+.card__img{aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card__img img{transform:scale(1.045)}
+.card__body{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;padding:1rem 1.1rem 1.15rem}
+.card__title{font-family:var(--serif);font-size:1.02rem;line-height:1.25;margin:0;font-weight:400}
+.card__num{flex:0 0 auto;color:var(--wine);font-size:.58rem;letter-spacing:.16em;font-weight:600}
+.card__meta{margin-top:.35rem;color:var(--muted);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+.album-head{padding:clamp(2.5rem,5vw,4.5rem) 0 1.8rem}
+.album-head h1{font-size:clamp(2rem,5vw,3.6rem)}
+.album-head .lead{margin-top:1rem;color:var(--muted);font-size:.92rem}
+.crumbs{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;color:var(--muted);font-size:.62rem;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.4rem}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{color:var(--wine)}
+.album-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:2.6rem;padding:.65rem 1.1rem;border:1px solid var(--ink);
+  font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;background:transparent;cursor:pointer;
+  transition:background .3s,color .3s}
+.btn:hover{background:var(--ink);color:var(--ivory)}
+.btn--solid{background:var(--ink);color:var(--ivory)}
+.btn--solid:hover{background:var(--wine);border-color:var(--wine)}
+.masonry{column-count:4;column-gap:clamp(.6rem,1.2vw,1rem);padding-bottom:6rem}
+@media(max-width:1100px){.masonry{column-count:3}}
+@media(max-width:760px){.masonry{column-count:2}}
+@media(max-width:420px){.masonry{column-count:1}}
+.photo{position:relative;display:block;width:100%;margin:0 0 clamp(.6rem,1.2vw,1rem);padding:0;border:0;
+  background:var(--sand);cursor:zoom-in;break-inside:avoid;overflow:hidden}
+.photo img{width:100%;height:auto;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.photo:hover img{transform:scale(1.02)}
+.photo__zoom{position:absolute;right:.6rem;bottom:.6rem;width:2rem;height:2rem;display:grid;place-items:center;
+  border-radius:50%;background:rgba(20,16,14,.72);color:var(--ivory);opacity:0;transition:opacity .3s}
+.photo:hover .photo__zoom{opacity:1}
+.lightbox{position:fixed;inset:0;z-index:100;display:none;background:rgba(12,9,8,.96);padding:clamp(1rem,4vw,3rem)}
+.lightbox[open],.lightbox.is-open{display:grid;grid-template-rows:1fr auto;gap:1rem}
+.lightbox__stage{display:grid;place-items:center;min-height:0}
+.lightbox__stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.lightbox__bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--ivory);
+  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.lightbox__bar a{color:var(--ivory);text-underline-offset:4px}
+.lightbox button{background:transparent;border:1px solid rgba(245,239,230,.4);color:var(--ivory);width:2.6rem;height:2.6rem;
+  display:grid;place-items:center;cursor:pointer;font-size:1rem}
+.lightbox button:hover{background:var(--ivory);color:var(--ink)}
+.lightbox__close{position:absolute;top:clamp(1rem,3vw,2rem);right:clamp(1rem,3vw,2rem);z-index:2}
+.lightbox__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
+.lightbox__prev{left:clamp(.5rem,2vw,1.5rem)}
+.lightbox__next{right:clamp(.5rem,2vw,1.5rem)}
+.empty{padding:6rem 0;text-align:center;color:var(--muted)}
+@media(max-width:640px){.wrap{width:calc(100% - 2rem)}.stats{gap:1.6rem}}
+@media print{.top,.toolbar,.album-actions,.lightbox{display:none!important}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+    <a class="brand" href="../index.html">Camila Silva <span style="color:var(--muted);font-family:var(--sans);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase">· Acervo</span></a>
+    <a href="../index.html">← Todos os álbuns</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="album-head">
+    <nav class="crumbs" aria-label="Navegação">
+      <a href="../../index.html">Media kit</a><span>/</span><a href="../index.html">Álbuns</a><span>/</span><span>U. dos Morros: A beleza de ser um eterno aprendiz</span>
+    </nav>
+    <h1>U. dos Morros: A beleza de ser um eterno aprendiz</h1>
+    <p class="lead">120 fotos</p>
+    <div class="album-actions">
+      <a class="btn" href="https://www.facebook.com/media/set/?set=a.2371713916276705&amp;type=3" target="_blank" rel="noopener">Ver álbum original no Facebook</a>
+      <a class="btn btn--solid" href="../index.html">Ver outros álbuns</a>
+    </div>
+  </section>
+  <section class="masonry" aria-label="Fotos do álbum U. dos Morros: A beleza de ser um eterno aprendiz">
+    <button class="photo" type="button" data-full="fotos/0001_373549000803149.jpg" aria-label="Ampliar foto 1 de 120"><img src="fotos/0001_373549000803149.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 1" width="999" height="1777" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0002_374846880673361.jpg" aria-label="Ampliar foto 2 de 120"><img src="fotos/0002_374846880673361.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 2" width="611" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0003_374849394006443.jpg" aria-label="Ampliar foto 3 de 120"><img src="fotos/0003_374849394006443.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 3" width="606" height="1519" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0004_378166037008112.jpg" aria-label="Ampliar foto 4 de 120"><img src="fotos/0004_378166037008112.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 4" width="538" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0005_378166073674775.jpg" aria-label="Ampliar foto 5 de 120"><img src="fotos/0005_378166073674775.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 5" width="686" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0006_378166103674772.jpg" aria-label="Ampliar foto 6 de 120"><img src="fotos/0006_378166103674772.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 6" width="839" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0007_378166143674768.jpg" aria-label="Ampliar foto 7 de 120"><img src="fotos/0007_378166143674768.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 7" width="789" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0008_940318704126173.jpg" aria-label="Ampliar foto 8 de 120"><img src="fotos/0008_940318704126173.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 8" width="1080" height="1350" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0009_940340460790664.jpg" aria-label="Ampliar foto 9 de 120"><img src="fotos/0009_940340460790664.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 9" width="1200" height="1800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0010_940401027451274.jpg" aria-label="Ampliar foto 10 de 120"><img src="fotos/0010_940401027451274.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 10" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0011_940401087451268.jpg" aria-label="Ampliar foto 11 de 120"><img src="fotos/0011_940401087451268.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 11" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0012_940401137451263.jpg" aria-label="Ampliar foto 12 de 120"><img src="fotos/0012_940401137451263.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 12" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0013_940401177451259.jpg" aria-label="Ampliar foto 13 de 120"><img src="fotos/0013_940401177451259.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 13" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0014_940401220784588.jpg" aria-label="Ampliar foto 14 de 120"><img src="fotos/0014_940401220784588.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 14" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0015_940829990741711.jpg" aria-label="Ampliar foto 15 de 120"><img src="fotos/0015_940829990741711.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 15" width="1200" height="1800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0016_941293477362029.jpg" aria-label="Ampliar foto 16 de 120"><img src="fotos/0016_941293477362029.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 16" width="1200" height="1800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0017_941474114010632.jpg" aria-label="Ampliar foto 17 de 120"><img src="fotos/0017_941474114010632.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 17" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0018_941474170677293.jpg" aria-label="Ampliar foto 18 de 120"><img src="fotos/0018_941474170677293.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 18" width="1200" height="1800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0019_941474217343955.jpg" aria-label="Ampliar foto 19 de 120"><img src="fotos/0019_941474217343955.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 19" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0020_941474260677284.jpg" aria-label="Ampliar foto 20 de 120"><img src="fotos/0020_941474260677284.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 20" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0021_941474300677280.jpg" aria-label="Ampliar foto 21 de 120"><img src="fotos/0021_941474300677280.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 21" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0022_942469310577779.jpg" aria-label="Ampliar foto 22 de 120"><img src="fotos/0022_942469310577779.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 22" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0023_942469363911107.jpg" aria-label="Ampliar foto 23 de 120"><img src="fotos/0023_942469363911107.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 23" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0024_942469413911102.jpg" aria-label="Ampliar foto 24 de 120"><img src="fotos/0024_942469413911102.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 24" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0025_942469453911098.jpg" aria-label="Ampliar foto 25 de 120"><img src="fotos/0025_942469453911098.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 25" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0026_942469507244426.jpg" aria-label="Ampliar foto 26 de 120"><img src="fotos/0026_942469507244426.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 26" width="1200" height="1800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0027_942469543911089.jpg" aria-label="Ampliar foto 27 de 120"><img src="fotos/0027_942469543911089.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 27" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0028_942469583911085.jpg" aria-label="Ampliar foto 28 de 120"><img src="fotos/0028_942469583911085.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 28" width="1200" height="800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0029_942585353899508.jpg" aria-label="Ampliar foto 29 de 120"><img src="fotos/0029_942585353899508.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 29" width="1200" height="1800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0030_943037593854284.jpg" aria-label="Ampliar foto 30 de 120"><img src="fotos/0030_943037593854284.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 30" width="1080" height="1350" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0031_944152447076132.jpg" aria-label="Ampliar foto 31 de 120"><img src="fotos/0031_944152447076132.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 31" width="1200" height="1800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0032_946600346831342.jpg" aria-label="Ampliar foto 32 de 120"><img src="fotos/0032_946600346831342.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 32" width="1200" height="1800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0033_954149692743074.jpg" aria-label="Ampliar foto 33 de 120"><img src="fotos/0033_954149692743074.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 33" width="1440" height="1800" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0034_2371714142943349.jpg" aria-label="Ampliar foto 34 de 120"><img src="fotos/0034_2371714142943349.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 34" width="466" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0035_2371714259610004.jpg" aria-label="Ampliar foto 35 de 120"><img src="fotos/0035_2371714259610004.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 35" width="768" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0036_2414530648661698.jpg" aria-label="Ampliar foto 36 de 120"><img src="fotos/0036_2414530648661698.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 36" width="960" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0037_2415868781861218.jpg" aria-label="Ampliar foto 37 de 120"><img src="fotos/0037_2415868781861218.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 37" width="687" height="858" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0038_2415868875194542.jpg" aria-label="Ampliar foto 38 de 120"><img src="fotos/0038_2415868875194542.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 38" width="768" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0039_2415869041861192.jpg" aria-label="Ampliar foto 39 de 120"><img src="fotos/0039_2415869041861192.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 39" width="769" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0040_2415869191861177.jpg" aria-label="Ampliar foto 40 de 120"><img src="fotos/0040_2415869191861177.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 40" width="752" height="941" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0041_2415869341861162.jpg" aria-label="Ampliar foto 41 de 120"><img src="fotos/0041_2415869341861162.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 41" width="767" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0042_2415869458527817.jpg" aria-label="Ampliar foto 42 de 120"><img src="fotos/0042_2415869458527817.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 42" width="899" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0043_2415869548527808.jpg" aria-label="Ampliar foto 43 de 120"><img src="fotos/0043_2415869548527808.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 43" width="663" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0044_2415907065190723.jpg" aria-label="Ampliar foto 44 de 120"><img src="fotos/0044_2415907065190723.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 44" width="960" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0045_2415907238524039.jpg" aria-label="Ampliar foto 45 de 120"><img src="fotos/0045_2415907238524039.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 45" width="960" height="779" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0046_2415907261857370.jpg" aria-label="Ampliar foto 46 de 120"><img src="fotos/0046_2415907261857370.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 46" width="960" height="596" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0047_2415907315190698.jpg" aria-label="Ampliar foto 47 de 120"><img src="fotos/0047_2415907315190698.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 47" width="540" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0048_2415907411857355.jpg" aria-label="Ampliar foto 48 de 120"><img src="fotos/0048_2415907411857355.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 48" width="750" height="534" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0049_2416500581798038.jpg" aria-label="Ampliar foto 49 de 120"><img src="fotos/0049_2416500581798038.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 49" width="796" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0050_2420018124779617.jpg" aria-label="Ampliar foto 50 de 120"><img src="fotos/0050_2420018124779617.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 50" width="480" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0051_2420018134779616.jpg" aria-label="Ampliar foto 51 de 120"><img src="fotos/0051_2420018134779616.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 51" width="480" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0052_2420018138112949.jpg" aria-label="Ampliar foto 52 de 120"><img src="fotos/0052_2420018138112949.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 52" width="640" height="480" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0053_2420018254779604.jpg" aria-label="Ampliar foto 53 de 120"><img src="fotos/0053_2420018254779604.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 53" width="640" height="480" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0054_2420018354779594.jpg" aria-label="Ampliar foto 54 de 120"><img src="fotos/0054_2420018354779594.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 54" width="480" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0055_2420018374779592.jpg" aria-label="Ampliar foto 55 de 120"><img src="fotos/0055_2420018374779592.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 55" width="640" height="480" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0056_2426493124132117.jpg" aria-label="Ampliar foto 56 de 120"><img src="fotos/0056_2426493124132117.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 56" width="720" height="489" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0057_2426493184132111.jpg" aria-label="Ampliar foto 57 de 120"><img src="fotos/0057_2426493184132111.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 57" width="954" height="635" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0058_2460295834085179.jpg" aria-label="Ampliar foto 58 de 120"><img src="fotos/0058_2460295834085179.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 58" width="1080" height="1630" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0059_2460299074084855.jpg" aria-label="Ampliar foto 59 de 120"><img src="fotos/0059_2460299074084855.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 59" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0060_2460299167418179.jpg" aria-label="Ampliar foto 60 de 120"><img src="fotos/0060_2460299167418179.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 60" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0061_2460299257418170.jpg" aria-label="Ampliar foto 61 de 120"><img src="fotos/0061_2460299257418170.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 61" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0062_2460299344084828.jpg" aria-label="Ampliar foto 62 de 120"><img src="fotos/0062_2460299344084828.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 62" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0063_2460307320750697.jpg" aria-label="Ampliar foto 63 de 120"><img src="fotos/0063_2460307320750697.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 63" width="1080" height="1630" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0064_2460314514083311.jpg" aria-label="Ampliar foto 64 de 120"><img src="fotos/0064_2460314514083311.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 64" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0065_2460314634083299.jpg" aria-label="Ampliar foto 65 de 120"><img src="fotos/0065_2460314634083299.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 65" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0066_2460314714083291.jpg" aria-label="Ampliar foto 66 de 120"><img src="fotos/0066_2460314714083291.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 66" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0067_2460314820749947.jpg" aria-label="Ampliar foto 67 de 120"><img src="fotos/0067_2460314820749947.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 67" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0068_2460323550749074.jpg" aria-label="Ampliar foto 68 de 120"><img src="fotos/0068_2460323550749074.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 68" width="1080" height="810" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0069_2460334407414655.jpg" aria-label="Ampliar foto 69 de 120"><img src="fotos/0069_2460334407414655.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 69" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0070_2460334490747980.jpg" aria-label="Ampliar foto 70 de 120"><img src="fotos/0070_2460334490747980.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 70" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0071_2460334594081303.jpg" aria-label="Ampliar foto 71 de 120"><img src="fotos/0071_2460334594081303.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 71" width="636" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0072_2460334710747958.jpg" aria-label="Ampliar foto 72 de 120"><img src="fotos/0072_2460334710747958.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 72" width="720" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0073_2461312980650131.jpg" aria-label="Ampliar foto 73 de 120"><img src="fotos/0073_2461312980650131.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 73" width="1080" height="715" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0074_2604107203037374.jpg" aria-label="Ampliar foto 74 de 120"><img src="fotos/0074_2604107203037374.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 74" width="1080" height="1073" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0075_2611273918987369.jpg" aria-label="Ampliar foto 75 de 120"><img src="fotos/0075_2611273918987369.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 75" width="1080" height="1619" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0076_2611459938968767.jpg" aria-label="Ampliar foto 76 de 120"><img src="fotos/0076_2611459938968767.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 76" width="1079" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0077_2766745380106888.jpg" aria-label="Ampliar foto 77 de 120"><img src="fotos/0077_2766745380106888.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 77" width="1080" height="732" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0078_2766830490098377.jpg" aria-label="Ampliar foto 78 de 120"><img src="fotos/0078_2766830490098377.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 78" width="1080" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0079_2768944123220347.jpg" aria-label="Ampliar foto 79 de 120"><img src="fotos/0079_2768944123220347.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 79" width="1080" height="1582" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0080_2769473109834115.jpg" aria-label="Ampliar foto 80 de 120"><img src="fotos/0080_2769473109834115.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 80" width="1080" height="903" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0081_2770117259769700.jpg" aria-label="Ampliar foto 81 de 120"><img src="fotos/0081_2770117259769700.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 81" width="1080" height="1528" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0082_2771521412962618.jpg" aria-label="Ampliar foto 82 de 120"><img src="fotos/0082_2771521412962618.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 82" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0083_2771521469629279.jpg" aria-label="Ampliar foto 83 de 120"><img src="fotos/0083_2771521469629279.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 83" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0084_2771521546295938.jpg" aria-label="Ampliar foto 84 de 120"><img src="fotos/0084_2771521546295938.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 84" width="960" height="752" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0085_2771521596295933.jpg" aria-label="Ampliar foto 85 de 120"><img src="fotos/0085_2771521596295933.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 85" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0086_2771599386288154.jpg" aria-label="Ampliar foto 86 de 120"><img src="fotos/0086_2771599386288154.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 86" width="960" height="722" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0087_2771599432954816.jpg" aria-label="Ampliar foto 87 de 120"><img src="fotos/0087_2771599432954816.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 87" width="960" height="689" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0088_2771599479621478.jpg" aria-label="Ampliar foto 88 de 120"><img src="fotos/0088_2771599479621478.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 88" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0089_2771732359608190.jpg" aria-label="Ampliar foto 89 de 120"><img src="fotos/0089_2771732359608190.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 89" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0090_2771732422941517.jpg" aria-label="Ampliar foto 90 de 120"><img src="fotos/0090_2771732422941517.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 90" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0091_2771732502941509.jpg" aria-label="Ampliar foto 91 de 120"><img src="fotos/0091_2771732502941509.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 91" width="631" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0092_2772023076245785.jpg" aria-label="Ampliar foto 92 de 120"><img src="fotos/0092_2772023076245785.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 92" width="1080" height="1403" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0093_2775970692517690.jpg" aria-label="Ampliar foto 93 de 120"><img src="fotos/0093_2775970692517690.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 93" width="1080" height="720" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0094_2797523663695726.jpg" aria-label="Ampliar foto 94 de 120"><img src="fotos/0094_2797523663695726.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 94" width="1080" height="810" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0095_2817063521741740.jpg" aria-label="Ampliar foto 95 de 120"><img src="fotos/0095_2817063521741740.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 95" width="960" height="630" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0096_2818822971565795.jpg" aria-label="Ampliar foto 96 de 120"><img src="fotos/0096_2818822971565795.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 96" width="960" height="750" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0097_2818823024899123.jpg" aria-label="Ampliar foto 97 de 120"><img src="fotos/0097_2818823024899123.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 97" width="960" height="535" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0098_2818823094899116.jpg" aria-label="Ampliar foto 98 de 120"><img src="fotos/0098_2818823094899116.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 98" width="960" height="740" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0099_2818823148232444.jpg" aria-label="Ampliar foto 99 de 120"><img src="fotos/0099_2818823148232444.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 99" width="960" height="769" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0100_2819177904863635.jpg" aria-label="Ampliar foto 100 de 120"><img src="fotos/0100_2819177904863635.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 100" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0101_2819177968196962.jpg" aria-label="Ampliar foto 101 de 120"><img src="fotos/0101_2819177968196962.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 101" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0102_2819178048196954.jpg" aria-label="Ampliar foto 102 de 120"><img src="fotos/0102_2819178048196954.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 102" width="708" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0103_2819178134863612.jpg" aria-label="Ampliar foto 103 de 120"><img src="fotos/0103_2819178134863612.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 103" width="960" height="691" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0104_2834825643298861.jpg" aria-label="Ampliar foto 104 de 120"><img src="fotos/0104_2834825643298861.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 104" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0105_2834825746632184.jpg" aria-label="Ampliar foto 105 de 120"><img src="fotos/0105_2834825746632184.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 105" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0106_2834825819965510.jpg" aria-label="Ampliar foto 106 de 120"><img src="fotos/0106_2834825819965510.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 106" width="640" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0107_2834825896632169.jpg" aria-label="Ampliar foto 107 de 120"><img src="fotos/0107_2834825896632169.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 107" width="960" height="640" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0108_2834826019965490.jpg" aria-label="Ampliar foto 108 de 120"><img src="fotos/0108_2834826019965490.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 108" width="597" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0109_2834826149965477.jpg" aria-label="Ampliar foto 109 de 120"><img src="fotos/0109_2834826149965477.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 109" width="900" height="960" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0110_2972580209523403.jpg" aria-label="Ampliar foto 110 de 120"><img src="fotos/0110_2972580209523403.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 110" width="989" height="1823" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0111_3021453931302697.jpg" aria-label="Ampliar foto 111 de 120"><img src="fotos/0111_3021453931302697.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 111" width="1080" height="1363" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0112_3236220319826056.jpg" aria-label="Ampliar foto 112 de 120"><img src="fotos/0112_3236220319826056.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 112" width="1069" height="1426" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0113_3518910051557080.jpg" aria-label="Ampliar foto 113 de 120"><img src="fotos/0113_3518910051557080.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 113" width="640" height="1369" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0114_3519988448115907.jpg" aria-label="Ampliar foto 114 de 120"><img src="fotos/0114_3519988448115907.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 114" width="902" height="1642" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0115_3526884637426288.jpg" aria-label="Ampliar foto 115 de 120"><img src="fotos/0115_3526884637426288.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 115" width="1080" height="1289" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0116_3528131903968228.jpg" aria-label="Ampliar foto 116 de 120"><img src="fotos/0116_3528131903968228.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 116" width="1080" height="1655" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0117_3545105445604207.jpg" aria-label="Ampliar foto 117 de 120"><img src="fotos/0117_3545105445604207.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 117" width="942" height="1641" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0118_3546092652172153.jpg" aria-label="Ampliar foto 118 de 120"><img src="fotos/0118_3546092652172153.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 118" width="1080" height="1261" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0119_3569896616458423.jpg" aria-label="Ampliar foto 119 de 120"><img src="fotos/0119_3569896616458423.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 119" width="1080" height="1620" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+<button class="photo" type="button" data-full="fotos/0120_3586405258140892.jpg" aria-label="Ampliar foto 120 de 120"><img src="fotos/0120_3586405258140892.jpg" alt="Camila Silva — U. dos Morros: A beleza de ser um eterno aprendiz — foto 120" width="1080" height="1142" loading="lazy" decoding="async"><span class="photo__zoom" aria-hidden="true">+</span></button>
+  </section>
+</main>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+  <button class="lightbox__close" type="button" aria-label="Fechar">✕</button>
+  <button class="lightbox__nav lightbox__prev" type="button" aria-label="Foto anterior">‹</button>
+  <div class="lightbox__stage"><img alt=""></div>
+  <button class="lightbox__nav lightbox__next" type="button" aria-label="Próxima foto">›</button>
+  <div class="lightbox__bar">
+    <span data-counter>1 / 120</span>
+    <a data-download href="#" download>Baixar esta foto ↓</a>
+    <span>U. dos Morros: A beleza de ser um eterno aprendiz</span>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox');
+  if(!box) return;
+  var img=box.querySelector('.lightbox__stage img');
+  var counter=box.querySelector('[data-counter]');
+  var dl=box.querySelector('[data-download]');
+  var photos=[].slice.call(document.querySelectorAll('.photo'));
+  var idx=0;
+  function show(i){
+    idx=(i+photos.length)%photos.length;
+    var p=photos[idx];
+    img.src=p.getAttribute('data-full');
+    img.alt=p.querySelector('img')?.alt||'';
+    if(counter) counter.textContent=(idx+1)+' / '+photos.length;
+    if(dl){dl.href=p.getAttribute('data-full');dl.setAttribute('download',(p.getAttribute('data-full')||'').split('/').pop());}
+  }
+  function open(i){show(i);box.classList.add('is-open');document.body.style.overflow='hidden';}
+  function close(){box.classList.remove('is-open');document.body.style.overflow='';img.removeAttribute('src');}
+  photos.forEach(function(p,i){p.addEventListener('click',function(e){e.preventDefault();open(i);});});
+  box.querySelector('.lightbox__close').addEventListener('click',close);
+  box.querySelector('.lightbox__prev').addEventListener('click',function(){show(idx-1);});
+  box.querySelector('.lightbox__next').addEventListener('click',function(){show(idx+1);});
+  box.addEventListener('click',function(e){if(e.target===box||e.target.classList.contains('lightbox__stage'))close();});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+})();
+</script>
+</body>
+</html>

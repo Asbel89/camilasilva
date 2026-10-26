@@ -1753,3 +1753,39 @@ a.contact__dd:hover{color:var(--copper)}
   a{color:#111!important;text-decoration:none}
   img{max-width:100%!important}
 }
+
+/* ---------- acervo de álbuns (link no media kit) ---------- */
+.gallery__archive{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:clamp(1.5rem,4vw,3.5rem);
+  margin-top:clamp(2.5rem,5vw,4rem);
+  padding-top:clamp(1.5rem,3vw,2.4rem);
+  border-top:1px solid var(--line);
+}
+.gallery__archive-label{
+  margin:0 0 .55rem;
+  color:var(--wine);
+  font-size:.6rem;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+.gallery__archive-title{
+  font-family:var(--serif);
+  font-size:clamp(1.5rem,3vw,2.15rem);
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:-.02em;
+}
+.gallery__archive-text{
+  max-width:52ch;
+  margin-top:.7rem;
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.65;
+}
+@media (max-width:760px){
+  .gallery__archive{flex-direction:column;align-items:flex-start}
+}
