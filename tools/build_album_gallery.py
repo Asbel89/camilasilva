@@ -269,7 +269,7 @@ def album_page(album: dict) -> str:
 <main class="wrap">
   <section class="album-head">
     <nav class="crumbs" aria-label="Navegação">
-      <a href="../../index.html">Media kit</a><span>/</span><a href="../index.html">Álbuns</a><span>/</span><span>{title}</span>
+      <a href="../../../index.html">Media kit</a><span>/</span><a href="../index.html">Álbuns</a><span>/</span><span>{title}</span>
     </nav>
     <h1>{title}</h1>
     <p class="lead">{count} fotos{videos_note and ' · ' + videos_note}</p>
