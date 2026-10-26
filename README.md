@@ -4,8 +4,9 @@ Site institucional e acervo fotográfico de **Camila Silva**, bailarina de samba
 
 ## Links
 
-- **Site:** <https://camilasilva-gules.vercel.app>
-- **Acervo de fotos:** [`media-kit/albuns/index.html`](media-kit/albuns/index.html)
+- **Site oficial (Vercel):** <https://camilasilva-gules.vercel.app>
+- **Espelho no GitHub Pages:** <https://asbel89.github.io/camilasilva/>
+- **Acervo de fotos:** <https://asbel89.github.io/camilasilva/media-kit/albuns/index.html>
 - **Media kit em PDF:** [`Camila-Silva-Media-Kit-PT.pdf`](Camila-Silva-Media-Kit-PT.pdf) · [`Camila-Silva-Media-Kit.pdf`](Camila-Silva-Media-Kit.pdf)
 
 ## Conteúdo
