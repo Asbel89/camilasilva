@@ -1,0 +1,17 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editores
+.vscode/
+.idea/
+
+# Logs temporários
+*.tmp
